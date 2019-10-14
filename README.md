@@ -3,6 +3,8 @@
 # Programmer
 [ICPTool and ISPTool](https://www.nuvoton.com/hq/support/tool-and-software/software/programmer/?__locale=en)
 # Nu-Link2 open platform
-## Repos forked from DapLink/pyOCD and adding support for NuMicro devices
-[Daplink](https://github.com/OpenNuvoton/DapLink)   
-[pyOCD](https://github.com/OpenNuvoton/pyOCD)
+[DAPLink on Nu-Link2](https://github.com/OpenNuvoton/DapLink)   
+[ISP bridge](https://github.com/OpenNuvoton/NuLink2_ISP_Bridge)    
+[ICP library](https://github.com/OpenNuvoton/NuLink2_ICP_Library)
+## on chip debugging
+[pyOCD for Nu-Link2 (using CMSIS-DAP)](https://github.com/OpenNuvoton/pyOCD)
