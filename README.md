@@ -24,7 +24,7 @@ NuTool: Coding assistant
 <br>
 
 # Nu-Link2 debugging and programming adapter
-When using debugging and programming tool above, you need an USB apatper. 
+When using debugging and programming tool above, you need an USB adatper. 
 We introduce you a new feature-rich Nu-Link2 adapter here.
 ### The role of Nu-Link2 adapter
 User can switch between roles that Nu-Link2 play by re-programming Nu-Link2 to another .bin file  
