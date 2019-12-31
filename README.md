@@ -18,6 +18,7 @@ NuTool: Coding assistant
 - [ICPTool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0520101208200310)  
 - [ISPTool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0320101221101703)  
 - [ISPTool source code](https://github.com/OpenNuvoton/ISPTool)    
+- [ISPTool command set](./doc/NuMicro_ISP_Flow_And_Command_Set.pdf)    
 - [NuLink command tool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0520160317094731)  
 
 <br>
@@ -55,9 +56,11 @@ All Nu-Link2 firmware image (.bin files) can be found [here](./Latest_NuLink_Fir
 #### NuLink2_ISP_Bridge_FW.bin
 - This is the latest image built from [NuLink2_ISP_Bridge](https://github.com/OpenNuvoton/NuLink2_ISP_Bridge)
 - ISP bridge firmware is also integrated into NuLink2FW.bin, so ISP tool can connect with NuLink2FW.bin, too.
+- The target ISP loader code can be found at directory "BSP/SampleCode/ISP/" of each BSP. BSP can be found at https://github.com/OpenNuvoton or https://gitee.com/OpenNuvoton.  
 
 #### NuLink2_ISPLink2.bin
 - This is the latest image built from [NuLink2_ISPLink2](https://github.com/OpenNuvoton/NuLink2_ISPLink2)
+- The target ISP loader code can be found at directory "BSP/SampleCode/ISP/" of each BSP. BSP can be found at https://github.com/OpenNuvoton or https://gitee.com/OpenNuvoton.  
 
 #### NuLink2_ICP_Library.bin
 - This is the latest image built from [ICP library](https://github.com/OpenNuvoton/NuLink2_ICP_Library)
