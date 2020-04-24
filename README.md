@@ -52,7 +52,7 @@ All Nu-Link2 firmware image (.bin files) can be found [here](./Latest_NuLink_Fir
 - This is the latest image built from [CMSIS-DAP on Nu-Link2](https://github.com/OpenNuvoton/NuLink2_CMSIS_DAP)
 - If you don't need rich features of DAPLink, this is the light weight choice of CMSIS-DAP firmware.
 
-#### [NuLink2_ISP_Bridge_FW.bin](./Latest_NuLink_Firmware)
+#### [NuLink2_ISP_Bridge.bin](./Latest_NuLink_Firmware)
 - This is the latest image built from [NuLink2_ISP_Bridge](https://github.com/OpenNuvoton/NuLink2_ISP_Bridge)
 - ISP bridge firmware is also integrated into NuLink2FW.bin, so ISP tool can connect with NuLink2FW.bin, too.
 - The target ISP loader code can be found at directory "BSP/SampleCode/ISP/" of each BSP. BSP can be found at https://github.com/OpenNuvoton or https://gitee.com/OpenNuvoton.  
