@@ -26,8 +26,8 @@ NuTool: Coding assistant
 # Nu-Link2 debugging and programming adapter
 When using debugging and programming tool above, you need an USB adapter. 
 We introduce you a new feature-rich Nu-Link2 adapter here.   
-  >>[Where to buy](https://direct.nuvoton.com/tw/nu-link2-pro)   
-  >>[User manual](https://www.nuvoton.com/resource-download.jsp?tp_GUID=UG1320200319174043)  
+- [Where to buy](https://direct.nuvoton.com/tw/nu-link2-pro)   
+- [User manual](https://www.nuvoton.com/resource-download.jsp?tp_GUID=UG1320200319174043)  
 ### The role of Nu-Link2 adapter
 User can switch between roles that Nu-Link2 play by re-programming Nu-Link2 to another .bin file  
 All Nu-Link2 firmware image (.bin files) can be found [here](./Latest_NuLink_Firmware)  
