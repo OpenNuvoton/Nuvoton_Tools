@@ -5,7 +5,7 @@ Debugger
 - [KEIL Nu-Link debugger driver installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1120200221180521)
 - [IAR Nu-Link debugger driver installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1120200221180914)
 - [NuEclipse installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW1020180913190214)
-- [PinView installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1720200221181644)  
+- [PinView installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200221181935)  
 - [Customized pyOCD source code](https://github.com/OpenNuvoton/pyOCD) (using adapter firmware "NuLink2_DAPLink.bin")
 - [Customized openOCD source code](https://github.com/OpenNuvoton/OpenOCD-Nuvoton)  (using adapter firmware "NuLink2FW.bin")
   
@@ -18,7 +18,7 @@ NuTool: Coding assistant
 - [ISPTool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0320101221101703)  
 - [ISPTool source code](https://github.com/OpenNuvoton/ISPTool)    
 - [ISPTool command set](./doc/NuMicro_ISP_Flow_And_Command_Set.pdf)    
-- [NuLink command tool installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200221181935)  
+- [NuLink command tool installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1720200221181644)  
 
 <br>
 <br>
