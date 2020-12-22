@@ -21,7 +21,7 @@ Coding assistant
 - [NuTool-ClockConfigure](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200930114649)
 
 Signal pass-through/monitor (I2C/SPI/CAN of Nu-Link2-Pro): 
-- [NuTool-USB_to_Serial_Port](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320201210175128) 
+- [NuTool-USB_to_Serial_Port](https://github.com/OpenNuvoton/NuTool-USB-to-Serial-Port) 
 
 <br>
 <br>
