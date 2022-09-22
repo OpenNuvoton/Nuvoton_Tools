@@ -23,6 +23,11 @@ Coding assistant
 Signal pass-through/monitor (I2C/SPI/CAN of Nu-Link2-Pro): 
 - [NuTool-USB_to_Serial_Port](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320201210175128) 
 
+Apps
+- [NuBLE-Android](https://github.com/OpenNuvoton/NuBLE-Android/) 
+- [NuBLE-iOS](https://github.com/OpenNuvoton/NUBLE-iOS/) 
+- [NuISPTool-Android](https://github.com/OpenNuvoton/NuISPTool-Android/) 
+
 <br>
 <br>
 
