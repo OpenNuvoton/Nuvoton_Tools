@@ -13,7 +13,7 @@ Programmer
 - [ICPTool installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1720200221181328)  
 - [ISPTool installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW17SW1720201209134839)  
 - [ISPTool source code](https://github.com/OpenNuvoton/ISPTool)    
-- [ISPTool command set document](./doc/NuMicro_ISP_Flow_And_Command_Set.pdf)    
+- [ISPTool command set document](./doc/)    
 - [NuLink command tool installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1720200221181644)  
 
 Coding assistant  
