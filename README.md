@@ -1,27 +1,31 @@
 # NuMicro software development tools  
-[Nuvoton tools official website](https://www.nuvoton.com/tool-and-software/software-development-tool/nutool/)  
-<br>
-IDE and Debugger
-- [KEIL Nu-Link debugger driver installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1120200221180521)
-- [IAR Nu-Link debugger driver installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1120200221180914)
-- [NuEclipse installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW132022111608043510)
-- [PinView installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200221181935)  
-- [Customized pyOCD source code](https://github.com/OpenNuvoton/pyOCD) (using adapter firmware "NuLink2_DAPLink.bin")
-- [Customized openOCD source code](https://github.com/OpenNuvoton/OpenOCD-Nuvoton)  (using adapter firmware "NuLink2FW.bin")
+IDE and Driver (official download link)
+- [KEIL Nu-Link debugger driver](https://www.nuvoton.com/tool-and-software/ide-and-compiler/)
+- [IAR Nu-Link debugger driver](https://www.nuvoton.com/tool-and-software/ide-and-compiler/)
+- [NuEclipse IDE](https://www.nuvoton.com/tool-and-software/ide-and-compiler/)
 
-Programmer  
-- [ICPTool installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1720200221181328)  
-- [ISPTool installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW17SW1720201209134839)  
-- [ISPTool source code](https://github.com/OpenNuvoton/ISPTool)    
-- [ISPTool command set document](./doc/)    
-- [NuLink command tool installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1720200221181644)  
+Programmer (official download link)  
+- [ICPTool: NuMicro ICP Programming Tool](https://www.nuvoton.com/tool-and-software/software-tool/programmer-tool/)  
+- [ISPTool: NuMicro ISP Programming Tool](https://www.nuvoton.com/tool-and-software/software-tool/programmer-tool/)  
+- [NuLink command tool](https://www.nuvoton.com/tool-and-software/software-tool/programmer-tool/)  
 
-Coding assistant  
-- [NuTool-PinConfigure](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200319135912)
-- [NuTool-ClockConfigure](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200930114649)
+Open source code
+- [ISPTool](https://github.com/OpenNuvoton/ISPTool)    
+- [Nuvoton customized pyOCD](https://github.com/OpenNuvoton/pyOCD) 
+- [Nuvoton customized openOCD](https://github.com/OpenNuvoton/OpenOCD-Nuvoton)  
+
+
+Coding assistant and debugger (desktop) 
+- [NuTool-PinConfigure](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/)
+- [NuTool-ClockConfigure](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/)
+- [NuTool-LCDView](https://www.nuvoton.com/tool-and-software/software-tool/application-specific/lcdview/)  
+- [NuTool-PinView](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/)  
+
+Coding assistant (cloud) 
+- [NuTool-LCDView](https://opennuvoton.github.io/LCDView/)
 
 Signal pass-through/monitor (I2C/SPI/CAN of Nu-Link2-Pro): 
-- [NuTool-USB_to_Serial_Port](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320201210175128) 
+- [NuTool-USB_to_Serial_Port](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/) 
 
 Apps
 - [NuBLE-Android](https://github.com/OpenNuvoton/NuBLE-Android/) 
@@ -86,8 +90,9 @@ Users can reprogram Nu-Link2-Pro with another .bin file using the following inst
 - USB interfaces: MSC/CDC/CMSIS-DAPv2 WinUSB/WebUSB CMSIS-DAP  
 
 ### Some other example projects for NuLink2  
+- [Nu-Link2-CMSIS_DAP](https://github.com/OpenNuvoton/NuLink2_CMSIS_DAP)
+- [Nu-Link2-ICP_Library](https://github.com/OpenNuvoton/NuLink2_ICP_Library)
 - [Nu-Link2-Pro_Offline_ISP](https://github.com/OpenNuvoton/Nu-Link2-Pro_Offline_ISP)
-- [NuLink2_ICP_Library](https://github.com/OpenNuvoton/NuLink2_ICP_Library)
             
 <br>
 <br>
