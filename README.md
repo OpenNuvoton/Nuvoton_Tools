@@ -81,7 +81,7 @@ Users can reprogram Nu-Link2-Pro with another .bin file using the following inst
 ### Comparison of NuLink2FW.bin and NuLink2_DAPLink.bin  
 #### [NuLink2FW.bin](./Latest_NuLink_Firmware)
 - Proprietary code 
-- Support NuMicro 8051, offline programming, user code read-out protection, unlimited flash break points, NuMicro chip-specific features (config0/config1 dataflash setting, KPROM, etc.)
+- Support NuMicro 8051, offline programming, encryption during data transmission, unlimited flash break points, NuMicro chip-specific features (config0/config1 dataflash setting, KPROM, etc.)
 - USB interfaces: MSC/VCOM/HID_ICE(proprietary commands) or CMSIS-DAPv2 WinUSB + WebUSB CMSIS-DAP/VCOM_Nu-Link2-Bridge or HID_ISP (defined by BRIDGE-MODE of NU_CFG.TXT)
 
 #### [NuLink2_DAPLink.bin](./Latest_NuLink_Firmware)
