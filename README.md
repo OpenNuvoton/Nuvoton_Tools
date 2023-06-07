@@ -32,6 +32,9 @@ Apps
 - [NuBLE-iOS](https://github.com/OpenNuvoton/NUBLE-iOS/) 
 - [NuISPTool-Android](https://github.com/OpenNuvoton/NuISPTool-Android/) 
 
+Machine learning development environment
+- [NuEdgeWise](https://github.com/OpenNuvoton/NuEdgeWise)
+
 <br>
 <br>
 
