@@ -1,5 +1,8 @@
 NuLinkFW revision history:
 
+# v3.12.7513r
+# v3.11.7470r
+# v3.10.7443r
 # v3.09.7380r
 If you upgrade Nu-Link2 firmware from old version to later than v3.09.7380r. 
 1. Be sure to install USB driver in the final step of the tool installation.
