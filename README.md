@@ -22,6 +22,7 @@ Coding assistant and debugger (desktop)
 - [NuTool-PinView](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/)  
 
 Coding assistant (cloud) 
+- [NuTool-PinConfigure](https://opennuvoton.github.io/NuTool-PinConfigure/)
 - [NuTool-LCDView](https://opennuvoton.github.io/LCDView/)
 
 Signal pass-through/monitor (I2C/SPI/CAN of Nu-Link2-Pro): 
