@@ -49,7 +49,7 @@ An overview picture of software tools, adapter and targets
 ![](img/7380_BM1.PNG)
 ![](img/7380_BM1_MON.PNG)
 ![](img/7380_BM2.png)
-![](img/7443_BM3.PNG)
+![](img/7443_BM3.png)
 
 ### The firmware of the Nu-Link2-Pro adapter
 #### All Nu-Link2-Pro firmware binary files can be found [here](./Latest_NuLink_Firmware)  
