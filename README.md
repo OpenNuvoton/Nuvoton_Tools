@@ -44,7 +44,7 @@ Machine learning development environment
 When using the software development tools above, you may need a USB adapter. 
 Here, we introduce a new feature-rich Nu-Link2-Pro adapter to you. 
 - [Where to buy](https://direct.nuvoton.com/tw/Nu-Link2-pro)   
-- [User manual](https://www.nuvoton.com/resource-download.jsp?tp_GUID=UG1320200319174043)  
+- [Nu-Link2-Pro Debugger and Programmer User Manual](https://www.nuvoton.com/resource-download.jsp?tp_GUID=UG1320200319174043)  
 On this page, we will only focus on the feature-rich Nu-Link2-pro. If you wish to learn about other types of Nu-Link, please click the [link](https://www.nuvoton.com/tool-and-software/debugger-and-programmer/1-to-1-debugger-and-programmer/).   
 
 An overview picture of software tools, adapter and targets  
