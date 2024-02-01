@@ -1,5 +1,8 @@
 NuLinkFW revision history:
 
+# V3.15.7623r
+Nu-Link2-Me adds new USB PID to support for ISP-I2C.
+Be sure to install USB driver in the final step of the tool installation.
 # v3.14.7565r
 # v3.13.7537r
 # v3.12.7513r
