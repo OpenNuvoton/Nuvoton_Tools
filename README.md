@@ -30,6 +30,9 @@ Coding assistant (cloud)
 Signal pass-through/monitor (I2C/SPI/CAN of Nu-Link2-Pro): 
 - [NuTool-USB_to_Serial_Port](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/) 
 
+4 Ports CANFD Analyzer Tool: 
+- [CANFD Analyzer](https://github.com/OpenNuvoton/CANFD_Analyzer/) 
+
 Apps
 - [NuBLE-Android](https://github.com/OpenNuvoton/NuBLE-Android/) 
 - [NuBLE-iOS](https://github.com/OpenNuvoton/NUBLE-iOS/) 
