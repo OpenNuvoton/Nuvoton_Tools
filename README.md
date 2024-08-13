@@ -1,6 +1,7 @@
 # NuMicro software development tools  
 IDE and Driver (official download link)
-- [KEIL Nu-Link debugger driver](https://www.nuvoton.com/tool-and-software/ide-and-compiler/)
+- [KEIL Nu-Link debugger driver](https://www.nuvoton.com/tool-and-software/ide-and-compiler/)  
+  [Nuvoton CMSIS Pack](https://github.com/OpenNuvoton/cmsis-packs)
 - [IAR Nu-Link debugger driver](https://www.nuvoton.com/tool-and-software/ide-and-compiler/)
 - [NuEclipse IDE](https://www.nuvoton.com/tool-and-software/ide-and-compiler/)
 
