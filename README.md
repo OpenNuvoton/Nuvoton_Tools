@@ -14,8 +14,8 @@ Open source code
 - [ISPTool](https://github.com/OpenNuvoton/ISPTool)
 - [ISPLib and examples](https://github.com/OpenNuvoton/ISPTool_Cross_Platform)
 - [Nuvoton customized pyOCD](https://github.com/OpenNuvoton/pyOCD) 
-- [Nuvoton customized openOCD](https://github.com/OpenNuvoton/OpenOCD-Nuvoton)  
-
+- [Nuvoton customized openOCD Legacy](https://github.com/OpenNuvoton/OpenOCD-Nuvoton)  
+- [Nuvoton customized openOCD](https://github.com/OpenNuvoton/OpenOCD-Nuvoton-CMSIS-DAP)  
 
 Coding assistant and debugger (desktop) 
 - [NuTool-PinConfigure](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/)
