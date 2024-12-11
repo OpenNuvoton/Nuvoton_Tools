@@ -1,5 +1,6 @@
 NuLinkFW revision history:
 
+# V3.18.7724r
 # V3.17.7691r
 # V3.16.7675r
 # V3.15.7623r
