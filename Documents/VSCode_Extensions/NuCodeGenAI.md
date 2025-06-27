@@ -19,6 +19,17 @@ The `nuvoton-nucodegenai` is an AI-powered autonomous coding extension that gene
 ![](https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/install_Nuvoton_Pack.png)
 2. Install [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot).
 3. Install `NUCODEGENAI` extension.
+    - **Method 1:** From the Extensions view in VS Code:
+      1. Go to the Extensions view.
+      2. Select **Views and More Actions...**
+      3. Select Install from VSIX...  ![](../../img/NuCodeGenAI/install_vsix.png)
+    - **Method 2:** From the command line:
+        ```shell
+        # if you use VS Code
+        code --install-extension nucodegenai-0.0.2.vsix
+        # if you use VS Code Insiders
+        code-insiders --install-extension nucodegenai-0.0.2.vsix
+        ```
 ### Step 2: Prepare BSP Project
 1. Go to [Nuvoton Technology Corp](https://github.com/opennuvoton), and download NuMicro BSP project.
 
