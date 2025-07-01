@@ -1,10 +1,10 @@
-# 🔧 Zephyr IDE Environment Setup Guide (Nuvoton NuMicro Cortex-M)
+# Zephyr IDE Environment Setup Guide (Nuvoton NuMicro Cortex-M)
 
 This guide walks you through setting up a Zephyr project.
 
 ---
 
-## ✅ Step 1: Install Required Extension Packs
+## Step 1: Install Required Extension Packs
 
 Install the following extension packs:
 - **Nuvoton NuMicro Cortex-M Pack**
@@ -19,7 +19,7 @@ Use the Zephyr IDE buttons in the following steps to create the environment.
 
 ![](../../img/ZephyrIDE/environment_setup.png)
 
-## ✅ Step 2: Creating a Zephyr Project from Sample Code
+## Step 2: Creating a Zephyr Project from Sample Code
 
 Create a new project using sample code.
 Choose a project template provided by the Zephyr IDE.
@@ -27,7 +27,7 @@ Choose a project template provided by the Zephyr IDE.
 
 ---
 
-## ✅ Step 3: Add Build Option and Select Board
+## Step 3: Add Build Option and Select Board
 
 Add a build configuration and choose your target board, e.g., `NuMaker-PFM-M467`.
 
@@ -35,7 +35,7 @@ Add a build configuration and choose your target board, e.g., `NuMaker-PFM-M467`
 
 ---
 
-## ✅ Step 4: Add Runner Configuration (OpenOCD)
+## Step 4: Add Runner Configuration (OpenOCD)
 
 Configure the project runner to use OpenOCD.
 
@@ -44,7 +44,7 @@ Configure the project runner to use OpenOCD.
 
 ---
 
-## ✅ Step 5: Update Zephyr Project Runner Settings
+## Step 5: Update Zephyr Project Runner Settings
 
 Go to `View → Command Palette` and run `Update Zephyr Project Runner`. Select the project to update the runner settings.
 
@@ -54,7 +54,7 @@ Go to `View → Command Palette` and run `Update Zephyr Project Runner`. Select 
 
 ---
 
-## ✅ Step 6: Build Project and Flash to Target
+## Step 6: Build Project and Flash to Target
 
 Use the build button to build and flash the firmware to your target board.
 
@@ -62,7 +62,7 @@ Use the build button to build and flash the firmware to your target board.
 
 ---
 
-## ✅ Step 7: Create launch.json
+## Step 7: Create launch.json
 
 Create the `launch.json` file used for debugging.
 
@@ -70,7 +70,7 @@ Create the `launch.json` file used for debugging.
 
 ---
 
-## ✅ Step 8: Select Debug Settings
+## Step 8: Select Debug Settings
 
 Select `Nuvoton Debug Zephyr`.
 
@@ -78,7 +78,7 @@ Select `Nuvoton Debug Zephyr`.
 
 ---
 
-## ✅ Step 9: Enter Debug Mode and Start Monitor for Output
+## Step 9: Enter Debug Mode and Start Monitor for Output
 
 Launch the debugger and open the monitor or terminal to view runtime output.
 
