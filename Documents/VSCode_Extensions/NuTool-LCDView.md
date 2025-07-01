@@ -14,18 +14,28 @@ Install the following extension packs:
 
 ## ✅ Step 2: Prepare your NuMicro BSP project.
 You can choose from the following options
-- Go to [Nuvoton Technology Corp](https://github.com/opennuvoton), and download the project which you need. (Recommended)
-- Custom project. Download[ M258KG6AE_LCD.zip](../../example/LCDView/M258KG6AE_LCD.zip)
-
-**Note: For demonstration purposes, the subsequent steps (Step 3 and onward) will be based on the custom project.**
+- Go to [Nuvoton Technology Corp](https://github.com/opennuvoton), and download the project which you need.
 
 ---
 
 ## ✅ Step 3: Launch Visual Studio Code, choose "Open Folder...", and select VSCode folder in your project.
 
-## ✅ Step 4: Ensure your settings in "Manage Solution" are properly configured.
-
-![](../../img/LCDView/lcdview01.jpg)
+## ✅ Step 4: Open `launch.json` file, click `Add Configuration...` button, and type `Nuvoton Debug` to insert the configuration as below.
+    {
+        "name": "Nuvoton Debug",
+        "type": "cortex-debug-nuvoton",
+        "request": "launch",
+        "cwd": "${workspaceFolder}",
+        "executable": "${command:embedded-debug.getApplicationFile}",
+        "servertype": "openocd",
+        "serverpath": "${command:openocd-helper.getOpenOcdPath}",
+        "svdFile": "${command:openocd-helper.getSvdPath}",
+        "configFiles": [
+            "interface/cmsis-dap.cfg",
+            "${command:openocd-helper.getOpenOcdConfigPath}"
+        ],
+        "runToEntryPoint": "main"
+    },
 
 ---
 
