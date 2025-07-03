@@ -18,7 +18,7 @@ This guide walks you through setting up a NuMicro Cortex-M Pack project.
 - Choose "Open Folder..." and select the VSCode folder in your project.  
 ![](../../img/NuCodeGenAI/open_vscodefolder.png)
 
-## Step 4: Add `Nucoton Debug` configuration
+## Step 4: Add `Nuvoton Debug` configuration
 - Open `.vscode/launch.json` file, and insert the debug configuration in configurations
 -  insert the debug configuration in configurations
 ```json
