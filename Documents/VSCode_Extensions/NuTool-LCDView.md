@@ -1,10 +1,10 @@
-# 🔧 LCDView Environment Setup Guide
+# LCDView Environment Setup Guide
 
 This guide walks you through setting up a LCDView project.
 
 ---
 
-## ✅ Step 1: Install Required Extension Packs
+## Step 1: Install Required Extension Packs
 
 Install the following extension packs:
 - **Nuvoton NuMicro Cortex-M Pack**
@@ -12,15 +12,15 @@ Install the following extension packs:
 
 ---
 
-## ✅ Step 2: Prepare your NuMicro BSP project.
+## Step 2: Prepare your NuMicro BSP project.
 You can choose from the following options
 - Go to [Nuvoton Technology Corp](https://github.com/opennuvoton), and download the project which you need.
 
 ---
 
-## ✅ Step 3: Launch Visual Studio Code, choose "Open Folder...", and select VSCode folder in your project.
+## Step 3: Launch Visual Studio Code, choose "Open Folder...", and select VSCode folder in your project.
 
-## ✅ Step 4: Open `launch.json` file, click `Add Configuration...` button, and type `Nuvoton Debug` to insert the configuration as below.
+## Step 4: Open `launch.json` file, click `Add Configuration...` button, and type `Nuvoton Debug` to insert the configuration as below.
     {
         "name": "Nuvoton Debug",
         "type": "cortex-debug-nuvoton",
@@ -39,7 +39,7 @@ You can choose from the following options
 
 ---
 
-## ✅ Step 5: Click `CMSIS`, then execute `Build solution` and `Run`
+## Step 5: Click `CMSIS`, then execute `Build solution` and `Run`
 
 <img src="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/LCDView/step3.jpg" width="300"  />
 
@@ -47,11 +47,11 @@ You can choose from the following options
 
 
 
-## ✅ Step 6: Click `Run and Debug` and select `Nuvoton Debug`
+## Step 6: Click `Run and Debug` and select `Nuvoton Debug`
 
-## ✅ Step 7: Set breakpoints and then click `Start Debugging`
+## Step 7: Set breakpoints and then click `Start Debugging`
 
-## ✅ Step 8: Open LCDView to observe LCD view
+## Step 8: Open LCDView to observe LCD view
 - Load project, please select M258KG6AE.nvt
 - Switch to Emulator Mode
 ![](../../img/LCDView/step7.jpg)
