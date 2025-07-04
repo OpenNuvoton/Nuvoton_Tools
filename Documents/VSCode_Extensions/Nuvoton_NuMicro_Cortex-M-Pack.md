@@ -6,9 +6,10 @@ This guide walks you through setting up a NuMicro Cortex-M Pack project.
 ## Step 1: Install Required Extension Packs
 - Nuvoton `NuMicro Cortex-M Pack`  
 ![](../../img/ZephyrIDE/install_Nuvoton_Pack.png)
-- Install `Arm CMSIS Solution` version **1.52.0**  
+- Fix `Arm CMSIS Solution` version at **1.52.0**  
 ![](../../img/NuMicro_Cortex-M-Pack/arm_cmsis_solution.png)
 ![](../../img/NuMicro_Cortex-M-Pack/arm_cmsis_version.png)
+- Fix `Arm Debugger` version at **1.4.4**  
 
 ## Step 2: Prepare NuMicro BSP project
 - Go to [Nuvoton Technology Corp](https://github.com/opennuvoton), and download NuMicro BSP project.
