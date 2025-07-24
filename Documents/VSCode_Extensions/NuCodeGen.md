@@ -12,13 +12,14 @@ The `nuvoton-nucodegen` is an AI-powered autonomous coding extension that genera
 
 ## Requirements
 - Visual Studio Code: Version 1.95.0 or higher is recommended.
+- Need a GitHub Account to sign in to the Github Copilot extension.
 
 ## Steps
 ### Step 1: Install Required Extensions
 1. Install [Nuvoton NuMicro Cortex-M Pack](https://marketplace.visualstudio.com/items?itemName=Nuvoton.nuvoton-numicro-cortex-m-pack).  
 ![](https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/install_Nuvoton_Pack.png)
-2. Install [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot).
-3. Install `NUCODEGEN` extension.
+2. Install `NUCODEGEN` extension.
+    - this extension will automatically install the [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) extension.
     - **Method 1:** From the Extensions view in VS Code:
       1. Go to the Extensions view.
       2. Select **Views and More Actions...**
@@ -26,9 +27,9 @@ The `nuvoton-nucodegen` is an AI-powered autonomous coding extension that genera
     - **Method 2:** From the command line:
         ```shell
         # if you use VS Code
-        code --install-extension nucodegen-0.0.3.vsix
+        code --install-extension nuvoton-nucodegen-0.0.3.vsix
         # if you use VS Code Insiders
-        code-insiders --install-extension nucodegen-0.0.3.vsix
+        code-insiders --install-extension nuvoton-nucodegen-0.0.3.vsix
         ```
 ### Step 2: Prepare BSP Project
 1. Go to [Nuvoton Technology Corp](https://github.com/opennuvoton), and download NuMicro BSP project.
@@ -66,6 +67,9 @@ The following steps are need to be used with the `@nucodegen` participant.
 ### Step 7: Build Code
 If you want to build the code separately, you can use the `#buildcode` tool.  
 ![build tool](../../img/NuCodeGen/build_tool.jpg)
+### Step 8: Load & Debug Code
+If you want to load and debug the code, you can use the `#debugcode` tool.  
+![load & debug](../../img/NuCodeGen/debugcode_tool.png)
 
 ## Usage
 ### 1. Chat Participant
@@ -85,6 +89,8 @@ The following commands need to be used with the `@nucodegen` participant.
 The following commands need to be used with the `@nucodegen` participant.
 - `#buildcode`: build your project  
 ![build tool](../../img/NuCodeGen/build_tool.jpg)
+- `#debugcode`: load and debug your project  
+![load & debug](../../img/NuCodeGen/debugcode_tool.png)
 
 ## Troubleshooting
 ### Shell Integration Unavailable
