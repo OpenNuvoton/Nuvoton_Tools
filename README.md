@@ -58,4 +58,4 @@ Official Website: https://www.nuvoton.com/tool-and-software/
 
 ## Debugging and programming adapter
 
-- [Nu-Link2-Pro](../Documents/NuLink2Pro.md)
+- [Nu-Link2-Pro](./Documents/NuLink2Pro.md)

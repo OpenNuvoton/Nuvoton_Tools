@@ -12,11 +12,11 @@ Here, we introduce a new feature-rich Nu-Link2-Pro adapter to you.
 On this page, we will only focus on the feature-rich Nu-Link2-Pro. If you wish to learn about other types of Nu-Link, please click on [Nu-Link](https://www.nuvoton.com/tool-and-software/debugger-and-programmer/1-to-1-debugger-and-programmer/).
 
 An overview picture of software tools, Nu-Link2-Pro adapters and targets  
-![debugger](img/7380_BM0.PNG)
-![bridge](img/7380_BM1.PNG)
-![monitor](img/7380_BM1_MON.PNG)
-![isp](img/7380_BM2.png)
-![bootloader isp](img/7443_BM3.png)
+![debugger](../img/7380_BM0.PNG)
+![bridge](../img/7380_BM1.PNG)
+![monitor](../img/7380_BM1_MON.PNG)
+![isp](../img/7380_BM2.png)
+![bootloader isp](../img/7443_BM3.png)
 
 ## The firmware of the Nu-Link2-Pro adapter
 
@@ -36,18 +36,18 @@ Users can reprogram Nu-Link2-Pro with another .bin file using the following inst
 1. When you upgrade the NuLink2FW.bin to a version greater than or equal to v3.09.7380, you will see some options in NU_CFG.TXT.
 
     - Open the NU_CFG.TXT file in the pop-up "NuMicro MCU" disk  
-    ![NU_CFG.TXT](img/NUTXT.png)
+    ![NU_CFG.TXT](../img/NUTXT.png)
 
 2. For the Nu-Link2-Pro, you will see POWER-MODE and BRIDGE-MODE options. You need to re-plug in the USB cable to activate the setting.
 
     - Set POWER-MODE for SWD output voltage level (mainly for CMSIS-DAP interface use)
 
     - Set BRIDGE-MODE=0; this is the default setting. It has a WebUSB interface conforming to the CMSIS-DAP protocol, and you can connect to KEIL Studio Desktop/Cloud via this interface. Note that CMSIS-DAP will be disable in other BRIDGE-MODE (Limited USB endpoints).  
-    ![DEV_WEBUSB](img/7380_DEV_WEBUSB_2005.PNG)
+    ![DEV_WEBUSB](../img/7380_DEV_WEBUSB_2005.PNG)
 
     - Set BRIDGE-MODE=1; the pass-through bridge function of Nu-Link2-Pro will be enabled (The word Nu-Link2-Bridge will be used to represent the pass-through bridge application on Nu-Link2-Pro adapter). Nu-Link2-Bridge pass-through the data between the VCOM port and I2C/SPI/RS485/CAN interfaces.
         (You will see a "Nu-Link2-Bridge Virtual Com Port" in device manager.)
-    ![device VCOM](img/device_manager.png)
+    ![device VCOM](../img/device_manager.png)
 
     - Set BRIDGE-MODE=2; a USB HID interface that supports ISPTool will be enabled. This USB HID interface doesn't pass through data, it communicates with ISPTool via HID_ISP and offers I2C/SPI/RS485/CAN interfaces for ISPTool.
 
