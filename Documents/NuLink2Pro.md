@@ -4,7 +4,7 @@
 ## Introduction
 
 When using the software development tools, you may need a USB adapter.
-Here, we introduce a new feature-rich Nu-Link2-Pro adapter to you.
+Here, we introduce a feature-rich Nu-Link2-Pro adapter to you.
 
 - [Where to buy](https://direct.nuvoton.com/tw/Nu-Link2-pro)
 - [Nu-Link2-Pro Debugger and Programmer User Manual](https://www.nuvoton.com/resource-download.jsp?tp_GUID=UG1320200319174043)  
@@ -56,7 +56,7 @@ Users can reprogram Nu-Link2-Pro with another .bin file using the following inst
 
 3. If you use Nu-Link2-ME, it doesn't support BRIDGE functions, and you will only see the CMSIS-DAP option.
 
-    - Set CMSIS-DAP=1; this is the default setting. It has a WebUSB interface conforming to the CMSIS-DAP protocol, and you can connect to KEIL Studio Desktop/Cloud via this interface.
+    - Set CMSIS-DAP=1; this is the default setting. It has a WebUSB interface conforming to the CMSIS-DAP protocol, and you can connect to KEIL Studio Cloud via this interface.
     - Set CMSIS-DAP=0; it will disable CMSIS-DAP and enable the Nu-Link2 "USB BULK_ICE" interface (it's faster than "USB HID_ICE").
 
 ### Comparison of NuLink2FW.bin and NuLink2_DAPLink.bin  
