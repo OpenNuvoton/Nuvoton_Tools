@@ -8,7 +8,7 @@ Offline ISP (In-System Programming) refers to the ability to program a Nuvoton m
 The process involves two main stages:
 
 1. **Preparation (on a PC)**
-    * Install **NuMicro ICP Tool** or **NuMicro ISP Tool**.
+    * Use [**NuMicro ISP Tool**](#1-numicro-isp-tool) or [**NuMicro ICP Tool**](#2-offline_isp_file_convertor-executable-to-convert-the-data).
     * Configure the programming settings.
     * Export .isp file and update it to Nu-Link3-Pro.
 
@@ -49,49 +49,51 @@ BUTTON-MODE=1
 ## ISP Operation Notes
 
 - Offline/Online ISP can be used interchangeably, but **do not use them at the same time**.
-- To update the Offline ISP data on Nu-Link3-Pro, you can use the `NuMicro ISP Tool -> Menu "Project" -> Export .isp`
-- Alternatively, you can use the `Offline_isp_file_convertor` executable to convert the data. 
-
-    ### For Offline_isp_file_convertor.exe 
-    All `Offline_isp_file_convertor` related files are located in the ICPTool installation directory: `Nuvoton Tools\ICPTool\Offline_ISP`.
-
-    Programming options are set in the `.ini` configuration file.
-
-    **config.ini Example:**
-
-    ```ini
-    [Connection Interface]
-    Bridge=3
-    ; 0 = UART
-    ; 1 = SPI
-    ; 2 = I2C
-    ; 3 = RS485
-    ; 4 = CAN
-
-    [Files]
-    APROM=AP_16K.bin
-    DataFlash=DF_4K.bin
-
-    [Config Bits]
-    Config0=0xFFFFFFFF
-    Config1=0xFFFFFFFF
-    ; Config0~13
-
-    [Programming Options]
-    APROM=1
-    DataFlash=1
-    Config=1
-    RESETAndRun=0
-    EraseAll=1
-    ; 1 = enabled
-    ```
-
-    **Converter Command Example**
-
-    ```shell
-    offline_isp_file_convertor.exe -h
-    offline_isp_file_convertor.exe -i .\config.ini -s .\AP_16K.bin .\DF_4K.bin -o demo.isp
-    ```
+- To update the Offline ISP data on Nu-Link3-Pro, you can use: 
+   #### 1. `NuMicro ISP Tool`
+    - Menu "Project" -> Export .isp
+      
+   #### 2. `Offline_isp_file_convertor` executable to convert the data. 
+    - For Offline_isp_file_convertor.exe 
+       All `Offline_isp_file_convertor` related files are located in the ICPTool installation directory: `Nuvoton Tools\ICPTool\Offline_ISP`.
+   
+       Programming options are set in the `.ini` configuration file.
+   
+       **config.ini Example:**
+   
+       ```ini
+       [Connection Interface]
+       Bridge=3
+       ; 0 = UART
+       ; 1 = SPI
+       ; 2 = I2C
+       ; 3 = RS485
+       ; 4 = CAN
+   
+       [Files]
+       APROM=AP_16K.bin
+       DataFlash=DF_4K.bin
+   
+       [Config Bits]
+       Config0=0xFFFFFFFF
+       Config1=0xFFFFFFFF
+       ; Config0~13
+   
+       [Programming Options]
+       APROM=1
+       DataFlash=1
+       Config=1
+       RESETAndRun=0
+       EraseAll=1
+       ; 1 = enabled
+       ```
+   
+       **Converter Command Example**
+   
+       ```shell
+       offline_isp_file_convertor.exe -h
+       offline_isp_file_convertor.exe -i .\config.ini -s .\AP_16K.bin .\DF_4K.bin -o demo.isp
+       ```
 
 
 
