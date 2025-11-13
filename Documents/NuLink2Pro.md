@@ -32,6 +32,7 @@ Users can reprogram Nu-Link2-Pro with another .bin file using the following inst
 ### More options for NuLink2FW (configuration file NU_CFG.TXT)
 
 #### Warning: The meanings of the options for versions newer than v3.09.7380 are different from those in versions v3.05.7174r to v3.08.7313. For the old settings, please see the old [old version setting](https://github.com/OpenNuvoton/Nuvoton_Tools/blob/70dcc9ce06c7d178160c84b870a49d4e9cbf5d1a/README.md)
+#### Inside NU_CFG.TXT, you will find the firmware version entry, which appears in the format "Version=VERSION NUMBER".  
 
 1. When you upgrade the NuLink2FW.bin to a version greater than or equal to v3.09.7380, you will see some options in NU_CFG.TXT.
 
