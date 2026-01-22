@@ -1,25 +1,45 @@
 name: Sync to Gitee
 
 on:
-  push:
-    branches: [ main, master ]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 2 * * *' # 每日 02:00 UTC（可修改或移除）
+
+permissions:
+  contents: read
 
 jobs:
-  build:
+  sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Sync to Gitee
-        uses: Yikun/hub-mirror-action@master
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          # 你的 GitHub 帳號
-          src: github/ccma1120
-          # 你的 Gitee 帳號
-          dst: gitee/ccma1120
-          
-          # 讀取你在 Settings > Secrets 設定的變數
-          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
-          dst_token: ${{ secrets.GITEE_TOKEN }}
-          
-          account_type: user
-          force_update: true
-          static_list: '${{ github.event.repository.name }}'
+          fetch-depth: 0   # 需要所有 refs 和 tags
+
+      - name: Configure git user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Add Gitee remote (HTTPS token auth)
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+        run: |
+          set -e
+          # remove existing to avoid duplicate
+          git remote remove gitee || true
+          # use oauth2 style token auth for Gitee
+          git remote add gitee https://oauth2:${GITEE_TOKEN}@gitee.com/OpenNuvoton/Nuvoton_Tools.git
+          git remote -v
+
+      - name: Fetch origin refs
+        run: git fetch origin --prune
+
+      - name: Push all branches and tags to Gitee
+        env:
+          GIT_TERMINAL_PROMPT: 0
+        run: |
+          set -e
+          # 強制同步所有分支與 tags（請確認你要 force push）
+          git push -f gitee refs/remotes/origin/*:refs/heads/* --tags --prune
