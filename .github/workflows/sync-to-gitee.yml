@@ -1,0 +1,25 @@
+name: Sync to Gitee
+
+on:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync to Gitee
+        uses: Yikun/hub-mirror-action@master
+        with:
+          # 你的 GitHub 帳號
+          src: github/ccma1120
+          # 你的 Gitee 帳號
+          dst: gitee/ccma1120
+          
+          # 讀取你在 Settings > Secrets 設定的變數
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
+          
+          account_type: user
+          force_update: true
+          static_list: '${{ github.event.repository.name }}'
