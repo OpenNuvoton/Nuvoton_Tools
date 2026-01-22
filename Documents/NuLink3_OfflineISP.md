@@ -115,7 +115,6 @@ BUTTON-MODE=1
 ## Clear Offline ISP Data
 
 - To clear Offline ISP data, create a file named `CLR_ISP.ACT` in the disk drive to trigger the clearing process.
-- After completion, press the offline button to start programming the target.
 
 
 ## Status LED Description
