@@ -1,10 +1,13 @@
 name: Sync to Gitee
 
 on:
+  # 新增這段：監聽 Push 事件
+  push:
+    branches: [ master, main ]  # 當 master 或 main 分支有更新時觸發
+  
+  # 保留這段：讓你還是可以手動按按鈕 (方便除錯或強制同步)
   workflow_dispatch:
-  schedule:
-    - cron: '0 2 * * *' # 每日 02:00 UTC（可修改或移除）
-
+  
 permissions:
   contents: read
 
