@@ -8,7 +8,7 @@ Offline ISP (In-System Programming) refers to the ability to program a Nuvoton m
 The process involves two main stages:
 
 1. **Preparation (on a PC)**
-    * Use [**NuMicro ISP Tool**](#1-numicro-isp-tool) or [**NuMicro ICP Tool**](#2-offline_isp_file_convertor-executable-to-convert-the-data).
+    * Install [**NuMicro ICP Tool**](#2-offline_isp_file_convertor-executable-to-convert-the-data).
     * Configure the programming settings.
     * Export .isp file and update it to Nu-Link3-Pro.
 
@@ -49,11 +49,8 @@ BUTTON-MODE=1
 ## ISP Operation Notes
 
 - Offline/Online ISP can be used interchangeably, but **do not use them at the same time**.
-- To update the Offline ISP data on Nu-Link3-Pro, you can use: 
-   #### 1. `NuMicro ISP Tool`
-    - Menu "Project" -> Export .isp
-      
-   #### 2. `Offline_isp_file_convertor` executable to convert the data. 
+- To update the Offline ISP data on Nu-Link3-Pro, you can use:       
+   #### `Offline_isp_file_convertor` executable to convert the data. 
     - For Offline_isp_file_convertor.exe 
        All `Offline_isp_file_convertor` related files are located in the ICPTool installation directory: `Nuvoton Tools\ICPTool\Offline_ISP`.
    
