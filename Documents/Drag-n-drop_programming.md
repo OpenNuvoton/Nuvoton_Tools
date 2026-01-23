@@ -1,22 +1,20 @@
+
 # Drag-n-Drop Programming
 
 ## Brief Description
 
-**Drag-n-Drop Programming** is a method of updating a target device's firmware by treating it as a **Mass Storage Device Class (MSC)**, similar to a USB flash drive. You can simply drag and drop a firmware file onto the device's virtual disk. This process also supports the use of copy commands. The system automatically checks the file format and content and is compatible with **Windows, Mac, and Linux** operating systems.
-
-
+**Drag-n-Drop Programming** is a method for updating a target device's firmware by treating it as a **Mass Storage Device Class (MSC)**, similar to a USB flash drive. You can simply drag and drop a firmware file onto the device's virtual disk. This process also supports copy commands. The system automatically checks the file format and content, and is compatible with **Windows, Mac, and Linux** operating systems.
 
 ## Functions
 
 This programming method serves two main functions:
-* Update the **target chip** firmware.
-* Update the **Nu-Link firmware**.
+* Update the **target chip** firmware
+* Update the **Nu-Link firmware**
 
+## Updating the Target Chip
 
-## Updating Target Chip
-
-### Setting
-Specific Nu-Link models require certain configurations before connecting to a USB port.
+### Settings
+Specific Nu-Link models require certain configurations before connecting to a USB port:
 * **Nu-Link1-Me**: Connect the corresponding jumper before plugging in the USB cable.
 * **Nu-Link2-Me**: Switch **SW4** to the OFF position before plugging in the USB cable.
 * **Nu-Link3**: No configuration is needed.
@@ -31,35 +29,32 @@ When the device is properly connected, a virtual disk named "**NuMicro MCU**" wi
 ### Process
 The update process involves several steps:
 * **Detection**: The system connects to the device, reads its ID, and retrieves flash information.
-* **Download**: The system checks the file content (some incorrect format will be treated as an error), loads the programming algorithm, and runs it.
-* The algorithm handles initialization, erasing, and programming but **does not perform verification**.
+* **Download**: The system checks the file content (incorrect formats will be treated as errors), loads the programming algorithm, and runs it.
+* The algorithm handles initialization, erasing, and programming, but **does not perform verification**.
 
 ### Operations
 * Only general downloads are available.
 * **Erase** operations vary depending on the chip's security features:
     * **Chips without Security Extension**: **Chip Erase** is performed.
-    * **Chips with Security Extension**: **Chip Erase** is performed for a secure-only case, while **Page Erase** or **XOM Erase** is performed if a non-secure area exists.
+    * **Chips with Security Extension**: **Chip Erase** is performed for secure-only cases, while **Page Erase** or **XOM Erase** is performed if a non-secure area exists.
 * Supported memory regions include **APROM**, **LDROM**, **Data Flash**, and **Non-Secure APROM**.
 * The process is designed to **keep CONFIG 0-3 settings intact**.
 
-### Unsupported 
+### Unsupported
 The following are not supported by this programming method:
 * **Series**: M030G, 8051, ISDx, NM1x, KM1Mx, etc.
-* **Region**: SPROM, OTP, etc.
-* **Setting**: XOM, NSCBA, etc.
-
+* **Regions**: SPROM, OTP, etc.
+* **Settings**: XOM, NSCBA, etc.
 
 ## Updating Nu-Link Firmware
 
-### Setting
-Similar to updating the target chip, updating the Nu-Link firmware requires specific settings for different models.
+### Settings
+Similar to updating the target chip, updating the Nu-Link firmware requires specific settings for different models:
 * **Nu-Link1-Me**: Connect the corresponding jumper, then plug in the USB cable.
 * **Nu-Link2-Me**: Press the **offline button**, then plug in the USB cable.
 
 ### Pop-up Disk "Nu-Link"
-A virtual disk named "**Nu-Link**" will pop up. To update the firmware, simply drag and drop the new Nu-Link firmware file into this disk.
-
-
+A virtual disk named "**Nu-Link**" will appear. To update the firmware, simply drag and drop the new Nu-Link firmware file into this disk.
 
 ## Possible Problems in Use
 
