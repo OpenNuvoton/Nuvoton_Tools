@@ -10,9 +10,10 @@ The Nu-Link3-Pro has a built-in **MicroPython interpreter**. You can run your ow
 
 The Nu-Link3-Pro will automatically run the `MAIN.PY` file from the microSD card.
 
+[Sample code for offline ISP](../Scripts/Nu-Link3-Pro/MicroPythonOfflineISP/MAIN.PY)
+
 ![nulink3-MPY](../img/nulink3-MPY.png)
 
-TODO: Sample code
 
 | Nu-Link3-Pro Support | Standard Library | Description                              |
 |----------------------|------------------|------------------------------------------|

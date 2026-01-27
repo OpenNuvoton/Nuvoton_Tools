@@ -20,7 +20,7 @@ Overview of software tools, Nu-Link2-Pro adapters, and targets:
 
 ## Nu-Link2-Pro Adapter Firmware
 
-### All Nu-Link2-Pro firmware binary files can be found at [Latest_NuLink_Firmware](./Latest_NuLink_Firmware)
+### All Nu-Link2-Pro firmware binary files can be found at [Latest_NuLink_Firmware](../Latest_NuLink_Firmware)
 
 Users can reprogram Nu-Link2-Pro with another .bin file using the following instructions (Windows OS):
 
@@ -62,13 +62,13 @@ Users can reprogram Nu-Link2-Pro with another .bin file using the following inst
 
 ### Comparison of NuLink2FW.bin and NuLink2_DAPLink.bin
 
-#### [NuLink2FW.bin](./Latest_NuLink_Firmware)
+#### [NuLink2FW.bin](../Latest_NuLink_Firmware)
 
 - Proprietary code
 - Supports NuMicro 8051, offline programming, encryption during data transmission, unlimited flash breakpoints, NuMicro chip-specific features (config0/config1 dataflash setting, KPROM, etc.)
 - USB interfaces: MSC/VCOM/HID_ICE (proprietary commands) or CMSIS-DAPv2 WinUSB + WebUSB CMSIS-DAP/VCOM_Nu-Link2-Bridge or HID_ISP (defined by BRIDGE-MODE in NU_CFG.TXT)
 
-#### [NuLink2_DAPLink.bin](./Latest_NuLink_Firmware)
+#### [NuLink2_DAPLink.bin](../Latest_NuLink_Firmware)
 
 - Open source: [DAPLink on Nu-Link2-Pro](https://github.com/OpenNuvoton/DapLink)
 - Supports many third-party IDEs

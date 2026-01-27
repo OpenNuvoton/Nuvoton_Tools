@@ -1,61 +1,75 @@
-# Nuvoton Tools
+# 🧰 Nuvoton Tools Collection
 
-Official Website: https://www.nuvoton.com/tool-and-software/
+Welcome to the official repository for Nuvoton development tools and utilities.
+Here you can find tools to assist with programming, debugging, and analysis for NuMicro® Microcontrollers.
 
-## NuMicro software development tools  
+**Official Website:** https://www.nuvoton.com/tool-and-software/
 
-- IDE and Driver (official download link)
+---
 
-  - [KEIL Nu-Link debugger driver](https://www.nuvoton.com/tool-and-software/ide-and-compiler/)  
-    [Nuvoton CMSIS Pack](https://github.com/OpenNuvoton/cmsis-packs)
-  - [IAR Nu-Link debugger driver](https://www.nuvoton.com/tool-and-software/ide-and-compiler/)
-  - [NuEclipse IDE](https://www.nuvoton.com/tool-and-software/ide-and-compiler/)
+## 🛠️ Tool List
 
-- Programmer (official download link)  
+### 💻 IDE & Drivers
 
-  - [ICPTool: NuMicro ICP Programming Tool](https://www.nuvoton.com/tool-and-software/software-tool/programmer-tool/)  
-  - [ISPTool: NuMicro ISP Programming Tool](https://www.nuvoton.com/tool-and-software/software-tool/programmer-tool/)  
-  - [NuLink command tool](https://www.nuvoton.com/tool-and-software/software-tool/programmer-tool/)  
+| Tool Name | Description | OS Support | License | Documentation |
+| :--- | :--- | :--- | :--- | :--- |
+| **[KEIL Nu-Link debugger driver](https://www.nuvoton.com/tool-and-software/ide-and-compiler/)** | Debugger driver for Keil MDK | Windows | Proprietary | [Website](https://www.nuvoton.com/tool-and-software/ide-and-compiler/) |
+| **[Nuvoton CMSIS Pack](https://github.com/OpenNuvoton/cmsis-packs)** | CMSIS Device Family Pack (DFP) | - | Apache-2.0 | [GitHub](https://github.com/OpenNuvoton/cmsis-packs) |
+| **[IAR Nu-Link debugger driver](https://www.nuvoton.com/tool-and-software/ide-and-compiler/)** | Debugger driver for IAR EWARM | Windows | Proprietary | [Website](https://www.nuvoton.com/tool-and-software/ide-and-compiler/) |
+| **[NuEclipse IDE](https://www.nuvoton.com/tool-and-software/ide-and-compiler/)** | Open-source IDE based on Eclipse | Windows / Linux / macOS | EPL | [Website](https://www.nuvoton.com/tool-and-software/ide-and-compiler/) |
 
-- Open source code
+### 🔌 Programmers & Debuggers
 
-  - [ISPTool](https://github.com/OpenNuvoton/ISPTool)
-  - [ISPLib and examples](https://github.com/OpenNuvoton/ISPTool_Cross_Platform)
-  - [Nuvoton customized pyOCD](https://github.com/OpenNuvoton/pyOCD)
-  - [Nuvoton customized openOCD Legacy](https://github.com/OpenNuvoton/OpenOCD-Nuvoton) : [Supported devices](https://github.com/OpenNuvoton/OpenOCD-Nuvoton/blob/master/src/flash/nor/numicro.c#L189)
-  - [Nuvoton customized openOCD](https://github.com/OpenNuvoton/OpenOCD-Nuvoton-CMSIS-DAP)  
+| Tool Name | Description | OS Support | License | Documentation |
+| :--- | :--- | :--- | :--- | :--- |
+| **[ICPTool](https://www.nuvoton.com/tool-and-software/software-tool/programmer-tool/)** | NuMicro ICP Programming Tool | Windows | Proprietary | [Website](https://www.nuvoton.com/tool-and-software/software-tool/programmer-tool/) |
+| **[ISPTool (Official)](https://www.nuvoton.com/tool-and-software/software-tool/programmer-tool/)** | NuMicro ISP Programming Tool | Windows | Proprietary | [Website](https://www.nuvoton.com/tool-and-software/software-tool/programmer-tool/) |
+| **[NuLink Command Tool](https://www.nuvoton.com/tool-and-software/software-tool/programmer-tool/)** | Command line programming tool | Windows / Linux | Proprietary | [Website](https://www.nuvoton.com/tool-and-software/software-tool/programmer-tool/) |
+| **[ISPTool (Source)](https://github.com/OpenNuvoton/ISPTool)** | Open Source ISP Programming Tool | - | Apache 2.0 | [GitHub](https://github.com/OpenNuvoton/ISPTool/tree/master/Documents) |
+| **[ISPLib (Source)](https://github.com/OpenNuvoton/ISPTool_Cross_Platform)** | Cross-platform ISP Library | Windows / Linux | In repo | [GitHub](https://github.com/OpenNuvoton/ISPTool_Cross_Platform) |
+| **[pyOCD (Source)](https://github.com/OpenNuvoton/pyOCD)** | Nuvoton customized pyOCD | Windows / Linux / macOS | Apache 2.0 | [GitHub](https://github.com/OpenNuvoton/pyOCD) |
+| **[OpenOCD Legacy (Source)](https://github.com/OpenNuvoton/OpenOCD-Nuvoton)** | Nuvoton customized OpenOCD (Legacy) | Windows / Linux | GPL-2.0 | [GitHub](https://github.com/OpenNuvoton/OpenOCD-Nuvoton) |
+| **[OpenOCD (Source)](https://github.com/OpenNuvoton/OpenOCD-Nuvoton-CMSIS-DAP)** | Nuvoton customized OpenOCD (CMSIS-DAP) | Windows / Linux | GPL-2.0 | [GitHub](https://github.com/OpenNuvoton/OpenOCD-Nuvoton-CMSIS-DAP) |
+| **[Nu-Link2-Pro](./Documents/NuLink2Pro.md)** | Nu-Link2-Pro Debugging and Programming Adapter | - | - | [Guide](./Documents/NuLink2Pro.md) |
+| **[Nu-Link3-Pro](./Documents/NuLink3Pro.md)** | Nu-Link2-Pro Debugging and Programming Adapter | - | - | [Guide](./Documents/NuLink3Pro.md) |
 
-- Coding assistant and debugger (desktop)
+### 🖥️ Desktop Assistant Tools
 
-  - [NuTool-PinConfigure](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/)
-  - [NuTool-ClockConfigure](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/)
-  - [NuTool-LCDView](https://www.nuvoton.com/tool-and-software/software-tool/application-specific/lcdview/)  
-  - [NuTool-PinView](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/)  
+| Tool Name | Description | OS Support | License | Documentation |
+| :--- | :--- | :--- | :--- | :--- |
+| **[NuTool-PinConfigure](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/)** | Pin configuration tool | Windows | Proprietary | [Website](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/) |
+| **[NuTool-ClockConfigure](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/)** | Clock configuration tool | Windows | Proprietary | [Website](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/) |
+| **[NuTool-LCDView](https://www.nuvoton.com/tool-and-software/software-tool/application-specific/lcdview/)** | LCD monitoring tool | Windows | Proprietary | [Website](https://www.nuvoton.com/tool-and-software/software-tool/application-specific/lcdview/) |
+| **[NuTool-PinView](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/)** | Pin status monitoring tool | Windows | Proprietary | [Website](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/) |
+| **[NuTool-USB_to_Serial_Port](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/)** | USB to Serial Port pass-through (Monitor) | Windows | Proprietary | [Website](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/) |
+| **[Nu-Link PulseView](https://github.com/OpenNuvoton/pulseview)** | Logic Analyzer GUI based on open-source sigrok/PulseView project. | Windows | GPL v3 | [Setup Guide](./Documents/NuLink3_PulseView.md) |
 
-- Coding assistant (cloud)
+### ☁️ Cloud Assistant Tools
 
-  - [NuTool-PinConfigure](https://opennuvoton.github.io/NuTool-PinConfigure/)
-  - [NuTool-ClockConfigure](https://opennuvoton.github.io/NuTool-ClockConfigure/)
-  - [NuTool-LCDView](https://opennuvoton.github.io/LCDView/)
+| Tool Name | Description | OS Support | License | Documentation |
+| :--- | :--- | :--- | :--- | :--- |
+| **[NuTool-PinConfigure (Web)](https://opennuvoton.github.io/NuTool-PinConfigure/)** | Web-based Pin configuration | Web | - | [Link](https://opennuvoton.github.io/NuTool-PinConfigure/) |
+| **[NuTool-ClockConfigure (Web)](https://opennuvoton.github.io/NuTool-ClockConfigure/)** | Web-based Clock configuration | Web | - | [Link](https://opennuvoton.github.io/NuTool-ClockConfigure/) |
+| **[NuTool-LCDView (Web)](https://opennuvoton.github.io/LCDView/)** | Web-based LCD View | Web | - | [Link](https://opennuvoton.github.io/LCDView/) |
 
-- Signal pass-through/monitor (I2C/SPI/CAN of Nu-Link2-Pro):
+### 📱 Mobile & Specialized Tools
 
-  - [NuTool-USB_to_Serial_Port](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/)
+| Tool Name | Description | OS Support | License | Documentation |
+| :--- | :--- | :--- | :--- | :--- |
+| **[NuBLE-Android](https://github.com/OpenNuvoton/NuBLE-Android/)** | BLE App for Android | Android | - | - |
+| **[NuBLE-iOS](https://github.com/OpenNuvoton/NUBLE-iOS/)** | BLE App for iOS | iOS | - | - |
+| **[NuISPTool-Android](https://github.com/OpenNuvoton/NuISPTool-Android/)** | ISP Tool for Android | Android | - | [GitHub](https://github.com/OpenNuvoton/NuISPTool-Android/) |
+| **[CANFD Analyzer](https://github.com/OpenNuvoton/CANFD_Analyzer/)** | 4 Ports CANFD Analyzer Tool | - | - | [GitHub](https://github.com/OpenNuvoton/CANFD_Analyzer/) |
+| **[NuEdgeWise](https://github.com/OpenNuvoton/NuEdgeWise)** | Machine learning development environment | - | Apache 2.0 | [GitHub](https://github.com/OpenNuvoton/NuEdgeWise) |
 
-- 4 Ports CANFD Analyzer Tool:
+---
 
-  - [CANFD Analyzer](https://github.com/OpenNuvoton/CANFD_Analyzer/)
+## ⚠️ License Information
 
-- Apps
+This repository contains multiple tools, each governed by its own license:
+Please refer to the `LICENSE` file located in each tool's subdirectory for specific terms and conditions.
 
-  - [NuBLE-Android](https://github.com/OpenNuvoton/NuBLE-Android/)
-  - [NuBLE-iOS](https://github.com/OpenNuvoton/NUBLE-iOS/)
-  - [NuISPTool-Android](https://github.com/OpenNuvoton/NuISPTool-Android/)
+---
 
-- Machine learning development environment
-
-  - [NuEdgeWise](https://github.com/OpenNuvoton/NuEdgeWise)
-
-## Debugging and programming adapter
-
-- [Nu-Link2-Pro](./Documents/NuLink2Pro.md)
+## 📞 Support
+For technical support, please visit [Nuvoton Forum](https://forum.nuvoton.com/) or open an Issue in this repository.

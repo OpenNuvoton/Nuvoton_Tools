@@ -1,5 +1,4 @@
 
-
 # Nu-Link3-Pro Debugging and Programming Adapter
 
 ## Introduction
@@ -18,7 +17,7 @@ Overview of software tools, Nu-Link3-Pro adapters, and targets:
 
 ## Nu-Link3 Adapter Firmware
 
-### Nu-Link3 firmware binary files can be found here: [Latest_NuLink_Firmware](./Latest_NuLink_Firmware)
+### Nu-Link3 firmware binary files can be found here: [Latest_NuLink_Firmware](../Latest_NuLink_Firmware)
 
 Users can reprogram Nu-Link3 with another .bin file using the following instructions (Windows OS):
 
