@@ -17,6 +17,9 @@ Here you can find tools to assist with programming, debugging, and analysis for 
 | **[Nuvoton CMSIS Pack](https://github.com/OpenNuvoton/cmsis-packs)** | CMSIS Device Family Pack (DFP) | - | Apache-2.0 | [GitHub](https://github.com/OpenNuvoton/cmsis-packs) |
 | **[IAR Nu-Link debugger driver](https://www.nuvoton.com/tool-and-software/ide-and-compiler/)** | Debugger driver for IAR EWARM | Windows | Proprietary | [Website](https://www.nuvoton.com/tool-and-software/ide-and-compiler/) |
 | **[NuEclipse IDE](https://www.nuvoton.com/tool-and-software/ide-and-compiler/)** | Open-source IDE based on Eclipse | Windows / Linux / macOS | EPL | [Website](https://www.nuvoton.com/tool-and-software/ide-and-compiler/) |
+| **[NuMicro Cortex-M Pack (VS Code)](https://marketplace.visualstudio.com/items?itemName=Nuvoton.nuvoton-numicro-cortex-m-pack)** | VS Code extension for NuMicro Cortex-M development | Windows / Linux / macOS | Apache 2.0 | [Marketplace](https://marketplace.visualstudio.com/items?itemName=Nuvoton.nuvoton-numicro-cortex-m-pack) |
+| **[NuCodeGen (VS Code)](https://marketplace.visualstudio.com/items?itemName=Nuvoton.nuvoton-nucodegen)** | VS Code extension for NuCodeGen code generation | Windows / Linux / macOS | Apache 2.0 | [Marketplace](https://marketplace.visualstudio.com/items?itemName=Nuvoton.nuvoton-nucodegen) |
+| **[NuVoton TRM Chatbot (VS Code)](https://marketplace.visualstudio.com/items?itemName=Nuvoton.nuvoton-trm-chatbot)** | VS Code extension for TRM chatbot assistance | Windows / Linux / macOS | Apache 2.0 | [Marketplace](https://marketplace.visualstudio.com/items?itemName=Nuvoton.nuvoton-trm-chatbot) |
 
 ### 🔌 Programmers & Debuggers
 
@@ -66,8 +69,7 @@ Here you can find tools to assist with programming, debugging, and analysis for 
 
 ## ⚠️ License Information
 
-This repository contains multiple tools, each governed by its own license:
-Please refer to the `LICENSE` file located in each tool's subdirectory for specific terms and conditions.
+This repository and its scripts are licensed under **Apache 2.0**. For other tools listed in the table, please refer to the license information provided in the table or the linked documentation.
 
 ---
 

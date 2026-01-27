@@ -20,7 +20,7 @@ Overview of software tools, Nu-Link2-Pro adapters, and targets:
 
 ## Nu-Link2-Pro Adapter Firmware
 
-### All Nu-Link2-Pro firmware binary files can be found at [Latest_NuLink_Firmware](../Latest_NuLink_Firmware)
+### Download the latest firmware from the [Releases page](https://github.com/OpenNuvoton/Nuvoton_Tools/releases).
 
 Users can reprogram Nu-Link2-Pro with another .bin file using the following instructions (Windows OS):
 
@@ -60,15 +60,15 @@ Users can reprogram Nu-Link2-Pro with another .bin file using the following inst
 - Set CMSIS-DAP=1; this is the default setting. It has a WebUSB interface conforming to the CMSIS-DAP protocol, and you can connect to KEIL Studio Cloud via this interface.
 - Set CMSIS-DAP=0; this will disable CMSIS-DAP and enable the Nu-Link2 "USB BULK_ICE" interface (it's faster than "USB HID_ICE").
 
-### Comparison of NuLink2FW.bin and NuLink2_DAPLink.bin
+### Comparison of NuLink2 and NuLink2_DAPLink
 
-#### [NuLink2FW.bin](../Latest_NuLink_Firmware)
+#### NuLink2
 
 - Proprietary code
 - Supports NuMicro 8051, offline programming, encryption during data transmission, unlimited flash breakpoints, NuMicro chip-specific features (config0/config1 dataflash setting, KPROM, etc.)
 - USB interfaces: MSC/VCOM/HID_ICE (proprietary commands) or CMSIS-DAPv2 WinUSB + WebUSB CMSIS-DAP/VCOM_Nu-Link2-Bridge or HID_ISP (defined by BRIDGE-MODE in NU_CFG.TXT)
 
-#### [NuLink2_DAPLink.bin](../Latest_NuLink_Firmware)
+#### NuLink2_DAPLink
 
 - Open source: [DAPLink on Nu-Link2-Pro](https://github.com/OpenNuvoton/DapLink)
 - Supports many third-party IDEs

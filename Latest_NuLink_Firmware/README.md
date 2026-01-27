@@ -1,27 +1,37 @@
-NuLinkFW revision history:
 
-# V3.21.7829r
-# V3.20.7778r
-# V3.19.7746r
-# V3.18.7724r
-# V3.17.7691r
-# V3.16.7675r
-# V3.15.7623r
-Nu-Link2-Me adds new USB PID to support for ISP-I2C.
-Be sure to install USB driver in the final step of the tool installation.
-# v3.14.7565r
-# v3.13.7537r
-# v3.12.7513r
-# v3.11.7470r
-# v3.10.7443r
-# v3.09.7380r
-If you upgrade Nu-Link2 firmware from old version to later than v3.09.7380r. 
-1. Be sure to install USB driver in the final step of the tool installation.
-2. If you are using Nu-Link2-Pro bridge function, see how to configure new defined BRIDGE_MODE on https://github.com/OpenNuvoton/Nuvoton_Tools
-3. If you are using Nu-Link2-Pro bridge, there is new USB PIDs for each bridge mode. please update your "NuMicro_ISP_Programming_Tool" later than v4.08 and "USB to Serial Port tool" later than v1.02.  
-USB to Serial Port Tool: https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/  
-NuMicro_ISP_Programming_Tool: https://www.nuvoton.com/tool-and-software/software-tool/programmer-tool/  
-Or just patch new USB PID to your source code to recognize new defines   
-   https://github.com/OpenNuvoton/ISPTool/commit/b1d1894d31721d86a56b0c0927da71ebffc117e0  
-   https://github.com/OpenNuvoton/NuTool-USB-to-Serial-Port/commit/9b2404b25f55e533dfb8b30377843b25f0da5a0b  
-       
+
+
+# Latest Nu-Link Firmware
+
+This folder contains information about the latest firmware versions for Nuvoton's Nu-Link debuggers and programmers.
+
+## Downloading Firmware
+
+To download the latest firmware for Nu-Link1, Nu-Link2, and Nu-Link3:
+
+1. Visit the [Releases page](https://github.com/OpenNuvoton/Nuvoton_Tools/releases) on GitHub.
+2. Look for the latest release that includes firmware updates.
+3. Download the appropriate firmware files for your Nu-Link model:
+   - **Nu-Link1**: Download the Nu-Link1 firmware binary (.bin file).
+   - **Nu-Link2**: Download the Nu-Link2 firmware binary (.bin file).
+   - **Nu-Link3**: Download the Nu-Link3 firmware binary (.bin file).
+4. Follow the flashing instructions in the release notes or the respective Nu-Link documentation.
+
+## Firmware Update Instructions
+
+### For Nu-Link2 and Nu-Link3
+
+- Connect your Nu-Link device to your PC via USB.
+- Put the device into firmware update mode (usually by pressing a button while plugging in).
+- Drag and drop the downloaded .bin file onto the virtual drive that appears.
+- Safely eject and reconnect the device.
+
+For detailed instructions, refer to the [Nu-Link2-Pro Guide](../Documents/NuLink2Pro.md) or [Nu-Link3-Pro Guide](../Documents/NuLink3Pro.md).
+
+### For Nu-Link1
+
+- By [NuMicro ICP Programming Tool](https://www.nuvoton.com/tool-and-software/software-tool/programmer-tool/)
+
+## Version History
+Check the releases page for changelog and version notes.
+
