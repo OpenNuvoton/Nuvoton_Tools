@@ -34,7 +34,7 @@ Here you can find tools to assist with programming, debugging, and analysis for 
 | **[OpenOCD Legacy (Source)](https://github.com/OpenNuvoton/OpenOCD-Nuvoton)** | Nuvoton customized OpenOCD (Legacy) | Windows / Linux | GPL-2.0 | [GitHub](https://github.com/OpenNuvoton/OpenOCD-Nuvoton) |
 | **[OpenOCD (Source)](https://github.com/OpenNuvoton/OpenOCD-Nuvoton-CMSIS-DAP)** | Nuvoton customized OpenOCD (CMSIS-DAP) | Windows / Linux | GPL-2.0 | [GitHub](https://github.com/OpenNuvoton/OpenOCD-Nuvoton-CMSIS-DAP) |
 | **[Nu-Link2-Pro](./Documents/NuLink2Pro.md)** | Nu-Link2-Pro Debugging and Programming Adapter | - | - | [Guide](./Documents/NuLink2Pro.md) |
-| **[Nu-Link3-Pro](./Documents/NuLink3Pro.md)** | Nu-Link2-Pro Debugging and Programming Adapter | - | - | [Guide](./Documents/NuLink3Pro.md) |
+| **[Nu-Link3-Pro](./Documents/NuLink3Pro.md)** | Nu-Link3-Pro Debugging and Programming Adapter | - | - | [Guide](./Documents/NuLink3Pro.md) |
 
 ### 🖥️ Desktop Assistant Tools
 

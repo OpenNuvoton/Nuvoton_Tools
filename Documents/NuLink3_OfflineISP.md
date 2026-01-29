@@ -45,8 +45,8 @@ BUTTON-MODE=1
 ## ISP Operation Notes
 
 - Offline and Online ISP can be used interchangeably, but **do not use them at the same time**.
-- To update the Offline ISP data on Nu-Link3-Pro, use the `Offline_isp_file_convertor` executable to convert the data.
-    - All `Offline_isp_file_convertor` related files are located in the ICPTool installation directory: `Nuvoton Tools\ICPTool\Offline_ISP`.
+- To update the Offline ISP data on Nu-Link3-Pro, use the `Offline_isp_file_converter` executable to convert the data.
+    - All `Offline_isp_file_converter` related files are located in the ICPTool installation directory: `Nuvoton Tools\ICPTool\Offline_ISP`.
     - Programming options are set in the `.ini` configuration file.
 
     **config.ini Example:**
@@ -81,8 +81,8 @@ BUTTON-MODE=1
     **Converter Command Example:**
 
     ```shell
-    offline_isp_file_convertor.exe -h
-    offline_isp_file_convertor.exe -i .\config.ini -s .\AP_16K.bin .\DF_4K.bin -o demo.isp
+    Offline_isp_file_converter.exe -h
+    Offline_isp_file_converter.exe -i .\config.ini -s .\AP_16K.bin .\DF_4K.bin -o demo.isp
     ```
 
 ## ISP Project File Operation
