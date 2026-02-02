@@ -59,7 +59,7 @@ Bridge Connector
 
 Maximum sample rate and record length for various channel count combinations:
 
-| Channel Count | Max Sample Rate (MHz) | Buffer Size = 256K bytes, Record Length (ms) |     |     |     |
+| Channel Count | Max Sample Rate (MHz) | Buffer Size = 1M bytes, Record Length (ms) |     |     |     |
 |:-------------:|:--------------------:|:---------------------------------------------:|:---:|:---:|:---:|
 |               |                      | Sample Rate                                   |     |     |     |
 |               |                      | **1 MHz** | **4 MHz** | **10 MHz** | **22 MHz** |
