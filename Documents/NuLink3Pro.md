@@ -35,6 +35,8 @@ Overview of software tools, Nu-Link3-Pro adapters, and targets:
 
 **Nu-Link firmware binary files can be found on the [Releases page](https://github.com/OpenNuvoton/Nuvoton_Tools/releases) on GitHub.**
 
+**Requirement: Nu-Link3 needs v3.22.7946r or above**
+
 Users can reprogram Nu-Link3 with another .bin file using the following instructions (Windows OS):
 
 1. Press the button on Nu-Link3 and plug in the USB cable.
