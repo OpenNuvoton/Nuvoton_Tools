@@ -1,17 +1,16 @@
+# 5.3 Drag-n-Drop Programming
 
-# Drag-n-Drop Programming
-
-## Brief Description
+## Overview
 
 **Drag-n-Drop Programming** is a method for updating a target device's firmware by treating it as a **Mass Storage Device Class (MSC)**, similar to a USB flash drive. You can simply drag and drop a firmware file onto the device's virtual disk. This process also supports copy commands. The system automatically checks the file format and content, and is compatible with **Windows, Mac, and Linux** operating systems.
 
-## Functions
+## 5.3.1 Functions
 
 This programming method serves two main functions:
 * Update the **target chip** firmware
 * Update the **Nu-Link firmware**
 
-## Updating the Target Chip
+## 5.3.2 Updating the Target Chip
 
 ### Settings
 Specific Nu-Link models require certain configurations before connecting to a USB port:
@@ -36,7 +35,7 @@ The update process involves several steps:
 * Only general downloads are available.
 * **Erase** operations vary depending on the chip's security features:
     * **Chips without Security Extension**: **Chip Erase** is performed.
-    * **Chips with Security Extension**: **Chip Erase** is performed for secure-only cases, while **Page Erase** or **XOM Erase** is performed if a non-secure area exists.
+    * **Chips with Security Extension**: **Chip Erase** is performed for secure-only cases, while **Page Erase** is performed if a non-secure area exists.
 * Supported memory regions include **APROM**, **LDROM**, **Data Flash**, and **Non-Secure APROM**.
 * The process is designed to **keep CONFIG 0-3 settings intact**.
 
@@ -46,16 +45,16 @@ The following are not supported by this programming method:
 * **Regions**: SPROM, OTP, etc.
 * **Settings**: XOM, NSCBA, etc.
 
-## Updating Nu-Link Firmware
+## 5.3.3 Updating Nu-Link Firmware
 
 ### Settings
 Similar to updating the target chip, updating the Nu-Link firmware requires specific settings for different models:
 * **Nu-Link1-Me**: Connect the corresponding jumper, then plug in the USB cable.
-* **Nu-Link2-Me**: Press the **offline button**, then plug in the USB cable.
+* **Nu-Link2** or **Nu-Link3** : Press the **offline button**, then plug in the USB cable.
 
 ### Pop-up Disk "Nu-Link"
-A virtual disk named "**Nu-Link**" will appear. To update the firmware, simply drag and drop the new Nu-Link firmware file into this disk.
+A virtual disk named "**Nu-Link**" will appear. To update the Nu-Link firmware, simply drag and drop the new Nu-Link firmware file into this disk.
 
-## Possible Problems in Use
+## 5.3.4 Troubleshooting
 
 Common issues you might encounter include problems with **USB permissions**, **OS compatibility**, or interference from **antivirus software**.
