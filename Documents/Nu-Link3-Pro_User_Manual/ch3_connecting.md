@@ -190,7 +190,7 @@ This connection is also used by default for Offline ISP.
 
 *Table 3.4-1 ETM Interface Pin Definition and Description*
 
-### 3.4.1 ETM Connection
+### 3.4.1 SWD and ETM Connection
 
 ![ETM Interface Connection Diagram for SWD](./media/image19.png)
 
