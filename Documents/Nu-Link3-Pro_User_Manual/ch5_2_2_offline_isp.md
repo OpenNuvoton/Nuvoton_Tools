@@ -1,6 +1,4 @@
-
-
-# Nu-Link3-Pro Offline ISP
+# 5.2.2 Offline ISP Programming
 
 Offline ISP (In-System Programming) refers to the ability to program a Nuvoton microcontroller without needing a host PC connected during the programming process. This is a key feature for mass production environments where it is impractical to have a computer at every programming station.
 
@@ -18,17 +16,16 @@ The process involves two main stages:
     * The Nu-Link programmer then uses the stored data to program the target chip without needing a computer.
 
 The following is the flowchart:
-<div style="margin-left: 30px;">
-  <img src="../img/nulink3-isp-offline.png" alt="ISP OFFLINE">
-</div>
 
-<br>
-<br>
-<br>
+![ISP Offline Flow](./media/nulink3-isp-offline.png)
 
-# Configuration Flow Details
+*Figure 5.2.2-1 Offline ISP Programming Flow*
 
-## NU_CFG File Settings
+---
+
+## Configuration Flow
+
+### NU_CFG File Settings
 
 Plug in the Nu-Link3-Pro. When the **NuMicro MCU** disk appears, set the `BUTTON-MODE` to `ISP` in the `NU_CFG.TXT` file.
 
@@ -42,7 +39,7 @@ BUTTON-MODE=1
 ; 2 = MicroPython
 ```
 
-## ISP Operation Notes
+### ISP Operation Notes
 
 - Offline and Online ISP can be used interchangeably, but **do not use them at the same time**.
 - To update the Offline ISP data on Nu-Link3-Pro, use the `Offline_isp_file_converter` executable to convert the data.
@@ -85,7 +82,7 @@ BUTTON-MODE=1
     Offline_isp_file_converter.exe -i .\config.ini -s .\AP_16K.bin .\DF_4K.bin -o demo.isp
     ```
 
-## ISP Project File Operation
+### ISP Project File Operation
 
 - Copy or drag the `.isp` project file into the NuMicro MCU disk drive to trigger the update process.
 - After completion, the disk will automatically remount. You can check the `OFL_ISP` file for Offline ISP information.
@@ -99,9 +96,11 @@ BUTTON-MODE=1
     Programming Options: APROM DataFlash Config EraseAll
     ```
 
-## Clear Offline ISP Data
+### Clear Offline ISP Data
 
 - To clear Offline ISP data, create a file named `CLR_ISP.ACT` in the disk drive to trigger the clearing process.
+
+---
 
 ## Status LED Description
 
@@ -114,9 +113,15 @@ The offline LED indicator for ISP is the same as for ICP.
 | Offline Programming Failed (Auto mode)  | On  | On  | Flash   | -         |
 | Offline Programming Failed              | On  | On  | Flash   | -         |
 
+*Table 5.2.2-1 Offline ISP LED Status*
+
+---
+
 ## Programming Success & Failure Indicators
 
 - **Programming Success (Left Image)**
 - **Programming Failure (Right Image)**
 
-![NU_CFG.TXT](../img/nulink3-offlineISP-blink.png)
+![Offline ISP LED Indicators](./media/nulink3-offlineISP-blink.png)
+
+*Figure 5.2.2-2 Offline ISP Success/Failure LED Indicators*

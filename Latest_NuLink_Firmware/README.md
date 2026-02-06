@@ -26,7 +26,7 @@ To download the latest firmware for Nu-Link1, Nu-Link2, and Nu-Link3:
 - Drag and drop the downloaded .bin file onto the virtual drive that appears.
 - Safely eject and reconnect the device.
 
-For detailed instructions, refer to the [Nu-Link2-Pro Guide](../Documents/NuLink2Pro.md) or [Nu-Link3-Pro Guide](../Documents/NuLink3Pro.md).
+For detailed instructions, refer to the [Nu-Link2-Pro Guide](../Documents/NuLink2Pro.md) or [Nu-Link3-Pro Guide](../Documents/Nu-Link3-Pro_User_Manual/Nu-Link3-Pro_User_Manual.md).
 
 ### For Nu-Link1
 
