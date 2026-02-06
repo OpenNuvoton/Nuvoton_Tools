@@ -127,9 +127,8 @@ The Nu-Link Debugger and Programmer series provides a USB connector and a SWD si
 *Table 7.4 Comparison of Nu-Link Debugger and Programmer*
 
 **Notes:**  
+The Nu-Link3-Pro, Nu-Link2-Pro and Nu-Link2-Me can be connected to an automatic IC programming system through the Control Bus.
 [^1]: Nu-Link2-Pro does not support I3C  
 [^2]: Voltage adjusted by resistor ICEJPR1  
 [^3]: Voltage adjusted by resistor JPR1  
 [^4]: Nu-Link2-Me only supports UART interface for ISP update  
-[^5]: The Nu-Link3-Pro, Nu-Link2-Pro and Nu-Link2-Me can be connected to an automatic IC programming system through the Control Bus.
-
