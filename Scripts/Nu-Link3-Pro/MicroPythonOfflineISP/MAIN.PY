@@ -341,7 +341,7 @@ class ISP_CAN(ISP_Timer):
     def __run_cmd_read(self, recv_data, timeout_sec=5):
         tick_count = self.get_timer_tick()
         while not self._recv_event:
-            if (self.get_timer_tick() - tick_count) > timeout_sec:
+            if (self.get_timer_tick() - tick_count) >= timeout_sec:
                 break
 
         if self._recv_event:
