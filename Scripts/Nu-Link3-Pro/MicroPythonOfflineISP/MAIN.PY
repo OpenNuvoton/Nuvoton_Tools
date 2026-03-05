@@ -155,7 +155,10 @@ class ISP_Intr(ISP_Timer):
         return self._run_cmd(0xA4, word_to_bytes(self._packet_no), None)
 
     def erase_all(self):
-        return self._run_cmd(0xA3, None, None)
+        if self.__run_cmd_write(0xA3, None):
+            return self.__run_cmd_read(None, 25)
+
+        return False
 
     def update_config(self, configs=[]):
         configs = configs[0:14] if len(configs) > 14 else configs
@@ -172,12 +175,10 @@ class ISP_Intr(ISP_Timer):
         if curr_addr == start_addr:
             data = data[0:48] if len(data) > 48 else data
 
-            if self._run_cmd(
-                isp_cmd,
-                word_to_bytes(start_addr) + word_to_bytes(total_len) + data,
-                None,
+            if self.__run_cmd_write(
+                isp_cmd, word_to_bytes(start_addr) + word_to_bytes(total_len) + data
             ):
-                return len(data)
+                return len(data) if self.__run_cmd_read(None, 25) else 0
             else:
                 return 0
         else:
