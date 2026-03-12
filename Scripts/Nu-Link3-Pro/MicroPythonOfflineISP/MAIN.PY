@@ -420,7 +420,7 @@ class ISP_CAN(ISP_Timer):
             self._df_base_addr + start_addr,
             total_len,
             self._df_base_addr + curr_addr,
-            data,
+            data
         )
 
     def resend(self):
@@ -525,7 +525,7 @@ def main():
         3: ISP_RS485(),
         4: ISP_CAN(
             0x0F000000 if (user_config["ISP CAN"]["ConfigBaseSel"] == 1) else 0x00000000,
-            user_config["ISP CAN"]["DataFlashBaseAddress"],
+            bytes_to_word(user_config["ISP CAN"]["DataFlashBaseAddress"]),
         ),
     }
 
