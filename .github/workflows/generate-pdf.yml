@@ -1,0 +1,59 @@
+name: Generate Nu-Link2 and Nu-Link3 User Manual PDF (Pandoc)
+
+on:
+  push:
+    tags:
+      - 'V*'
+    branches: [ main ]
+    paths:
+      - 'Documents/Nu-Link2_Nu-Link3_User_Manual/**/*.md'
+  workflow_dispatch: 
+
+jobs:
+  build-pdf-pandoc:
+    runs-on: ubuntu-22.04
+    
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Cache APT Packages
+        uses: actions/cache@v4
+        with:
+          path: /var/cache/apt/archives
+          key: ${{ runner.os }}-apt-texlive-v1
+          
+      - name: Install Pandoc & LaTeX & CJK Fonts
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tzdata
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-lang-chinese
+          sudo apt-get install -y fonts-noto-cjk fonts-dejavu
+          
+      - name: Convert with Pandoc
+        run: |
+          cd Documents/Nu-Link2_Nu-Link3_User_Manual
+          
+          FILES=$(find docs -type f -name "*.md" | sort)
+          
+          (for f in $FILES; do cat "$f"; echo -e "\n\n"; done) | sed -E 's|(\.\./)+media|media|g' | pandoc -o ../../Nu-Link2_Nu-Link3_User_Manual.pdf --pdf-engine=xelatex -V mainfont="DejaVu Sans" -V CJKmainfont="Noto Sans CJK TC" -V geometry:margin=1in --toc --number-sections --resource-path=.:..:../..:../../.. --include-before-body=cover.tex
+          
+      - name: Upload PDF Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Nu-Link2_Nu-Link3_User_Manual_Pandoc
+          path: Nu-Link2_Nu-Link3_User_Manual.pdf
+      
+      - name: Attach PDF to Current Release
+        uses: ncipollo/release-action@v1
+        with:
+          allowUpdates: true 
+          tag: ${{ github.ref_name }}  
+          artifacts: "**/*.pdf"
+          omitName: true
+          omitBody: true          

@@ -34,7 +34,7 @@ Here you can find tools to assist with programming, debugging, and analysis for 
 | **[OpenOCD Legacy (Source)](https://github.com/OpenNuvoton/OpenOCD-Nuvoton)** | Nuvoton customized OpenOCD (Legacy) | Windows / Linux | GPL-2.0 | [GitHub](https://github.com/OpenNuvoton/OpenOCD-Nuvoton) |
 | **[OpenOCD (Source)](https://github.com/OpenNuvoton/OpenOCD-Nuvoton-CMSIS-DAP)** | Nuvoton customized OpenOCD (CMSIS-DAP) | Windows / Linux | GPL-2.0 | [GitHub](https://github.com/OpenNuvoton/OpenOCD-Nuvoton-CMSIS-DAP) |
 | **[Nu-Link2-Pro](./Documents/NuLink2Pro.md)** | Nu-Link2-Pro Debugging and Programming Adapter | - | - | [Guide](./Documents/NuLink2Pro.md) |
-| **[Nu-Link3-Pro](./Documents/Nu-Link3-Pro_User_Manual/Nu-Link3-Pro_User_Manual.md)** | Nu-Link3-Pro Debugging and Programming Adapter | - | - | [Guide](./Documents/Nu-Link3-Pro_User_Manual/Nu-Link3-Pro_User_Manual.md) |
+| **[Nu-Link3-Pro](./Documents/Nu-Link2_Nu-Link3_User_Manual/Nu-Link2_Nu-Link3_User_Manual.md)** | Nu-Link3-Pro Debugging and Programming Adapter | - | - | [Guide](./Documents/Nu-Link2_Nu-Link3_User_Manual/Nu-Link2_Nu-Link3_User_Manual.md) |
 
 ### 🖥️ Desktop Assistant Tools
 
@@ -45,7 +45,7 @@ Here you can find tools to assist with programming, debugging, and analysis for 
 | **[NuTool-LCDView](https://www.nuvoton.com/tool-and-software/software-tool/application-specific/lcdview/)** | LCD monitoring tool | Windows | Proprietary | [Website](https://www.nuvoton.com/tool-and-software/software-tool/application-specific/lcdview/) |
 | **[NuTool-PinView](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/)** | Pin status monitoring tool | Windows | Proprietary | [Website](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/) |
 | **[NuTool-USB_to_Serial_Port](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/)** | USB to Serial Port pass-through (Monitor) | Windows | Proprietary | [Website](https://www.nuvoton.com/tool-and-software/software-tool/general/nutool/) |
-| **[Nu-Link PulseView](https://github.com/OpenNuvoton/pulseview)** | Logic Analyzer GUI based on open-source sigrok/PulseView project. | Windows | GPL v3 | [Setup Guide](./Documents/Nu-Link3-Pro_User_Manual/ch6_1_pulseview.md) |
+| **[Nu-Link PulseView](https://github.com/OpenNuvoton/pulseview)** | Logic Analyzer GUI based on open-source sigrok/PulseView project. | Windows | GPL v3 | [Setup Guide](./Documents/Nu-Link2_Nu-Link3_User_Manual/docs/06_additional_features/pulseview.md) |
 
 ### ☁️ Cloud Assistant Tools
 

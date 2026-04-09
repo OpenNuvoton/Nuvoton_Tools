@@ -6,7 +6,7 @@ This example demonstrates how to change the duty cycle of the output waveform by
 ## Configuration
 - Used Model: Claude Opus 4.5
 - Pin Connect:
-  - EPWM0_CH0 are connected to Nulink 3 pro PSIO_CH0 for waveform observation using [PulseView](https://github.com/OpenNuvoton/Nuvoton_Tools/blob/master/Documents/Nu-Link3-Pro_User_Manual/ch6_1_pulseview.md).
+  - EPWM0_CH0 are connected to Nulink 3 pro PSIO_CH0 for waveform observation using [PulseView](https://github.com/OpenNuvoton/Nuvoton_Tools/blob/master/Documents/Nu-Link2_Nu-Link3_User_Manual/ch6_1_pulseview.md).
 
 
 ## Generation Flow
