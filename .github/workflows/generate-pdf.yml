@@ -19,7 +19,17 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
+        with:
+          fetch-tags: true 
+          fetch-depth: 0
+      
+      - name: Get Latest V-Tag
+        id: get_tag
+        run: |
+          LATEST_TAG=$(git describe --tags --abbrev=0 --match "V*")
+          echo "LATEST_TAG=$LATEST_TAG" >> $GITHUB_ENV
+          
+          
       - name: Cache APT Packages
         uses: actions/cache@v4
         with:
@@ -53,7 +63,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true 
-          tag: ${{ github.ref_name }}  
+          tag: ${{ env.LATEST_TAG }}
           artifacts: "**/*.pdf"
           omitName: true
           omitBody: true          
