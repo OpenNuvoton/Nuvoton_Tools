@@ -1,35 +1,32 @@
-# ACMP Window Latch
+# ACMP Compare VBG
 
 ## Purpose
-This example demonstrates the usage of ACMP window latch function.
+This example demonstrates how ACMP compare VBG output with ACMP1_P0 value.
 
 ## Configuration
 - Used Model: Claude Opus 4.5
 - Pin Connect:
   - ACMP1_P0 and DAC1_OUT are connected together.
-  - PA.9 and ACMP1_WLAT are connected together to trigger the window latch function.
   - UART0_TXD and UART0_RXD are connected with NuLink3 pro for printing the comparison result.
 
 ## Generation Flow
 ```mermaid
 graph LR
   ACMP(ACMP) --> DAC(DAC)
-  DAC --> GPIO(GPIO)
-  GPIO --> UART0(UART0)
+  DAC --> UART0(UART0)
   UART0 --> Clock(Clock)
   Clock --> MFPs(MFPs)
-  MFPs --> GPIO1(GPIO)
+  MFPs --> GPIO(GPIO)
 ```
 
 ## Prompts
 ### ACMP Prompt
 ```
-@nucodegen Generate a sample ACMP code for Nuvoton MCU with the following configuration:
+Generate a sample ACMP code for Nuvoton MCU with the following configuration:
 - IP: ACMP01, Channel: 1
 - Positive Input Pin: P0
 - Negative Input Source: VBG
 - Hysteresis: Disabled
-- Window Latch: Enabled
 - Interrupts: Enable
 - IRQn: ACMP01_IRQn, IRQHandler: ACMP01_IRQHandler
 - Optional: 
@@ -40,7 +37,7 @@ graph LR
 
 ### DAC Prompt
 ```
-@nucodegen Generate a sample DAC code for Nuvoton MCU with the following configuration:
+Generate a sample DAC code for Nuvoton MCU with the following configuration:
 - IP: DAC1
 - Trigger Source: Software trigger
 - DAC Conversion Settling Time: 1 us
@@ -49,34 +46,19 @@ graph LR
     *  check conversion finish interrupt after conversion, and then clear it at polling loop.
     * Vary the data for conversion in steps of 256.
 - Purpose: 
-    * The DAC1 output voltage will serve as the positive input of ACMP1_P0.
+    * The DAC1 output voltage will serve as the positive input of ACMP1.
     * For each while loop, vary the data from the minimum value to the maximum value, and then back to the minimum.
-```
-
-### GPIO Prompt
-```
-@nucodegen Generate a sample GPIO code for Nuvoton MCU with the following configuration:
-- Port: PA
-- Pin(s): BIT9
-- Operation Mode: Output
-- Optional: 
-    * set PA.9 init state to high
-    * Toggle PA.9 output in main loop after DAC1 reach maximum peak 3 times.
-    * correctly handle underflow/overflow.
-- Purpose: Change ACMP window latch input value.
 ```
 
 ### UART0 Prompt
 ```
-@nucodegen open UART0 to print 
-1. the comparison result between positive input and VBG after handling.
-2. the PA.9 change state.
+open UART0 to print the comparison result between positive input and VBG.
 ```
 
 ### Clock Prompt
 ```
-@nucodegen Generate a sample CLK (clock controller) configuration code for Nuvoton MCU with the following configuration:
-- Enable Module Clock: UART0_MODULE, ACMP01_MOUDLE, GPIOA_MODULE, GPIOB_MODULE, GPIOC_MOUDLE, DAC01_MOUDLE
+Generate a sample CLK (clock controller) configuration code for Nuvoton MCU with the following configuration:
+- Enable Module Clock: ACMP01_MOUDLE, GPIOA_MODULE, GPIOB_MODULE, GPIOC_MOUDLE, DAC01_MOUDLE, UART0_MODULE
 - Module Clock Source: 
     * UART0: CLK_UARTSEL0_UART0SEL_HIRC
 - Module Clock Divider: 
@@ -87,18 +69,17 @@ graph LR
 
 ### MFPs Prompt
 ```
-@nucodegen Generate a sample PIN (MFP) configuration code for Nuvoton MCU with the following configuration:
+Generate a sample PIN (MFP) configuration code for Nuvoton MCU with the following configuration:
 - Port: PA, Pin: PA.1, Function: UART0_TXD
 - Port: PA, Pin: PA.0, Function: UART0_RXD
 - Port: PB, Pin: PB.13, Function: DAC1_OUT
 - Port: PA, Pin: PA.10, Function: ACMP1_P0
-- Port: PA, Pin: PA.6, Function: ACMP1_WLAT
 - Port: PC, Pin: PC.0, Function: ACMP1_O
 ```
 
 ### GPIO Prompt
 ```
-@nucodegen Generate a sample GPIO code for Nuvoton MCU with the following configuration:
+Generate a sample GPIO code for Nuvoton MCU with the following configuration:
 - Port: PA
 - Pin Mask: BIT10
 - Operation Mode: Input

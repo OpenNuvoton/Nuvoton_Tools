@@ -20,7 +20,7 @@ graph LR
 ## Prompts
 ### I2C0/1 Prompt
 ```
-@nucodegen Generate a sample I2C code for Nuvoton MCU with the following configuration:
+Generate a sample I2C code for Nuvoton MCU with the following configuration:
 - IP: I2C0, I2C1
 - Bus Clock: 100 kHz
 - Mode: I2C0: Master, I2C1: Slave
@@ -39,12 +39,12 @@ graph LR
 
 ### UART0 Prompt
 ```
-@nucodegen open UART0 to print comparison results between arrays.
+open UART0 to print comparison results between arrays.
 ```
 
 ### Clock Prompt
 ```
-@nucodegen Generate a sample CLK (clock controller) configuration code for Nuvoton MCU with the following configuration:
+Generate a sample CLK (clock controller) configuration code for Nuvoton MCU with the following configuration:
 - Enable Module Clock: UART0_MODULE, I2C0_MODULE, I2C1_MODULE
 - Module Clock Source: 
     * UART0: CLK_UARTSEL0_UART0SEL_HIRC
@@ -56,7 +56,7 @@ graph LR
 
 ### MFPs Prompt
 ```
-@nucodegen Generate a sample PIN (MFP) configuration code for Nuvoton MCU with the following configuration:
+Generate a sample PIN (MFP) configuration code for Nuvoton MCU with the following configuration:
 - Port: PB, Pin: PB.12, Function: UART0_RXD
 - Port: PB, Pin: PB.13, Function: UART0_TXD
 - Port: PG, Pin: PG.0, Function: I2C0_SCL

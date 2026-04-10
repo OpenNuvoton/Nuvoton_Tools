@@ -19,7 +19,7 @@ graph LR
 ## Prompts
 ### CANFD Prompt
 ```
-@nucodegen Generate a sample CANFD code for Nuvoton MCU with the following configuration:
+Generate a sample CANFD code for Nuvoton MCU with the following configuration:
 - IP: CANFD0
 - Operation Mode: CAN Mode
 - Nominal Bit Rate: 1000000 bps
@@ -46,12 +46,12 @@ graph LR
 
 ### UART0 Prompt
 ```
-@nucodegen open UART to print comparsion result between TX and RX data for each ID.
+open UART to print comparsion result between TX and RX data for each ID.
 ```
 
 ### Clock Prompt
 ```
-@nucodegen Generate a sample CLK (clock controller) configuration code for Nuvoton MCU with the following configuration:
+Generate a sample CLK (clock controller) configuration code for Nuvoton MCU with the following configuration:
 - Enable Module Clock: UART0, CANFD0
 - Module Clock Source: 
     * UART0: HIRC
@@ -65,7 +65,7 @@ graph LR
 
 ### MFPs Prompt
 ```
-@nucodegen Generate a sample PIN (MFP) configuration code for Nuvoton MCU with the following configuration:
+Generate a sample PIN (MFP) configuration code for Nuvoton MCU with the following configuration:
 - Port: PB, Pin: PB.12, Function: UART0_RXD
 - Port: PB, Pin: PB.13, Function: UART0_TXD
 ```
