@@ -1,4 +1,4 @@
-# PulseView Logic Analyzer
+## PulseView Logic Analyzer
 
 This section details the integration between the **Nu-Link3-Pro** debugging adapter and **PulseView**, the popular GUI for the sigrok logic analyzer software suite. By leveraging the specific hardware capabilities of the Nu-Link3-Pro. This integration provides a seamless workflow for visualizing digital signals, decoding protocols, and troubleshooting embedded systems directly on the PC.
 
@@ -8,7 +8,7 @@ You can download the PulseView software from [here](https://github.com/OpenNuvot
 
 Figure: System block diagram
 
-## Logic Analysis Features
+### Logic Analysis Features
 
 PulseView provides a rich set of features for analyzing digital logic signals captured by the Nu-Link3-Pro:
 
@@ -19,7 +19,7 @@ PulseView provides a rich set of features for analyzing digital logic signals ca
 
   Figure: Nu-Link3-Pro logic analyzer monitoring signals via PulseView
 
-## Device Connectivity
+### Device Connectivity
 
 The Nu-Link3-Pro device establishes a connection with external hardware through a dedicated bridge connector.
 
@@ -44,7 +44,7 @@ Bridge connector pins (CON.6)
 
 Figure: shows the layout and assignment of the bridge pins, offering clarity for hardware integration and signal routing.
 
-## Trigger Conditions
+### Trigger Conditions
 
 Each logic analyzer channel allows independent configuration of trigger conditions, enhancing flexibility during signal monitoring and analysis.
 
@@ -52,7 +52,7 @@ Each logic analyzer channel allows independent configuration of trigger conditio
 
 Figure: Select trigger type for channels
 
-## Data Capture and Protocol Analysis
+### Data Capture and Protocol Analysis
 
 PulseView offers functionality to add protocol decoders, which interpret the captured data according to specific communication standards. Below figure illustrates the process of adding a protocol decoder in the PulseView interface.
 
@@ -80,7 +80,7 @@ Figure: The process of exporting these annotations for documentation or further 
 
 
 
-## Performance Specifications
+### Performance Specifications
 
 Maximum sample rate and record length for various channel count combinations:
 
@@ -92,6 +92,8 @@ Maximum sample rate and record length for various channel count combinations:
 | 2             | 22                   | 4200     | 1040      | 420       | 192        |
 | 4             | 10                   | 2080      | 520      | 208        |           |
 | 6             | 4                    | 1040      | 260       |           |           |
+
+Table: Maximum Sample Rate and Record Length by Channel Count
 
 
 

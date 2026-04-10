@@ -51,7 +51,7 @@ jobs:
           
           FILES=$(find docs -type f -name "*.md" | sort)
           
-          (for f in $FILES; do cat "$f"; echo -e "\n\n"; done) | sed -E 's|(\.\./)+media|media|g' | pandoc -o ../../Nu-Link2_Nu-Link3_User_Manual.pdf --pdf-engine=xelatex -V mainfont="DejaVu Sans" -V CJKmainfont="Noto Sans CJK TC" -V geometry:margin=1in --toc --number-sections --resource-path=.:..:../..:../../.. --include-before-body=cover.tex
+          (for f in $FILES; do cat "$f"; echo -e "\n\n"; done) | sed 's/^# /\\newpage\n\n# /' | sed 's/!\[/\n\n![/g' | sed -E "s|(\.\./)+media|$PWD/media|g" | pandoc -o ../../Nu-Link2_Nu-Link3_User_Manual.pdf --pdf-engine=xelatex -V mainfont="DejaVu Sans" -V CJKmainfont="Noto Sans CJK TC" -V geometry:margin=1in --toc --toc-depth=3 --number-sections --resource-path=.:..:../..:../../.. --include-before-body=cover.tex --include-in-header=header.tex
           
       - name: Upload PDF Artifact
         uses: actions/upload-artifact@v4

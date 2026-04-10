@@ -1,5 +1,7 @@
 
-## Nu-Link2-Pro Operating Current of ICP
+## Nu-Link2-Pro 
+
+### Operating Current of ICP
 
 When power is supplied via an USB during ICP online programming, the
 operating current of Nu-Link2-Pro is shown in the Table: below.
@@ -51,7 +53,7 @@ Nu-Link2-Pro is shown in the Table: below.
 Table: Nu-Link2-Pro Operating Current (Offline Programming) of
 Micro SD Card
 
-## Nu-Link2-Pro Operating Current of ISP
+### Operating Current of ISP
 
 The operating current of Nu-Link2-Pro during ISP online programming with
 power supply via USB is shown in the Table: below.
@@ -63,14 +65,12 @@ power supply via USB is shown in the Table: below.
 
 Table: Operating Current of ISP Online Programming
 
-## Automatic IC Programming System
+### Automatic IC Programming System
 
 The automatic IC programming system through individual slot and the
 Control Bus as Figure:.
 
-![](../../media/nu-link2/image82.png)
-
-#### Figure: SWD Connector Pin Diagrams
+![SWD Connector Pin Diagrams](../../media/nu-link2/image82.png)
 
 ### Operation Sequence and Waveform
 
@@ -90,112 +90,12 @@ Control Bus as Figure:.
 
 - When BUSY is set to logic 1, and FAIL is set to logic 0, means “FAIL”.
 
-![](../../media/nu-link2/image83.png)
+![PASS Waveform](../../media/nu-link2/image83.png)
 
-> Figure: PASS Waveform
-
-![](../../media/nu-link2/image84.png)
-
-> Figure: FAIL Waveform
+![FAIL Waveform](../../media/nu-link2/image84.png)
 
 
 
-## Revision History
-
-<table>
-<colgroup>
-<col style="width: 22%" />
-<col style="width: 20%" />
-<col style="width: 56%" />
-</colgroup>
-<thead>
-<tr>
-<th><strong>Date</strong></th>
-<th><strong>Revision</strong></th>
-<th><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><blockquote>
-<p>2020.03.13</p>
-</blockquote></td>
-<td><blockquote>
-<p>1.00</p>
-</blockquote></td>
-<td><ol type="1">
-<li><p>Initially issued.</p></li>
-</ol></td>
-</tr>
-<tr>
-<td><blockquote>
-<p>2020.03.24</p>
-</blockquote></td>
-<td><blockquote>
-<p>1.01</p>
-</blockquote></td>
-<td><ol type="1">
-<li><p>Modify some related descriptions in the introduction
-section</p></li>
-</ol></td>
-</tr>
-<tr>
-<td><blockquote>
-<p>2021.09.10</p>
-</blockquote></td>
-<td><blockquote>
-<p>1.02</p>
-</blockquote></td>
-<td><ol type="1">
-<li><p>Update chapter 3.3 and 5.2.6</p></li>
-</ol></td>
-</tr>
-<tr>
-<td><blockquote>
-<p>2022.05.17</p>
-</blockquote></td>
-<td><blockquote>
-<p>1.03</p>
-</blockquote></td>
-<td><ol type="1">
-<li><p>Update 5.2.6</p></li>
-</ol></td>
-</tr>
-<tr>
-<td><blockquote>
-<p>2023.11.07</p>
-</blockquote></td>
-<td><blockquote>
-<p>1.04</p>
-</blockquote></td>
-<td><ol type="1">
-<li><p>Update chapter 3.3.9</p></li>
-</ol></td>
-</tr>
-</tbody>
-</table>
-
-**Important Notice**
-
-**Nuvoton Products are neither intended nor warranted for usage in
-systems or equipment, any malfunction or failure of which may cause loss
-of human life, bodily injury or severe property damage. Such
-applications are deemed, “Insecure Usage”.**
-
-**Insecure usage includes, but is not limited to: equipment for surgical
-implementation, atomic energy control instruments, airplane or spaceship
-instruments, the control or operation of dynamic, brake or safety
-systems designed for vehicular use, traffic signal instruments, all
-types of safety devices, and other applications intended to support or
-sustain life.**
-
-**All Insecure Usage shall be made at customer’s risk, and in the event
-that third parties lay claims to Nuvoton as a result of customer’s
-Insecure Usage, customer shall indemnify the damages and liabilities
-thus incurred by Nuvoton.**
-
-<img src="../../media/nu-link2/image90.png" style="width:6.28542in;height:0.37639in"
-alt="Description: 描述: 描述: 描述: 描述: logo3" />
 
 
 

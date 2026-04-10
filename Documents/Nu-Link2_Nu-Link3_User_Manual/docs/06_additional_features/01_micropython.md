@@ -1,4 +1,4 @@
-# MicroPython Support
+## MicroPython Support
 
 The Nu-Link3-Pro has a built-in **MicroPython interpreter**. You can run your own MicroPython code by following these steps:
 

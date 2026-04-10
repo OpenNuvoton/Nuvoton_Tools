@@ -28,39 +28,29 @@ The Nu-Link3-Pro offers complete programming and debugging support for all NuMic
 - Provides a virtual COM port via USB for convenient serial communication.
 
 
-## System Overview
+### System Overview
 
 The following diagrams illustrate the various roles Nu-Link3-Pro can play in your development workflow:
 
 
-**Debugger Mode:**
-
 ![Debugger Connection](../../media/nu-link3/nulink3-ide.png)
-
-**Bridge / USB-to-Serial Mode:**
 
 ![Bridge Connection](../../media/nu-link3/nulink3-usb2serial.png)
 
-**Monitor Mode:**
-
 ![Monitor Mode](../../media/nu-link3/nulink3-usb2serial_mon.png)
 
-**PulseView Logic Analyzer:**
-
 ![PulseView](../../media/nu-link3/nulink3-pulseview.png)
-
-**ISP Programming:**
 
 ![ISP Programming](../../media/nu-link3/nulink3-isp.png)
 
 
 
-## Driver Installation
+### Driver Installation
 
 For Windows operating systems, please download and install the [Nu-Link_USB_Driver](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1120201207161057)
 
 
-## Nu-Link3-Pro Firmware 
+### Nu-Link3-Pro Firmware 
 
 **Nu-Link firmware binary files can be found on the [Releases page](https://github.com/OpenNuvoton/Nuvoton_Tools/releases) on GitHub.**
 
@@ -74,7 +64,7 @@ Users can reprogram Nu-Link3 with another .bin file using the following instruct
 4. Re-plug the USB cable and it's done.
 
 
-## Configuration Options
+### Configuration Options
 
 You will see some options in NU_CFG.TXT:
 

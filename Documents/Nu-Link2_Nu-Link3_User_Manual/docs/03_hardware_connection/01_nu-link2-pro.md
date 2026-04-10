@@ -1,17 +1,15 @@
+## Nu-Link2-Pro Connection
 
-
-## Extension Connectors
+### Extension Connectors
 
 The figure below shows the Nu-Link2-Pro definition pin of each connector.
 The Nu-Link2-Pro mainly contains USB, Micro USB, Bridge interface, ETM
 interface and SWD interface. User can freely select a suitable interface
 for debugger and programmer.
 
-![](../../media/nu-link2/image6.png)
+![Pin Definition of Nu-Link2-Pro Connectors](../../media/nu-link2/image6.png)
 
-#### Figure: Pin Definition of Nu-Link2-Pro Connectors
-
-## SWD Interface
+### SWD Interface
 
 The table below shows SWD interface pin definition and description. The
 Nu-Link2-Pro provides a SWD interface connector with a 100-mil 10-pin
@@ -32,9 +30,9 @@ SWD interface pin and the connection of each function.
 | GND | CON4.9 | Ground |
 | FAIL/TX | CON4.10 | “FAIL” is Control Bus signals for IC Programmer. For details, please refer to section 6.3. |
 
-#### Table: SWD Interface Pin Definition and Description
+Table: SWD Interface Pin Definition and Description
 
-### ICE Programming Connection
+#### ICE Programming Connection
 
 The Nu-Link2-Pro provides ICE function to Programming and debugging on
 PC. The ICE connection pins are VCC(CON4.1), ICE_DAT(CON4.3),
@@ -42,9 +40,7 @@ ICE_CLK(CON4.5), /RESET(CON4.7) and VSS(CON4.9). The diagram below presents
 how to connect the target board to use ICE and the following table shows the pin
 corresponding to the target board.
 
-![](../../media/nu-link2/image7.png)
-
-#### Figure: SWD Interface Connection Diagram for ICE
+![SWD Interface Connection Diagram for ICE](../../media/nu-link2/image7.png)
 
 | **Pin Name** | **Pin Number** | **Pin Corresponding to the Target Board** |
 |--------------|----------------|:------------------------------------------|
@@ -54,9 +50,9 @@ corresponding to the target board.
 | /RESET       | CON4.7         | /RESET                                    |
 | VSS(GND)     | CON4.9         | VSS(GND)                                  |
 
-#### Table: SWD Interface Corresponding Pin for ICE
+Table: SWD Interface Corresponding Pin for ICE
 
-### Virtual COM Connection 
+#### Virtual COM Connection 
 
 The Nu-Link2-Pro provides virtual COM port (VCOM) function to print out
 messages on PC, and the Virtual COM transmission data by UART0. The
@@ -64,9 +60,7 @@ connection pins are VCC (CON4.1), VSS (CON4.9), TX (CON4.8) and RX
 (CON4.10). The diagram below presents how to connect the target board to use
 VCOM and the following table shows the pin corresponding to the target board.
 
-![](../../media/nu-link2/image8.png)
-
-#### Figure: SWD Interface Connection Diagram for Virtual COM
+![SWD Interface Connection Diagram for Virtual COM](../../media/nu-link2/image8.png)
 
 | **Pin Name** | **Pin Number** | **Pin Corresponding to the Target Board** |
 |--------------|----------------|:------------------------------------------|
@@ -75,9 +69,9 @@ VCOM and the following table shows the pin corresponding to the target board.
 | VSS(GND)     | CON4.9         | VSS(GND)                                  |
 | FAIL/TX      | CON4.10        | UART_TX                                   |
 
-#### Table: SWD Interface Corresponding Pin for Virtual COM
+Table: SWD Interface Corresponding Pin for Virtual COM
 
-### Automatic IC Programming Connection
+#### Automatic IC Programming Connection
 
 The Nu-Link2-Pro provides Automatic IC Programming function to mass
 production. The Automatic IC Programming connection pins are VCC
@@ -86,9 +80,7 @@ FAIL (CON4.10). The diagram below presents how to connect the target board to
 use Automatic IC Programming and the following table shows the pin corresponding
 to the target board.
 
-![](../../media/nu-link2/image9.png)
-
-#### Figure: SWD Interface Connection Diagram for Automatic IC Programming
+![SWD Interface Connection Diagram for Automatic IC Programming](../../media/nu-link2/image9.png)
 
 | Pin Name | Pin Number | Pin Corresponding to the Target Board |
 |----|----|----|
@@ -100,9 +92,9 @@ to the target board.
 | FAIL | CON4.10 | FAIL |
 
 
-#### Table: SWD Interface Corresponding Pin for Automatic IC Programming
+Table: SWD Interface Corresponding Pin for Automatic IC Programming
 
-## Bridge Interface
+### Bridge Interface
 
 The table below shows the bridge interface pin definition and description.
 The Nu-Link2-Pro provides a bridge interface connector with a 100-mil
@@ -134,9 +126,9 @@ pin and the connection of each function.
 | GPIO1 | CON6.19 | General Purpose I/O 1 |
 | GND | CON6.20 | Ground |
 
-#### Table: Bridge Interface Pin Definition and Description
+Table: Bridge Interface Pin Definition and Description
 
-### UART Connection
+#### UART Connection
 
 The Nu-Link2-Pro can be used as an open platform, we provide an extra
 UART interface as reserved. The UART connection pins are VCC33 (CON6.14
@@ -145,9 +137,7 @@ The diagram below presents how to connect the target board to use UART
 function and the following table shows the pin corresponding to the target
 board.
 
-![](../../media/nu-link2/image10.png)
-
-#### Figure: Bridge Interface Connection Diagram for UART
+![Bridge Interface Connection Diagram for UART](../../media/nu-link2/image10.png)
 
 | Pin Name | Pin Number | Pin Corresponding to the Target Board |
 |----|----|----|
@@ -159,9 +149,9 @@ board.
 | VSS(GND) | CON6.20 | VSS(GND) |
 
 
-#### Table: Bridge Interface Corresponding Pin for UART
+Table: Bridge Interface Corresponding Pin for UART
 
-### I2C Connection
+#### I2C Connection
 
 The Nu-Link2-Pro provides one channel I2C function for bridge
 and monitor mode. The I2C connection pins are VCC33(CON6.14
@@ -172,9 +162,7 @@ the target board. Click for further bridge information:
 [Github](https://github.com/OpenNuvoton/Nuvoton_Tools)
 [Gitee](https://gitee.com/OpenNuvoton/Nuvoton_Tools)
 
-![](../../media/nu-link2/image11.png)
-
-#### Figure: Bridge Interface Connection Diagram for I2C
+![Bridge Interface Connection Diagram for I2C](../../media/nu-link2/image11.png)
 
 | Pin Name | Pin Number | Pin Corresponding to the Target Board |
 |----|----|----|
@@ -186,9 +174,9 @@ the target board. Click for further bridge information:
 | VSS(GND) | CON6.20 | VSS(GND) |
 
 
-#### Table: Bridge Interface Pin for I2C
+Table: Bridge Interface Pin for I2C
 
-### SPI Connection
+#### SPI Connection
 
 The Nu-Link2-Pro provides one channel SPI function for bridge and
 monitor mode. The SPI connection pins are VCC33(CON6.14 and CON6.16),
@@ -199,9 +187,7 @@ target board. Click for further bridge information:
 [Github](https://github.com/OpenNuvoton/Nuvoton_Tools)
 [Gitee](https://gitee.com/OpenNuvoton/Nuvoton_Tools).
 
-![](../../media/nu-link2/image12.png)
-
-#### Figure: Bridge Interface Connection Diagram for SPI
+![Bridge Interface Connection Diagram for SPI](../../media/nu-link2/image12.png)
 
 | **Pin Name** | **Pin Number** | **Pin Corresponding to the Target Board** |
 |----|----|:---|
@@ -213,11 +199,12 @@ target board. Click for further bridge information:
 | VCC33 | CON6.16 | VCC<sup>\[1\]</sup> |
 | VSS (GND) | CON6.18 | VSS (GND) |
 | VSS (GND) | CON6.20 | VSS (GND) |
-| **Note:** The target board power and signal only support 3.3 V at Nu-Link2-Pro Bridge interface. |  |  |
 
-#### Table: Bridge Interface Corresponding Pin for SPI
+Table: Bridge Interface Corresponding Pin for SPI
 
-### RS-485 Connection
+**Note:** The target board power and signal only support 3.3 V at Nu-Link2-Pro Bridge interface.
+
+#### RS-485 Connection
 
 The Nu-Link2-Pro provides one channel RS-485 function for bridge and
 monitor mode. The RS-485 connection pins are VCC33(CON6.14 and CON6.16),
@@ -228,9 +215,7 @@ for further bridge information:
 [Github](https://github.com/OpenNuvoton/Nuvoton_Tools)
 [Gitee](https://gitee.com/OpenNuvoton/Nuvoton_Tools)
 
-![](../../media/nu-link2/image13.png)
-
-#### Figure: Bridge Interface Connection Diagram for RS-485
+![Bridge Interface Connection Diagram for RS-485](../../media/nu-link2/image13.png)
 
 | Pin Name | Pin Number | Pin Corresponding to the Target Board |
 |----|----|----|
@@ -242,9 +227,9 @@ for further bridge information:
 | VSS(GND) | CON6.20 | VSS(GND) |
 
 
-#### Table: Bridge Interface Corresponding Pin for RS-485
+Table: Bridge Interface Corresponding Pin for RS-485
 
-### CAN BUS Connection
+#### CAN BUS Connection
 
 The Nu-Link2-Pro provides one channel CAN BUS function for bridge and
 monitor mode. The CAN BUS connection pins are VCC33(CON6.14 and
@@ -253,9 +238,7 @@ The diagram below presents how to connect the target board to use CAN BUS
 function and the following table shows the pin corresponding to the target
 board. 
 
-![](../../media/nu-link2/image14.png)
-
-#### Bridge Interface Connection Diagram for CAN BUS
+![Bridge Interface Connection Diagram for CAN BUS](../../media/nu-link2/image14.png)
 
 | Pin Name | Pin Number | Pin Corresponding to the Target Board |
 |----|----|----|
@@ -267,9 +250,9 @@ board.
 | VSS(GND) | CON6.20 | VSS(GND) |
 
 
-#### Bridge Interface Corresponding Pin for CAN BUS
+Table: Bridge Interface Corresponding Pin for CAN BUS
 
-### PWM and Capture
+#### PWM and Capture
 
 The Nu-Link2-Pro provides one channel PWM function for user flexible
 planning. The PWM connection pins are VCC33(CON6.14 and CON6.16),
@@ -277,9 +260,7 @@ VSS(CON6.18 and CON6.20) and PWM(CON6.15). The diagram below presents how to
 connect the target board to use PWM function and the following table shows the
 pin corresponding to the target board.
 
-![](../../media/nu-link2/image15.png)
-
-#### Bridge Interface Connection Diagram for PWM
+![Bridge Interface Connection Diagram for PWM](../../media/nu-link2/image15.png)
 
 | Pin Name | Pin Number | Pin Corresponding to the Target Board |
 |----|----|----|
@@ -290,9 +271,9 @@ pin corresponding to the target board.
 | VSS(GND) | CON6.20 | VSS(GND) |
 
 
-#### Bridge Interface Corresponding Pin for PWM
+Table: Bridge Interface Corresponding Pin for PWM
 
-### ADC Connection
+#### ADC Connection
 
 The Nu-Link2-Pro provides one channel ADC function for user flexible
 planning. The ADC connection pins are VCC33(CON6.14 and CON6.16),
@@ -300,9 +281,7 @@ VSS(CON6.18 and CON6.20) and ADC(CON6.13). The diagram below presents how to
 connect the target board to use ADC function and the following table shows the
 pin corresponding to the target board.
 
-![](../../media/nu-link2/image16.png)
-
-#### Bridge Interface Connection Diagram for ADC
+![Bridge Interface Connection Diagram for ADC](../../media/nu-link2/image16.png)
 
 | Pin Name | Pin Number | Pin Corresponding to the Target Board |
 |----|----|----|
@@ -313,9 +292,9 @@ pin corresponding to the target board.
 | VSS (GND) | CON6.20 | VSS (GND) |
 
 
-#### Bridge Interface Corresponding Pin for ADC
+Table: Bridge Interface Corresponding Pin for ADC
 
-### GPIO Connection
+#### GPIO Connection
 
 The Nu-Link2-Pro provides two channel GPIO function for user flexible
 planning. The GPIO connection pins are VCC33(CON6.14 and CON6.16),
@@ -323,9 +302,7 @@ VSS(CON6.18 and CON6.20), GPIO0(CON6.17) and GPIO1(CON6.19). The diagram
 below presents how to connect the target board to use GPIO function and
 the following table shows the pin corresponding to the target board.
 
-![](../../media/nu-link2/image17.png)
-
-#### Bridge Interface Connection Diagram for GPIO
+![Bridge Interface Connection Diagram for GPIO](../../media/nu-link2/image17.png)
 
 | Pin Name | Pin Number | Pin Corresponding to the Target Board |
 |----|----|----|
@@ -337,9 +314,9 @@ the following table shows the pin corresponding to the target board.
 | VSS(GND) | CON6.20 | VSS(GND) |
 
 
-#### Bridge Interface Corresponding Pin for GPIO
+Table: Bridge Interface Corresponding Pin for GPIO
 
-### LIN Connection
+#### LIN Connection
 
 The Nu-Link2-Pro provides one LIN channel for user flexible planning.
 The LIN connection pins are VCC33 (CON6.14 and CON6.16), VSS (CON6.18
@@ -347,9 +324,7 @@ and CON6.20), SS (CON6.5) and CLK (CON6.6). The diagram below presents how to
 connect the target board to use LIN function and the following table shows the
 pin corresponding to the target board.
 
-![](../../media/nu-link2/image18.png)
-
-#### Figure: Bridge Interface Connection Diagram for LIN
+![Bridge Interface Connection Diagram for LIN](../../media/nu-link2/image18.png)
 
 | Pin Name | Pin Number | Pin Corresponding to the Target Board |
 |----|----|----|
@@ -361,9 +336,9 @@ pin corresponding to the target board.
 | VSS(GND) | CON6.20 | VSS(GND) |
 
 
-#### Table: Bridge Interface Corresponding Pin for LIN
+Table: Bridge Interface Corresponding Pin for LIN
 
-## ETM Interface
+### ETM Interface
 
 The table below shows ETM interface pin definition and description. The
 Nu-Link2 and nu-link2 provide an ETM interface connector with a 50-mil 20-pin
@@ -394,9 +369,9 @@ connection of each function.
 | GND | CON3.19 | Ground |
 | TRACEDATA\[3\] | CON3.20 | ETM trace data output pin. |
 
-#### Table: ETM Interface Pin Definition and Description
+Table: ETM Interface Pin Definition and Description
 
-### SWD Connection
+#### SWD Connection
 
 The ETM interface provides SWD function for IC programming and
 Debugging. The diagram below presents how to connect the target board to use
@@ -404,18 +379,16 @@ SWD function. In addition, please pay attention to the behavior and do
 not program or debug at the same time with the SWD interface; otherwise,
 an error will occur.
 
-![](../../media/nu-link2/image19.png)
+![ETM Interface Connection Diagram for SWD and ETM Function](../../media/nu-link2/image19.png)
 
-#### Figure: ETM Interface Connection Diagram for SWD and ETM Function
-
-### ETM Connection
+#### ETM Connection
 
 The ETM interface provides ETM function for capturing execution steps of
 microprocessor on the target board, and ETM will display them a
 readability format. The diagram above presents how to connect the target
 board to use ETM function.
 
-## ICP Offline Programming Connection
+### ICP Offline Programming Connection
 
 The Nu-Link2 and nu-link2 provide three kinds storage interface for Nu-Link2 and nu-link2
 ICP offline programming. The user can save the bin file to USB Flash
@@ -423,9 +396,7 @@ drive, Micro SD card or SPI Flash for offline programming. The priority
 of reading from these three storage is USB Flash drive \> Micro SD card
 \> SPI Flash. The diagram below shows the SWD interface used for offline programming.
 
-![](../../media/nu-link2/image20.png)
-
-#### Figure: ICP Offline Programming Illustration of SWD Interface
+![ICP Offline Programming Illustration of SWD Interface](../../media/nu-link2/image20.png)
 
 
 

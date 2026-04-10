@@ -1,11 +1,8 @@
 
-## Package Contents
+## Nu-Link2-Pro Package Contents
 
-![](../../media/nu-link2/image2.png)
+![The contents of Nu-Link2-Pro full package](../../media/nu-link2/image2.png)
 
-#### Figure: Nu-Link2-Pro Full Package Contents
-
-Figure: shows the contents of Nu-Link2-Pro full package:
 
 - Nu-Link2-Pro main body (2952mil x 1968mil x 688mil)
 
@@ -17,14 +14,11 @@ Figure: shows the contents of Nu-Link2-Pro full package:
 
 - Bridge cable (100-mil 20-pin squid cable with 20 x 100-mil sockets)
 
-## Board Overview
+### Nu-Link2-Pro PCBA
 
-![](../../media/nu-link2/image3.png)
+#### Front View
+![main components and connectors from the front side](../../media/nu-link2/image3.png)
 
-#### Figure: Front View of Nu-Link2-Pro PCBA
-
-Figure: shows the main components and connectors from the front
-side of Nu-Link2-Pro PCBA.
 
 The following lists components and connectors from the front view:
 
@@ -44,12 +38,8 @@ The following lists components and connectors from the front view:
 
 - ETM Connector
 
-![](../../media/nu-link2/image4.png)
-
-#### Figure: Rear View of Nu-Link2-Pro PCBA
-
-Figure: shows the main components and connectors from the rear side
-of Nu-Link2-Pro PCBA.
+#### Rear View
+![main components and connectors from the rear side](../../media/nu-link2/image4.png)
 
 The following lists components and connectors from the rear view:
 
@@ -57,14 +47,11 @@ The following lists components and connectors from the rear view:
   by IT department, user can disable Nu-Link2-Pro mass storage function
   by switch \#4 after firmware version 7246)
 
-## Hardware Overview
+### Nu-Link2-Pro Connectors
 
-![](../../media/nu-link2/image5.png)
+![Nu-Link2-Pro profile and connector overview](../../media/nu-link2/image5.png)
 
-#### Figure: Nu-Link2-Pro Connector and Function Overview
-
-Figure: shows the Nu-Link2-Pro profile and connector overview, the
-following lists of function brief description
+The following lists of function brief description
 
 - USB Connector (CON5)
 
@@ -117,9 +104,7 @@ following lists of function brief description
 
   - Save bin file for ICP Offline Programming
 
-- Status LED (ICES0, ICES1, ICES2, ICES3)
-
-  - Display the operation status of the Nu-Link2-Pro
+#### Status LED (ICES0, ICES1, ICES2, ICES3)
 
 | **Nu-Link2-Pro Operation Status** | **Status LED** |  |  |  |
 |----|:--:|:--:|:--:|:--:|
@@ -134,7 +119,7 @@ following lists of function brief description
 | Offline Programming Completed (Auto mode) | On | On | \- | \- |
 | Offline Programming Failed | On | Flash | \- | \- |
 
-Table: Status LEDs Difference List
+Table: Comparison of Status LED Indicators
 
 
 

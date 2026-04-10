@@ -1,8 +1,8 @@
-# Offline ISP Programming
+## Offline ISP Programming
 
 Offline ISP (In-System Programming) refers to the ability to program a Nuvoton microcontroller without needing a host PC connected during the programming process. This is a key feature for mass production environments where it is impractical to have a computer at every programming station.
 
-## Requirements
+### Requirements
 
 To use the offline ISP functionality, ensure your tools meet the following minimum requirements:
 
@@ -10,11 +10,11 @@ To use the offline ISP functionality, ensure your tools meet the following minim
 - **Nu-Link Firmware**: Version **7964r** or later.
 
 
-## Operation Steps
+### Operation Steps
 
 The offline ISP programming process is divided into three distinct phases:
 
-### Phase 1: Project Preparation (PC Side)
+#### Phase 1: Project Preparation (PC Side)
 
 The process begins in the ISP Tool software on the PC.
 
@@ -22,7 +22,7 @@ The process begins in the ISP Tool software on the PC.
 2. **Export Settings**: Select **Export settings for offline ISP**.
 3. **Generate File**: The software generates a file named `Project.isp` which contains all necessary configuration data and firmware images.
 
-### Phase 2: Data Transfer (PC to Programmer)
+#### Phase 2: Data Transfer (PC to Programmer)
 
 The Nu-Link (e.g., Nu-Link3-Pro) connects to the PC and appears as a Mass Storage Drive (similar to a USB flash drive).
 
@@ -31,7 +31,7 @@ The Nu-Link (e.g., Nu-Link3-Pro) connects to the PC and appears as a Mass Storag
 3. **Internal Processing**: The programmer's internal MCU automatically formats the SPI Flash memory (ISP Data Region) using a FAT File System.
 4. **Storage**: The ISP file is written into this internal memory for persistent storage.
 
-### Phase 3: Offline Programming (Programmer to Target)
+#### Phase 3: Offline Programming (Programmer to Target)
 
 At this stage, a PC is no longer required.
 
@@ -46,13 +46,12 @@ The following is the flowchart:
 
 ![ISP Offline Flow](../../../media/nu-link3/nulink3-isp-offline.png)
 
-*Figure: Offline ISP Programming Flow*
 
----
 
-## Configuration and Operation Notes
 
-### Function Mode Configuration
+### Configuration and Operation Notes
+
+#### Function Mode Configuration
 
 Plug in the Nu-Link2 or Nu-Link3 family. When the **NuMicro MCU** disk appears, Make sure the `BUTTON-MODE` is `ISP` in the `NU_CFG.TXT` file.
 
@@ -66,7 +65,7 @@ BUTTON-MODE=1
 ; 2 = MicroPython
 ```
 
-### Verification and Data Status
+#### Verification and Data Status
 
 After copying the `.isp` project file to the disk, the Nu-Link automatically processes the update. You can verify the stored programming information by checking the `OFL_ISP` file generated on the disk.
 
@@ -79,15 +78,15 @@ After copying the `.isp` project file to the disk, the Nu-Link automatically pro
     Programming Options: APROM DataFlash Config EraseAll
     ```
 
-### Essential Usage Notes
+#### Essential Usage Notes
 
 - **Exclusivity**: Offline and Online ISP modes can be used interchangeably, but they **must not be used simultaneously**.
 - **Data Updates**: To update the offline firmware or configuration, simply overwrite the existing `.isp` file on the NuMicro MCU disk with a new one. The disk will automatically remount once the update is complete.
 - **Clearing Data**: To completely remove the offline ISP data from the programmer, create a blank file named `CLR_ISP.ACT` in the root directory of the Nu-Link disk. This will trigger the internal cleanup process.
 
----
 
-## Status LED Description
+
+### Status LED Description
 
 The offline LED indicator for ISP is the same as for ICP.
 
@@ -98,15 +97,14 @@ The offline LED indicator for ISP is the same as for ICP.
 | Offline Programming Failed (Auto mode)  | On  | On  | Flash   | -         |
 | Offline Programming Failed              | On  | On  | Flash   | -         |
 
-*Table: Offline ISP LED Status*
+Table: Offline ISP LED Status
 
----
 
-## Programming Success & Failure Indicators
+
+### Programming Success & Failure Indicators
 
 - **Programming Success (Left Image)**
 - **Programming Failure (Right Image)**
 
 ![Offline ISP LED Indicators](../../../media/nu-link3/nulink3-offlineISP-blink.png)
 
-*Figure: Offline ISP Success/Failure LED Indicators*

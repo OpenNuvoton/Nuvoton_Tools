@@ -19,7 +19,7 @@ tool, a physical button, or an automated IC programming system.
 Nu-Link devices also function as In-System Programming (ISP) programmers, supporting firmware upgrades after field deployment.
 
 
-## Nu-Link Family Comparison
+### Nu-Link Family Comparison
 
 The table below compares the Nu-Link family of devices.
 
@@ -50,6 +50,7 @@ The table below compares the Nu-Link family of devices.
 | PulseView | ✔ | - | - | - | - |
 | MicroPython | ✔ | - | - | - | - |
 
+Table: Nu-Link Family Comparison
 
 **Notes:**  
 [^1]: Nu-Link2-Pro does not support I3C or CAN FD (it only supports CAN 2.0).  
@@ -58,7 +59,7 @@ The table below compares the Nu-Link family of devices.
 [^4]: Only supports the UART interface for ISP updates.  
 
 
-## Abbreviations
+### Abbreviations
 
 For simplicity and clarity, some specific terms in this user manual
 are contracted or abbreviated, as listed in Table: Nu-Link Debugger/Programmer Technical Abbreviations.

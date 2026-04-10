@@ -1,16 +1,15 @@
-# Nu-Link3-Pro Connection
+## Nu-Link3-Pro Connection
 
-## Extension Connectors
+### Extension Connectors
 
 ![Pin Definition of Nu-Link3-Pro Connectors](../../media/nu-link3/image6.png)
 
-*Figure: Pin Definition of Nu-Link3-Pro Connectors*
 
 The Nu-Link3-Pro mainly contains USB, USB Type-C, Bridge interface, ETM interface and SWD interface. Users can freely select a suitable interface for debugger and programmer.
 
 ---
 
-## SWD Interface Pin Definition and Function Connection
+### SWD Interface Pin Definition and Function Connection
 
 | Pin Name | Pin Number | Pin Description |
 |----------|------------|-----------------|
@@ -25,15 +24,14 @@ The Nu-Link3-Pro mainly contains USB, USB Type-C, Bridge interface, ETM interfac
 | GND | CON4.9 | Ground |
 | FAIL/TX | CON4.10 | "FAIL" is Control Bus signals for IC Programmer. Also UART TX for Virtual COM (Used for Online ISP).  |
 
-*Table: SWD Interface Pin Definition and Description*
+Table: SWD Interface Pin Definition and Description
 
-### ICE Programming Connection
+#### ICE Programming Connection
 
 The Nu-Link3-Pro provides ICE function to Programming and debugging on PC.
 
 ![SWD Interface Connection Diagram for ICE](../../media/nu-link3/image7.png)
 
-*Figure: SWD Interface Connection Diagram for ICE*
 
 | Pin Name | Pin Number | Pin Corresponding to the Target Board |
 |----------|------------|---------------------------------------|
@@ -43,15 +41,14 @@ The Nu-Link3-Pro provides ICE function to Programming and debugging on PC.
 | /RESET | CON4.7 | /RESET |
 | VSS(GND) | CON4.9 | VSS(GND) |
 
-*Table: SWD Interface Corresponding Pin for ICE*
+Table: SWD Interface Corresponding Pin for ICE
 
-### Virtual COM Connection
+#### Virtual COM Connection
 
 The Nu-Link3-Pro provides virtual COM port (VCOM) function to print out messages on PC, and the Virtual COM transmission data by UART0. The UART here is also used by default for Online ISP.
 
 ![SWD Interface Connection Diagram for Virtual COM](../../media/nu-link3/image8.png)
 
-*Figure: SWD Interface Connection Diagram for Virtual COM*
 
 | Pin Name | Pin Number | Pin Corresponding to the Target Board |
 |----------|------------|---------------------------------------|
@@ -60,27 +57,25 @@ The Nu-Link3-Pro provides virtual COM port (VCOM) function to print out messages
 | VSS(GND) | CON4.9 | VSS(GND) |
 | FAIL/TX | CON4.10 | UART_TX |
 
-*Table: SWD Interface Corresponding Pin for Virtual COM*
+Table: SWD Interface Corresponding Pin for Virtual COM
 
-### Automatic IC Programming Connection
+#### Automatic IC Programming Connection
 
-The Nu-Link3-Pro provides Automatic IC Programming function to mass production. For details about Control Bus signals, please refer to [section 7.3](../07_appendix/nu-link3-pro.md#73-automatic-ic-programming-system).
+The Nu-Link3-Pro provides Automatic IC Programming function to mass production. For details about Control Bus signals, please refer to [section 7.3](../07_appendix/02_nu-link3-pro.md#73-automatic-ic-programming-system).
 
 ![SWD Interface Connection Diagram for Automatic IC Programming](../../media/nu-link3/image9.png)
 
-*Figure: SWD Interface Connection Diagram for Automatic IC Programming*
 
-### SWO Debug Connection
+#### SWO Debug Connection
 
 The Nu-Link3-Pro supports SWO (Serial Wire Output) for trace and monitoring functions.
 
 ![SWD Interface Connection Diagram for SWO debug](../../media/nu-link3/image10.png)
 
-*Figure: SWD Interface Connection Diagram for SWO debug*
 
 ---
 
-## Bridge Interface
+### Bridge Interface
 
 | Pin Name | Pin Number | Pin Description |
 |----------|------------|-----------------|
@@ -105,61 +100,53 @@ The Nu-Link3-Pro supports SWO (Serial Wire Output) for trace and monitoring func
 | GPIO1 | CON6.19 | General Purpose I/O 1 |
 | GND | CON6.20 | Ground |
 
-*Table: Bridge Interface Pin Definition and Description*
+Table: Bridge Interface Pin Definition and Description
 
-### UART Connection
+#### UART Connection
 
 This connection is also used by default for Offline ISP.
 
 ![Bridge Interface Connection Diagram for UART](../../media/nu-link3/image11.png)
 
-*Figure: Bridge Interface Connection Diagram for UART*
 
-### I2C/I3C Connection
+#### I2C/I3C Connection
 
 ![Bridge Interface Connection Diagram for I2C/I3C](../../media/nu-link3/image12.png)
 
-*Figure: Bridge Interface Connection Diagram for I2C/I3C*
 
-### SPI Connection
+#### SPI Connection
 
 ![Bridge Interface Connection Diagram for SPI](../../media/nu-link3/image13.png)
 
-*Figure: Bridge Interface Connection Diagram for SPI*
 
-### RS-485 Connection
+#### RS-485 Connection
 
 ![Bridge Interface Connection Diagram for RS-485](../../media/nu-link3/image14.png)
 
-*Figure: Bridge Interface Connection Diagram for RS-485*
 
-### CAN BUS Connection
+#### CAN BUS Connection
 
 ![Bridge Interface Connection Diagram for CAN BUS](../../media/nu-link3/image15.png)
 
-*Figure: Bridge Interface Connection Diagram for CAN BUS*
 
-### PWM and Capture
+#### PWM and Capture
 
 ![Bridge Interface Connection Diagram for PWM](../../media/nu-link3/image16.png)
 
-*Figure: Bridge Interface Connection Diagram for PWM*
 
-### ADC Connection
+#### ADC Connection
 
 ![Bridge Interface Connection Diagram for ADC](../../media/nu-link3/image17.png)
 
-*Figure: Bridge Interface Connection Diagram for ADC*
 
-### GPIO Connection
+#### GPIO Connection
 
 ![Bridge Interface Connection Diagram for GPIO](../../media/nu-link3/image18.png)
 
-*Figure: Bridge Interface Connection Diagram for GPIO*
 
 ---
 
-## ETM Interface Pin Definition and Function Connection
+### ETM Interface Pin Definition and Function Connection
 
 | Pin Name | Pin Number | Pin Description |
 |----------|------------|-----------------|
@@ -184,18 +171,14 @@ This connection is also used by default for Offline ISP.
 | GND | CON3.19 | Ground |
 | TRACEDATA[3] | CON3.20 | ETM trace data output pin. |
 
-*Table: ETM Interface Pin Definition and Description*
+Table: ETM Interface Pin Definition and Description
 
-### SWD and ETM Connection
+#### SWD and ETM Connection
 
 ![ETM Interface Connection Diagram for SWD](../../media/nu-link3/image19.png)
 
-*Figure: ETM Interface Connection Diagram for SWD and ETM Function*
 
----
+### ICP Offline Programming Function Connection
 
-## ICP Offline Programming Function Connection
+![ICP Offline Programming Illustration of SWD Interface](../../media/nu-link3/image20.png){ width=80% }
 
-![ICP Offline Programming Illustration of SWD Interface](../../media/nu-link3/image20.png)
-
-*Figure: ICP Offline Programming Illustration of SWD Interface*

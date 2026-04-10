@@ -9,7 +9,7 @@ This collection of Python scripts provides bridge functionality for Nuvoton's Nu
 - **can_normal.py**: CAN normal mode operations.
 - **can_monitor.py**: CAN bus monitoring.
 
-**Note**: Compared to Nu-Link2-Pro, Nu-Link3-Pro bridge do not include dedicated I2C and SPI monitor modes. Nu-Link3-Pro use [PulseView](../../../Documents/Nu-Link2_Nu-Link3_User_Manual/docs/06_additional_features/pulseview.md) for I2C and SPI signal monitoring and protocol analyzing instead.
+**Note**: Compared to Nu-Link2-Pro, Nu-Link3-Pro bridge do not include dedicated I2C and SPI monitor modes. Nu-Link3-Pro use [PulseView](../../../Documents/Nu-Link2_Nu-Link3_User_Manual/docs/06_additional_features/02_pulseview.md) for I2C and SPI signal monitoring and protocol analyzing instead.
 
 ## Features
 - **Host Mode**: Act as a host to transparently communicate with target chips via Nu-Link3-Pro.
