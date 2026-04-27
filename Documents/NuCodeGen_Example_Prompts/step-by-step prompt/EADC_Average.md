@@ -22,7 +22,7 @@ graph LR
 ## Prompts
 ### DAC Prompt
 ```
-@nucodegen Generate a sample DAC code for Nuvoton MCU with the following configuration:
+Generate a sample DAC code for Nuvoton MCU with the following configuration:
 - IP: DAC1
 - Trigger Source: Software trigger
 - DAC Conversion Settling Time: 1 us
@@ -36,7 +36,7 @@ graph LR
 
 ### EADC Prompt
 ```
-@nucodegen Generate a sample EADC code for Nuvoton MCU with the following configuration:
+Generate a sample EADC code for Nuvoton MCU with the following configuration:
 - IP: EADC0
 - Input Mode: Single-end
 - Sample Module: 1
@@ -57,12 +57,12 @@ graph LR
 
 ### UART0 Prompt
 ```
-@nucodegen open UART0 to print conversion results.
+open UART0 to print conversion results.
 ```
 
 ### Clock Prompt
 ```
-@nucodegen Generate a sample CLK (clock controller) configuration code for Nuvoton MCU with the following configuration:
+Generate a sample CLK (clock controller) configuration code for Nuvoton MCU with the following configuration:
 - Enable Module Clock: UART0_MODULE, GPIOB_MODULE, DAC01_MODULE, EADC0_MODULE
 - Module Clock Source: 
     * UART0: HIRC
@@ -77,7 +77,7 @@ graph LR
 
 ### MFPs Prompt
 ```
-@nucodegen Generate a sample PIN (MFP) configuration code for Nuvoton MCU with the following configuration:
+Generate a sample PIN (MFP) configuration code for Nuvoton MCU with the following configuration:
 - Port: PA, Pin: PA.1, Function: UART0_TXD
 - Port: PA, Pin: PA.0, Function: UART0_RXD
 - Port: PB, Pin: PB.13, Function: DAC1_OUT
@@ -86,7 +86,7 @@ graph LR
 
 ### GPIO Prompt
 ```
-@nucodegen Generate a sample GPIO code for Nuvoton MCU with the following configuration:
+Generate a sample GPIO code for Nuvoton MCU with the following configuration:
 - Port: PB
 - Pin Mask: BIT0
 - Operation Mode: Input

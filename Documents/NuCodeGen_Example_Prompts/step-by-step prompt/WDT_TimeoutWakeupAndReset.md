@@ -22,7 +22,7 @@ graph LR
 ## Prompts
 ### PMC Prompt
 ```
-@nucodegen Generate a sample PMC configuration code for Nuvoton MCU with the following configuration:
+Generate a sample PMC configuration code for Nuvoton MCU with the following configuration:
 - IP: PMC
 - Power-down Mode: NPD0, Power Level: PL1
 - Enter Mode: Power-down
@@ -33,7 +33,7 @@ graph LR
 
 ### WDT Prompt
 ```
-@nucodegen Generate a sample WDT code for Nuvoton MCU with the following configuration:
+Generate a sample WDT code for Nuvoton MCU with the following configuration:
 - IP: WDT0
 - Timeout Interval: WDT_TIMEOUT_2POW14
 - Reset Delay: WDT_RESET_DELAY_130CLK
@@ -52,7 +52,7 @@ graph LR
 
 ### GPIO Prompt
 ```
-@nucodegen  Generate a sample GPIO code for Nuvoton MCU with the following configuration:
+Generate a sample GPIO code for Nuvoton MCU with the following configuration:
 - Port: PA
 - Pin Mask: BIT0
 - Pin Mode: Output
@@ -63,7 +63,7 @@ graph LR
 
 ### UART0 Prompt
 ```
-@nucodegen open UART0 to get a character from user to start WDT demonstration before WDT configuration
+open UART0 to get a character from user to start WDT demonstration before WDT configuration
 and print
 1. already reset one time when the system recently reset due to WDT before re-initializing
 2. ready to enter power-down mode (waiting TX empty before entering power-down mode)
@@ -73,7 +73,7 @@ and print
 
 ### Clock Prompt
 ```
-@nucodegen Generate a sample CLK (clock controller) configuration code for Nuvoton MCU with the following configuration:
+Generate a sample CLK (clock controller) configuration code for Nuvoton MCU with the following configuration:
 - Enable Module Clock: UART0, GPIOA, WDT0
 - Module Clock Source: 
     * UART0: HIRC
@@ -86,7 +86,7 @@ and print
 
 ### MFPs Prompt
 ```
-@nucodegen Generate a sample PIN (MFP) configuration code for Nuvoton MCU with the following configuration:
+Generate a sample PIN (MFP) configuration code for Nuvoton MCU with the following configuration:
 - Port: PB, Pin: PB.12, Function: UART0_RXD
 - Port: PB, Pin: PB.13, Function: UART0_TXD
 - Port: PA, Pin: PA.0, Function: GPIO

@@ -20,7 +20,7 @@ graph LR
 ## Prompts
 ### UART1/2 Prompt
 ```
-@nucodegen /uart Generate a sample UART code for Nuvoton MCU with the following configuration:
+Generate a sample UART code for Nuvoton MCU with the following configuration:
 - IP: UART1, UART2
 - Baud Rate: 115200
 - Line Mode: Single Wire
@@ -36,12 +36,12 @@ graph LR
 
 ### UART0 Prompt
 ```
-@nucodegen open UART0 to print comparison results between TX and RX array
+open UART0 to print comparison results between TX and RX array
 ```
 
 ### Clock Prompt
 ```
-@nucodegen Generate a sample CLK (clock controller) configuration code for Nuvoton MCU with the following configuration:
+Generate a sample CLK (clock controller) configuration code for Nuvoton MCU with the following configuration:
 - Enable Module Clock: UART0_MODULE, UART1_MODULE, UART2_MODULE
 - Module Clock Source: 
     * UART0: CLK_UARTSEL0_UART0SEL_HIRC
@@ -57,7 +57,7 @@ graph LR
 
 ### MFPs Prompt
 ```
-@nucodegen Generate a sample PIN (MFP) configuration code for Nuvoton MCU with the following configuration:
+Generate a sample PIN (MFP) configuration code for Nuvoton MCU with the following configuration:
 - Port: PB, Pin: PB.12, Function: UART0_RXD
 - Port: PB, Pin: PB.13, Function: UART0_TXD
 - Port: PA, Pin: PA.2, Function: UART1_RXD
@@ -66,7 +66,7 @@ graph LR
 
 ### GPIO Prompt
 ```
-@nucodegen Generate a sample GPIO code for Nuvoton MCU with the following configuration:
+Generate a sample GPIO code for Nuvoton MCU with the following configuration:
 - Port: PB
 - Pin Mask: BIT0
 - Pull Control: Pull-up

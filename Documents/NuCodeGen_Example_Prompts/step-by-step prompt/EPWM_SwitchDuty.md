@@ -20,7 +20,7 @@ graph LR
 ## Prompts
 ### EPWM Prompt
 ```
-@nucodegen Generate a sample EPWM code for Nuvoton MCU with the following configuration:
+Generate a sample EPWM code for Nuvoton MCU with the following configuration:
 - IP: EPWM0
 - Channel(s): 0
 - Mode: Output
@@ -38,13 +38,13 @@ graph LR
 
 ### UART0 Prompt
 ```
-@nucodegen Open UART0, print the duty-cycle options, and get a character from user to determine which duty cycle to be used.
+Open UART0, print the duty-cycle options, and get a character from user to determine which duty cycle to be used.
 Print and read input in the main loop to allow the user to switch the duty cycle.
 ```
 
 ### Clock Prompt
 ```
-@nucodegen Generate a sample CLK (clock controller) configuration code for Nuvoton MCU with the following configuration:
+Generate a sample CLK (clock controller) configuration code for Nuvoton MCU with the following configuration:
 - Enable Module Clock: UART0, EPWM0
 - Module Clock Source: 
     * UART0: HIRC
@@ -57,7 +57,7 @@ Print and read input in the main loop to allow the user to switch the duty cycle
 
 ### MFPs Prompt
 ```
-@nucodegen Generate a sample PIN (MFP) configuration code for Nuvoton MCU with the following configuration:
+Generate a sample PIN (MFP) configuration code for Nuvoton MCU with the following configuration:
 - Port: PB, Pin: PB.12, Function: UART0_RXD
 - Port: PB, Pin: PB.13, Function: UART0_TXD
 - Port: PE, Pin: PE.7, Function: EPWM0_CH0
