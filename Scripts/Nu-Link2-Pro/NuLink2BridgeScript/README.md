@@ -51,5 +51,5 @@ This collection of Python scripts provides bridge functionality for Nuvoton's Nu
 - **Permission Issues**: Run as administrator or adjust serial port permissions.
 
 ## References
-- [Nu-Link2-Pro Documentation](../../../Documents/NuLink2Pro.md)
+- [Nu-Link2-Pro Documentation](https://www.nuvoton.com/resource-download.jsp?tp_GUID=UG1320200319174043)
 

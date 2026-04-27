@@ -19,36 +19,44 @@ tool, a physical button, or an automated IC programming system.
 The Nu-Link3-Pro also functions as an In-System Programming (ISP) programmer, supporting firmware upgrades after field deployment.
 
 
-### Nu-Link3-Pro Feature Summary
+### Nu-Link Family Comparison
 
-| Type / Function | Nu-Link3-Pro |
-|-----------------|:------------:|
-| **Debug** | |
-| Debug via SWD | ✔ |
-| ETM | ✔ |
-| pyOCD | ✔ |
-| **Program** | |
-| Online ICP Programming | ✔ |
-| Offline ICP Programming | ✔ |
-| Offline ICP-Control Bus | ✔ |
-| Drag-and-drop flash programming | ✔ |
-| SWD I/O Voltage Support | 1.8V, 2.5V, 3.3V, 5.0V |
-| **Upgrade** | |
-| Online ISP | ✔ |
-| Offline ISP | ✔ |
-| **Storage** | |
-| SPI Flash | ✔ |
-| SD Card | ✔ |
-| USB Flash Drive | ✔ |
-| **Bridge** | |
-| Virtual COM | ✔ |
-| **Bus Monitor** | |
-| I2C/I3C, SPI, CAN, RS-485 | ✔ |
-| **Additional features** | |
-| PulseView | ✔ |
-| MicroPython | ✔ |
+The table below compares the Nu-Link family of devices.
 
-Table: Nu-Link3-Pro Feature Summary
+| Type / Function | Nu-Link3-Pro | Nu-Link2-Pro | Nu-Link2 | Nu-Link2-Me | Nu-Link-Me |
+|-----------------|:------------:|:------------:|:--------:|:-----------:|:----------:|
+| **Debug** | | | | | |
+| Debug via SWD | ✔ | ✔ | ✔ | ✔ | ✔ |
+| ETM | ✔ | ✔ | - | - | - |
+| pyOCD | ✔ | ✔ | ✔ | ✔ | - |
+| **Program** | | | | | |
+| Online ICP Programming | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Offline ICP Programming | ✔ | ✔ | ✔ | ✔ | - |
+| Offline ICP-Control Bus | ✔ | ✔ | ✔ | ✔ | - |
+| Drag-and-drop flash programming | ✔ | ✔ | ✔ | ✔ | - |
+| SWD I/O Voltage Support | 1.8V, 2.5V, 3.3V, 5.0V | 1.8V, 2.5V, 3.3V, 5.0V | 1.8V, 2.5V, 3.3V, 5.0V | 1.8V, 3.3V, 5.0V [^2] | 3.3V, 5.0V [^3] |
+| **Upgrade** | | | | | |
+| Online ISP | ✔ | ✔ | ✔ [^4] | ✔ [^4] | - |
+| Offline ISP | ✔ | ✔ | ✔ [^4] | ✔ [^4] | - |
+| **Storage** | | | | | |
+| SPI Flash | ✔ | ✔ | ✔ | ✔ | - |
+| SD Card | ✔ | ✔ | - | - | - |
+| USB Flash Drive | ✔ | ✔ | - | - | - |
+| **Bridge** | | | | | |
+| Virtual COM | ✔ | ✔ | ✔ | ✔ | ✔ |
+| **Bus Monitor** | | | | | |
+| I2C/I3C, SPI, CAN, RS-485 | ✔ | ✔ [^1] | - | - | - |
+| **Additional features** | | | | | |
+| PulseView | ✔ | - | - | - | - |
+| MicroPython | ✔ | - | - | - | - |
+
+Table: Nu-Link Family Comparison
+
+**Notes:**  
+[^1]: Nu-Link2-Pro does not support I3C or CAN FD (it only supports CAN 2.0).  
+[^2]: Voltage is adjusted by resistor ICEJPR1.  
+[^3]: Voltage is adjusted by resistor JPR1.  
+[^4]: Only supports the UART interface for ISP updates.  
 
 
 ### Abbreviations

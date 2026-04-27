@@ -6,7 +6,7 @@ This example implements WDT0 time-out interrupt event to wake up system and gene
 ## Configuration
 - Used Model: Claude Opus 4.5
 - Pin Connect:
-  - PA.0 are connected to Nulink 3 pro PSIO_CH0 for waveform observation using [PulseView](https://github.com/OpenNuvoton/Nuvoton_Tools/blob/master/Documents/Nu-Link2_Nu-Link3_User_Manual/ch6_1_pulseview.md).
+  - PA.0 are connected to Nulink 3 pro PSIO_CH0 for waveform observation using [PulseView](https://github.com/OpenNuvoton/Nuvoton_Tools/blob/master/Documents/Nu-Link3-Pro_User_Manual/docs/06_additional_features/02_pulseview.md).
 
 
 ## Generation Flow
