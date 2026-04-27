@@ -1,4 +1,4 @@
-# Nu-Link3 User Manual
+# Nu-Link3-Pro User Manual
 
 **Professional Debugger and Programmer for Nuvoton Microcontrollers**
 

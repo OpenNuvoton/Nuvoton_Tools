@@ -66,7 +66,6 @@ are contracted or abbreviated, as listed in Table: Nu-Link Debugger/Programmer T
 
 | **Short Name** | **Full Name** |
 | --- | --- |
-| Nu-Link3 | Nu-Link3-Pro |
 | ICP Tool | Nuvoton NuMicro® ICP Programming Tool |
 | Keil MDK | Keil ARM Microcontroller Development Kit (MDK-ARM®) |
 | IAR EWARM | IAR Embedded Workbench for ARM |
