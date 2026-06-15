@@ -1,4 +1,4 @@
-# Nu-Link3 User Manual
+# Nu-Link2 and Nu-Link3 User Manual
 
 **Professional Debugger and Programmer for Nuvoton Microcontrollers**
 
@@ -8,15 +8,18 @@
 
 ### [Chapter 1: Overview and Features](docs/01_overview/00_index.md)
 
-- [1.1 Nu-Link3-Pro](docs/01_overview/02_nu-link3-pro.md)
+- [1.1 Nu-Link2-Pro](docs/01_overview/01_nu-link2-pro.md)
+- [1.2 Nu-Link3-Pro](docs/01_overview/02_nu-link3-pro.md)
 
 ### [Chapter 2: Package Contents](docs/02_package_contents/00_index.md)
 
-- [2.1 Nu-Link3-Pro](docs/02_package_contents/02_nu-link3-pro.md)
+- [2.1 Nu-Link2-Pro](docs/02_package_contents/01_nu-link2-pro.md)
+- [2.2 Nu-Link3-Pro](docs/02_package_contents/02_nu-link3-pro.md)
 
 ### [Chapter 3: Hardware Connection](docs/03_hardware_connection/00_index.md)
 
-- [3.1 Nu-Link3-Pro](docs/03_hardware_connection/02_nu-link3-pro.md)
+- [3.1 Nu-Link2-Pro](docs/03_hardware_connection/01_nu-link2-pro.md)
+- [3.2 Nu-Link3-Pro](docs/03_hardware_connection/02_nu-link3-pro.md)
 
 ### [Chapter 4: Debugging](docs/04_debugging/00_index.md)
 
@@ -41,5 +44,6 @@
 
 ### [Chapter 7: Appendix](docs/07_appendix/00_index.md)
 
-- [7.1 Nu-Link3-Pro](docs/07_appendix/02_nu-link3-pro.md)
-- [7.2 Disclaimer](docs/07_appendix/03_disclaimer.md)
+- [7.1 Nu-Link2-Pro](docs/07_appendix/01_nu-link2-pro.md)
+- [7.2 Nu-Link3-Pro](docs/07_appendix/02_nu-link3-pro.md)
+- [7.3 Disclaimer](docs/07_appendix/03_disclaimer.md)

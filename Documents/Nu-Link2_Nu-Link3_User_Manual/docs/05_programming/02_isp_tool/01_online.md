@@ -18,7 +18,8 @@
 
 ### Hardware Connection
 
-4. Connect the Nu-Link3-Pro to the target chip based on the selected interface. For detailed pin definitions and connection diagrams, please refer to:
+4. Connect the Nu-Link to the target chip based on the selected interface. For detailed pin definitions and connection diagrams, please refer to:
+   - **Nu-Link2-Pro**: [Bridge Interface](../../03_hardware_connection/01_nu-link2-pro.md#bridge-interface)
    - **Nu-Link3-Pro**: [Bridge Interface](../../03_hardware_connection/02_nu-link3-pro.md#bridge-interface)
 
 

@@ -60,9 +60,9 @@
 
 ---
 
-### ETM Trace Settings
+### ETM Trace Settings (Nu-Link2-Pro and Nu-Link3-Pro)
 
-To enable **Embedded Trace Macrocell (ETM)** tracing on Nuvoton Cortex®-M4, M23, M33 and M55 devices, connect the device using the **Nu-Link3-Pro** with a 20-pin connector and follow these steps:
+To enable **Embedded Trace Macrocell (ETM)** tracing on Nuvoton Cortex®-M4, M23, M33 and M55 devices, connect the device using the **Nu-Link2-Pro** and **Nu-Link3-Pro** with a 20-pin connector and follow these steps:
 
 1. **Open the Project:** Open the **Template.uvproj** file located in the M480 BSP.
 

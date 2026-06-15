@@ -13,7 +13,10 @@ This programming method serves two main functions:
 ### Updating the Target Chip
 
 #### Settings
-No specific configuration is needed for the Nu-Link3-Pro before connecting to a USB port.
+Specific Nu-Link models require certain configurations before connecting to a USB port:
+* **Nu-Link1-Me**: Connect the corresponding jumper before plugging in the USB cable.
+* **Nu-Link2-Me**: Switch **SW4** to the OFF position before plugging in the USB cable.
+* **Nu-Link3**: No configuration is needed.
 
 #### Pop-up Disk "NuMicro MCU"
 When the device is properly connected, a virtual disk named "**NuMicro MCU**" will appear.
@@ -45,8 +48,9 @@ The following are not supported by this programming method:
 ### Updating Nu-Link Firmware
 
 #### Settings
-To update the Nu-Link3-Pro firmware:
-* Press the **offline button**, then plug in the USB cable.
+Similar to updating the target chip, updating the Nu-Link firmware requires specific settings for different models:
+* **Nu-Link1-Me**: Connect the corresponding jumper, then plug in the USB cable.
+* **Nu-Link2** or **Nu-Link3** : Press the **offline button**, then plug in the USB cable.
 
 #### Pop-up Disk "Nu-Link"
 A virtual disk named "**Nu-Link**" will appear. To update the Nu-Link firmware, simply drag and drop the new Nu-Link firmware file into this disk.

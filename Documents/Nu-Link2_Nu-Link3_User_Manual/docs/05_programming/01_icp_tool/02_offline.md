@@ -15,19 +15,19 @@ In addition, the Nu-Link supports "Limited Offline Programming," which can effec
 
 Nu-Link has three interfaces to download the offline data for offline download:
 
-| Storage Option | Description |
-|----------------|-------------|
-| USB flash drive | External USB storage device |
-| SD card | External SD card storage |
-| Embedded SPI flash | Built-in flash memory |
+| Storage Option | Description | Supported devices |
+|----------------|-------------|-------------|
+| USB flash drive | External USB storage device | Nu-Link2-Pro and Nu-Link3-Pro |
+| SD card | External SD card storage | Nu-Link2-Pro and Nu-Link3-Pro |
+| Embedded SPI flash | Built-in flash memory | Nu-Link |
 
 Table: Offline Data Storage Options
 
 **Steps to use USB flash drive or SD card interface for offline download:**
 
-1. Use **Tool → Create Offline USB/SD File** on the menu bar of ICP Tool to save the offline file and drag and drop the file into USB flash drive or SD card.
-2. Plug USB flash drive or SD card into Nu-Link3-Pro.
-3. Press the button on the Nu-Link3-Pro to start downloading.
+1. Use **Tool → Create Offline USB/SD File** on the menu bar of ICP Tool to save **NuLink2.us** file and drag and drop the file into USB flash drive or SD card.
+2. Plug USB flash drive or SD card into Nu-Link2-Pro and Nu-Link3-Pro.
+3. Press the button on the Nu-Link2-Pro and Nu-Link3-Pro to start downloading.
 
 
 
