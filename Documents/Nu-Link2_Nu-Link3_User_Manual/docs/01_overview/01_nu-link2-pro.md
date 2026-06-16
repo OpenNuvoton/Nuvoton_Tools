@@ -65,17 +65,127 @@
 
 ### System Overview
 
-Overview of software tools, Nu-Link2-Pro adapters, and targets:
+The following diagrams illustrate the various roles Nu-Link2-Pro can play in your development workflow:
 
-![debugger](../../media/nu-link2/7380_BM0.PNG)
+#### Debugging — SWD Debug Probe
 
-![bridge](../../media/nu-link2/7380_BM1.PNG)
+```mermaid
+flowchart LR
+    subgraph PC["PC side"]
+        direction TB
+        T1["Keil Studio (WebApp)"]
+        T2["pyOCD"]
+        T3["VS Code IDE <br/>(with extension: Nuvoton NuMicro Cortex-M Pack)"]
+        T4["CMSIS-DAP compliant IDE<br/>e.g. KEIL (select CMSIS-DAP)"]
+        T5["KEIL (select NuLink)<br/>IAR (select NuLink)<br/>ICP tool<br/>NuLink command tool<br/>NuEclipse + openOCD"]
+    end
+    subgraph ADP["Nu-Link2-Pro adapter"]
+        FW["NuLink2FW.bin<br/>(BRIDGE_MODE=0 of NU_CFG.TXT)"]
+    end
+    subgraph TGT["target board"]
+        MCU["Target MCU<br/>(flash can be empty)"]
+    end
+    T1 <-- "USB WebUSB_CMSIS-DAP" --> FW
+    T2 <-- "USB HID_CMSIS-DAP" --> FW
+    T3 <-- "USB HID_CMSIS-DAP" --> FW
+    T4 <-- "USB HID_CMSIS-DAP" --> FW
+    T5 <-- "USB HID_ICE" --> FW
+    FW <-- "SWD" --> MCU
+```
 
-![monitor](../../media/nu-link2/7380_BM1_MON.PNG)
+#### Bridging — Normal Mode (Master)
 
-![isp](../../media/nu-link2/7380_BM2.png)
+```mermaid
+flowchart LR
+    subgraph PC["PC side"]
+        direction TB
+        A1["NuTool-USB to Serial Port<br/>(I2C / SPI / CAN)"]
+        A2["Terminal emulator<br/>(e.g. Tera term) (RS485)"]
+    end
+    subgraph ADP["Nu-Link2-Pro adapter"]
+        FW["NuLink2FW.bin<br/>(BRIDGE_MODE=1 of NU_CFG.TXT,<br/>pass through USB_I2C / USB_SPI /<br/>USB_CAN / USB_RS485 data via<br/>VCOM_Nu-Link2-Bridge port)"]
+    end
+    subgraph TGT["target board"]
+        MCU["Target MCU runs<br/>slave device firmware"]
+    end
+    A1 <-- "USB VCOM_Nu-Link2-Bridge" --> FW
+    A2 <-- "USB VCOM_Nu-Link2-Bridge" --> FW
+    FW <-- "I2C / SPI / CAN / RS485" --> MCU
+```
 
-![bootloader isp](../../media/nu-link2/7443_BM3.png)
+#### Monitoring — I2C / SPI / CAN / RS485 Bus
+
+```mermaid
+flowchart LR
+    subgraph PC["PC side"]
+        direction TB
+        A1["NuTool-USB to Serial Port<br/>(I2C / SPI / CAN)"]
+        A2["Terminal emulator<br/>(e.g. Tera term) (RS485)"]
+    end
+    subgraph ADP["Nu-Link2-Pro adapter"]
+        FW["NuLink2FW.bin<br/>(BRIDGE_MODE=1 of NU_CFG.TXT,<br/>monitor I2C/SPI/CAN/RS485 data via<br/>VCOM_Nu-Link2-Bridge port)"]
+    end
+    subgraph TGTA["target board A"]
+        DA["Device A (master)"]
+    end
+    subgraph TGTB["target board B"]
+        DB["Device B (slave)"]
+    end
+    BUS{{"I2C / SPI / CAN / RS485"}}
+    A1 <-- "USB VCOM_Nu-Link2-Bridge" --> FW
+    A2 <-- "USB VCOM_Nu-Link2-Bridge" --> FW
+    BUS <--> DA
+    BUS <--> DB
+    FW -- "tap (listen-only) via I2C / SPI / RS485 / CAN pins" --> BUS
+```
+
+#### Programming — ISP via LDROM
+
+```mermaid
+flowchart LR
+    subgraph PC["PC side"]
+        direction TB
+        T1["ISP Tool (USB)"]
+        T2["ISP Tool (UART)"]
+        T3["ISP Tool<br/>(SPI / I2C / RS485 / CAN)"]
+    end
+    subgraph ADP["Nu-Link2-Pro adapter"]
+        FW1["NuLink2FW.bin"]
+        FW2["NuLink2FW.bin<br/>(BRIDGE_MODE=2 of NU_CFG.TXT,<br/>deal with ISPTool HID_ISP packets)"]
+    end
+    subgraph TGT["target board"]
+        MCU["Target MCU with specific LDROM firmware<br/>(boot from LDROM)<br/>Can be found in each BSP directory<br/>BSP/SampleCode/ISP"]
+    end
+    T1 <-- "USB HID_ISP" --> MCU
+    T2 <-- "USB VCOM" --> FW1
+    T3 <-- "USB HID_ISP" --> FW2
+    FW1 <-- "LDROM UART" --> MCU
+    FW2 <-- "I2C / SPI / RS485 / CAN" --> MCU
+```
+
+#### Programming — ISP via MKROM (Mask ROM)
+
+```mermaid
+flowchart LR
+    subgraph PC["PC side"]
+        direction TB
+        T1["Boot Loader ISP Tool (USB)"]
+        T2["Boot Loader ISP Tool (UART)"]
+        T3["Boot Loader ISP Tool<br/>(SPI / I2C / RS485 / CAN)"]
+    end
+    subgraph ADP["Nu-Link2-Pro adapter"]
+        FW1["NuLink2FW.bin"]
+        FW2["NuLink2FW.bin<br/>(BRIDGE_MODE=3 of NU_CFG.TXT,<br/>deal with MKROM HID_ISP packets)"]
+    end
+    subgraph TGT["target board"]
+        MCU["Target MCU with specific<br/>MKROM firmware (unreadable)"]
+    end
+    T1 <-- "USB HID_MKROM_ISP" --> MCU
+    T2 <-- "USB VCOM" --> FW1
+    T3 <-- "USB HID_MKROM_ISP" --> FW2
+    FW1 <-- "MKROM UART" --> MCU
+    FW2 <-- "I2C / SPI / RS485 / CAN" --> MCU
+```
 
 ### Driver Installation
 

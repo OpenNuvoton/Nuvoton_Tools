@@ -32,16 +32,148 @@ The Nu-Link3-Pro offers complete programming and debugging support for all NuMic
 
 The following diagrams illustrate the various roles Nu-Link3-Pro can play in your development workflow:
 
+#### Debugging — SWD Debug Probe
 
-![Debugger Connection](../../media/nu-link3/nulink3-ide.png)
+```mermaid
+flowchart LR
+    subgraph PC["PC side"]
+        direction TB
+        T1["Keil Studio (WebApp)"]
+        T2["pyOCD"]
+        T3["VS Code IDE <br/>(with extension: Nuvoton NuMicro Cortex-M Pack)"]
+        T4["CMSIS-DAP compliant IDE<br/>e.g. KEIL (select CMSIS-DAP)"]
+        T5["KEIL (select NuLink)<br/>IAR (select NuLink)<br/>ICP tool<br/>NuLink command tool<br/>NuEclipse + openOCD"]
+    end
+    subgraph ADP["Nu-Link3-Pro adapter"]
+        FW["NuLink3FW.bin"]
+    end
+    subgraph TGT["target board"]
+        MCU["Target MCU<br/>(flash can be empty)"]
+    end
+    T1 <-- "USB WebUSB_CMSIS-DAP" --> FW
+    T2 <-- "USB HID_CMSIS-DAP" --> FW
+    T3 <-- "USB HID_CMSIS-DAP" --> FW
+    T4 <-- "USB HID_CMSIS-DAP" --> FW
+    T5 <-- "USB HID_ICE" --> FW
+    FW <-- "SWD" --> MCU
+```
 
-![Bridge Connection](../../media/nu-link3/nulink3-usb2serial.png)
+#### Bridging — Normal Mode (Master)
 
-![Monitor Mode](../../media/nu-link3/nulink3-usb2serial_mon.png)
+```mermaid
+flowchart LR
+    subgraph PC["PC side"]
+        direction TB
+        A1["NuTool – USB to Serial Port<br/>(I2C / SPI / CAN)"]
+        A2["Terminal emulator<br/>(e.g. Tera Term) (RS485)"]
+    end
+    subgraph ADP["Nu-Link3-Pro adapter"]
+        FW["NuLink3FW.bin<br/>(pass through USB_I2C / USB_SPI /<br/>USB_CAN / USB_RS485 data via<br/>VCOM_Nu-Link3-Bridge port)"]
+    end
+    subgraph TGT["target board"]
+        MCU["Target MCU runs<br/>slave device firmware"]
+    end
+    A1 <-- "USB VCOM_Nu-Link3-Bridge" --> FW
+    A2 <-- "USB VCOM_Nu-Link3-Bridge" --> FW
+    FW <-- "I2C / SPI / CAN / RS485" --> MCU
+```
 
-![PulseView](../../media/nu-link3/nulink3-pulseview.png)
+#### Monitoring — CAN / RS485 Bus
 
-![ISP Programming](../../media/nu-link3/nulink3-isp.png)
+```mermaid
+flowchart LR
+    subgraph PC["PC side"]
+        direction TB
+        A1["NuTool – USB to Serial Port (CAN)"]
+        A2["Terminal emulator<br/>(e.g. Tera Term) (RS485)"]
+    end
+    subgraph ADP["Nu-Link3-Pro adapter"]
+        FW["NuLink3FW.bin<br/>(monitor CAN/RS485 data via<br/>VCOM_Nu-Link3-Bridge port)"]
+    end
+    subgraph TGTA["target board A"]
+        DA["Device A (master)"]
+    end
+    subgraph TGTB["target board B"]
+        DB["Device B (slave)"]
+    end
+    BUS{{"CAN / RS485"}}
+    A1 <-- "USB VCOM_Nu-Link3-Bridge" --> FW
+    A2 <-- "USB VCOM_Nu-Link3-Bridge" --> FW
+    BUS <--> DA
+    BUS <--> DB
+    FW -- "tap (listen-only) via CAN / RS485 pins" --> BUS
+```
+
+#### Monitoring — Logic Analyzer 
+
+```mermaid
+flowchart LR
+    subgraph PC["PC side"]
+        PV["PulseView"]
+    end
+    subgraph ADP["Nu-Link3-Pro adapter"]
+        FW["NuLink3FW.bin<br/>(monitor I2C/SPI/any digital signal)"]
+    end
+    subgraph TGTA["target board A"]
+        DA["Device A (master)"]
+    end
+    subgraph TGTB["target board B"]
+        DB["Device B (slave)"]
+    end
+    BUS{{"I2C / SPI / any digital signal"}}
+    PV <-- "USB WinUSB" --> FW
+    BUS <--> DA
+    BUS <--> DB
+    FW -- "tap (listen-only) via PSIO pins" --> BUS
+```
+
+#### Programming — ISP via LDROM
+
+```mermaid
+flowchart LR
+    subgraph PC["PC side"]
+        direction TB
+        T1["ISP Tool (USB)"]
+        T2["ISP Tool (UART)"]
+        T3["ISP Tool<br/>(SPI / I2C / RS485 / CAN)"]
+    end
+    subgraph ADP["Nu-Link3-Pro adapter"]
+        FW1["NuLink3FW.bin"]
+        FW2["NuLink3FW.bin<br/>(deal with ISPTool HID_ISP packets)"]
+    end
+    subgraph TGT["target board"]
+        MCU["Target MCU with specific LDROM firmware<br/>(boot from LDROM)<br/>Found in each BSP: BSP/SampleCode/ISP"]
+    end
+    T1 <-- "USB HID_ISP" --> MCU
+    T2 <-- "USB VCOM" --> FW1
+    T3 <-- "USB HID_ISP" --> FW2
+    FW1 <-- "LDROM UART" --> MCU
+    FW2 <-- "I2C / SPI / RS485 / CAN" --> MCU
+```
+
+#### Programming — ISP via MKROM (Mask ROM)
+
+```mermaid
+flowchart LR
+    subgraph PC["PC side"]
+        direction TB
+        T1["Boot Loader ISP Tool (USB)"]
+        T2["Boot Loader ISP Tool (UART)"]
+        T3["Boot Loader ISP Tool<br/>(SPI / I2C / RS485 / CAN)"]
+    end
+    subgraph ADP["Nu-Link3-Pro adapter"]
+        FW1["NuLink3FW.bin"]
+        FW2["NuLink3FW.bin<br/>(deal with MKROM HID_ISP packets)"]
+    end
+    subgraph TGT["target board"]
+        MCU["Target MCU with specific<br/>unreadable code in MKROM (mask ROM)"]
+    end
+    T1 <-- "USB HID_MKROM_ISP" --> MCU
+    T2 <-- "USB VCOM" --> FW1
+    T3 <-- "USB HID_MKROM_ISP" --> FW2
+    FW1 <-- "MKROM UART" --> MCU
+    FW2 <-- "I2C / SPI / RS485 / CAN" --> MCU
+```
 
 
 
