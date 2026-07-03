@@ -72,7 +72,6 @@ The following diagrams illustrate the various roles Nu-Link2-Pro can play in you
 ```mermaid
 flowchart LR
     subgraph PC["PC side"]
-        direction TB
         T1["Keil Studio (WebApp)"]
         T2["pyOCD"]
         T3["VS Code IDE <br/>(with extension: Nuvoton NuMicro Cortex-M Pack)"]
@@ -98,7 +97,6 @@ flowchart LR
 ```mermaid
 flowchart LR
     subgraph PC["PC side"]
-        direction TB
         A1["NuTool-USB to Serial Port<br/>(I2C / SPI / CAN)"]
         A2["Terminal emulator<br/>(e.g. Tera term) (RS485)"]
     end
@@ -118,7 +116,6 @@ flowchart LR
 ```mermaid
 flowchart LR
     subgraph PC["PC side"]
-        direction TB
         A1["NuTool-USB to Serial Port<br/>(I2C / SPI / CAN)"]
         A2["Terminal emulator<br/>(e.g. Tera term) (RS485)"]
     end
@@ -144,7 +141,6 @@ flowchart LR
 ```mermaid
 flowchart LR
     subgraph PC["PC side"]
-        direction TB
         T1["ISP Tool (USB)"]
         T2["ISP Tool (UART)"]
         T3["ISP Tool<br/>(SPI / I2C / RS485 / CAN)"]
@@ -168,7 +164,6 @@ flowchart LR
 ```mermaid
 flowchart LR
     subgraph PC["PC side"]
-        direction TB
         T1["Boot Loader ISP Tool (USB)"]
         T2["Boot Loader ISP Tool (UART)"]
         T3["Boot Loader ISP Tool<br/>(SPI / I2C / RS485 / CAN)"]

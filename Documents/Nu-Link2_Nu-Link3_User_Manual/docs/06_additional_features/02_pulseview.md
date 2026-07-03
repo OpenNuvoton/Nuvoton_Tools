@@ -4,7 +4,27 @@ This section details the integration between the **Nu-Link3-Pro** debugging adap
 
 You can download the PulseView software from [here](https://github.com/OpenNuvoton/pulseview/releases).
 
-<img src="../../media/nu-link3/NL3_PulseView/NL3_PulseView_NuLogic_0.png" width="400">
+```mermaid
+flowchart LR
+    subgraph PC["PC side"]
+        direction TB
+        PV["PulseView<br/>(Monitoring)"]
+        ISP["ISPTool<br/>(ISP-UART)"]
+    end
+    subgraph ADP["Nu-Link3-Pro adapter"]
+        direction TB
+        NL3["Nu-Link3 Bridge"]
+        U2U["USB to UART Bridge"]
+    end
+    subgraph TGT["target board"]
+        MCU["Target MCU"]
+    end
+    PV <-- "USB" --> NL3
+    ISP <-- "USB" --> U2U
+    U2U -- "UART-TX" --> MCU
+    MCU -- "UART-RX" --> U2U
+    NL3 -. "PSIO (listen-only tap of UART TX/RX)" .- U2U
+```
 
 Figure: System block diagram
 
@@ -78,22 +98,12 @@ PulseView includes an option to export annotations related to protocol analysis.
 
 Figure: The process of exporting these annotations for documentation or further examination.
 
-
-
 ### Performance Specifications
 
-Maximum sample rate and record length for various channel count combinations:
+The maximum capture length can be bounded by a configurable maximum sample count, selectable from **1M up to 500M samples**. The table below lists the record length obtained at the maximum sample count of 500M samples:
 
-| Channel Count | Max Sample Rate (MHz) | Buffer Size = 1M bytes, Record Length (ms) |     |     |     |
-|:-------------:|:--------------------:|:---------------------------------------------:|:---:|:---:|:---:|
-|               |                      | Sample Rate                                   |     |     |     |
-|               |                      | **1 MHz** | **4 MHz** | **10 MHz** | **22 MHz** |
-| 1             | 22                   | 8120     | 2080      | 840       | 380        |
-| 2             | 22                   | 4200     | 1040      | 420       | 192        |
-| 4             | 10                   | 2080      | 520      | 208        |           |
-| 6             | 4                    | 1040      | 260       |           |           |
+<img src="../../media/nu-link3/NL3_PulseView/NL3_PulseView_sample_count.png" width="500">
 
-Table: Maximum Sample Rate and Record Length by Channel Count
-
+Figure: Selecting the maximum sample count (1M to 500M) in PulseView
 
 

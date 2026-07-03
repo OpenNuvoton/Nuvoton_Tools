@@ -41,6 +41,7 @@
 
 - [6.1 MicroPython Support](docs/06_additional_features/01_micropython.md)
 - [6.2 PulseView Logic Analyzer](docs/06_additional_features/02_pulseview.md)
+- [6.3 Long-Duration Capture with sigrok-cli](docs/06_additional_features/03_sigrok_cli.md)
 
 ### [Chapter 7: Appendix](docs/07_appendix/00_index.md)
 
