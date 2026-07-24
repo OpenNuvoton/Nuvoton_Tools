@@ -45,7 +45,7 @@ The following lists components and connectors from the rear view:
 
 - Function Switch \#4 (mass-storage control)
 
-  Set switch \#4 to the **OFF** position to disable the Nu-Link2-Pro mass-storage interface in either of the following situations:
+  Set switch \#4 to the **ON** position to disable the Nu-Link2-Pro mass-storage interface in either of the following situations:
 
   - The host computer's IT policy blocks USB mass-storage devices. 
   - Using the Boot Loader ISP function. 
