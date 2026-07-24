@@ -39,7 +39,12 @@ The following lists components and connectors from the front view:
 
 The following lists components and connectors from the rear view:
 
-- Function Switch (Reserved)
+- Function Switch \#2 (mass-storage control)
+
+  Set switch \#2 to the **OFF** position to disable the Nu-Link3-Pro mass-storage interface in either of the following situations:
+
+  - The host computer's IT policy blocks USB mass-storage devices.
+  - Using the Boot Loader ISP function.
 
 
 ### Nu-Link3-Pro Connectors
