@@ -6,8 +6,8 @@ Offline ISP (In-System Programming) refers to the ability to program a Nuvoton m
 
 To use the offline ISP functionality, ensure your tools meet the following minimum requirements:
 
-- **ISP Tool Software**: [ISPTool v4.17](https://github.com/OpenNuvoton/ISPTool/releases) or later.
-- **Nu-Link Firmware**: Version **7964r** or later.
+- **ISP Tool Software**: [ISPTool v4.18](https://github.com/OpenNuvoton/ISPTool/releases) or later.
+- **Nu-Link Firmware**: Version **7973r** or later.
 
 
 ### Operation Steps

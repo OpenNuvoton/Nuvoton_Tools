@@ -4,27 +4,8 @@ This section details the integration between the **Nu-Link3-Pro** debugging adap
 
 You can download the PulseView software from [here](https://github.com/OpenNuvoton/pulseview/releases).
 
-```mermaid
-flowchart LR
-    subgraph PC["PC side"]
-        direction TB
-        PV["PulseView<br/>(Monitoring)"]
-        ISP["ISPTool<br/>(ISP-UART)"]
-    end
-    subgraph ADP["Nu-Link3-Pro adapter"]
-        direction TB
-        NL3["Nu-Link3 Bridge"]
-        U2U["USB to UART Bridge"]
-    end
-    subgraph TGT["target board"]
-        MCU["Target MCU"]
-    end
-    PV <-- "USB" --> NL3
-    ISP <-- "USB" --> U2U
-    U2U -- "UART-TX" --> MCU
-    MCU -- "UART-RX" --> U2U
-    NL3 -. "PSIO (listen-only tap of UART TX/RX)" .- U2U
-```
+<img src="../../media/nu-link3/NL3_PulseView/NL3_PulseView_NuLogic_0.png" width="400">
+
 
 Figure: System block diagram
 
