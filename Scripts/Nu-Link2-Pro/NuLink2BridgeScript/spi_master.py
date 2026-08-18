@@ -20,7 +20,7 @@ spi_misc = serial.EIGHTBITS
 
 serialPort = serial.Serial() # omit port to avoid auto-open
 serialPort.port = 'COM11'
-serialPort.baudrate = spi_clock
+serialPort.baudrate = ((2 + 1) << 28) + (spi_clock & 0x0FFFFFFF)
 serialPort.stopbits = spi_master
 serialPort.parity  = spi_type0
 serialPort.bytesize  = spi_misc

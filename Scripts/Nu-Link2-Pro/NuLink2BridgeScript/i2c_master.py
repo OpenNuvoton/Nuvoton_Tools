@@ -9,7 +9,7 @@ i2c_master = serial.STOPBITS_TWO
 
 serialPort = serial.Serial() # omit port to avoid auto-open
 serialPort.port = 'COM11'
-serialPort.baudrate = i2c_clock
+serialPort.baudrate = ((1 + 1) << 28) + (i2c_clock & 0x0FFFFFFF)
 serialPort.stopbits = i2c_master
 serialPort.setDTR(True)
 serialPort.setRTS(False)
