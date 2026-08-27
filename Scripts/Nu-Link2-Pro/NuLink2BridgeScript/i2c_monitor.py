@@ -8,9 +8,9 @@ i2c_monitor = serial.STOPBITS_ONE
 i2c_master = serial.STOPBITS_TWO
 
 try:
-    serialPort = serial.Serial("COM7",\
-                               i2c_clock
-                               serial.EIGHTBITS,\
+    serialPort = serial.Serial("COM7",
+                               (((1 + 1) << 28) + (i2c_clock & 0x0FFFFFFF)),
+                               serial.EIGHTBITS,
                                serial.PARITY_NONE,
                                i2c_monitor);
 except:

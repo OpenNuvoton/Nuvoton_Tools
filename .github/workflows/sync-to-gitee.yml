@@ -1,11 +1,8 @@
 name: Sync to Gitee
 
 on:
-  # 新增這段：監聽 Push 事件
   push:
-    branches: [ master, main ]  # 當 master 或 main 分支有更新時觸發
-  
-  # 保留這段：讓你還是可以手動按按鈕 (方便除錯或強制同步)
+    branches: [ master, main ]    
   workflow_dispatch:
   
 permissions:
@@ -18,7 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # 需要所有 refs 和 tags
+          fetch-depth: 0   
 
       - name: Configure git user
         run: |
@@ -43,6 +40,6 @@ jobs:
         env:
           GIT_TERMINAL_PROMPT: 0
         run: |
-          set -e
-          # 強制同步所有分支與 tags（請確認你要 force push）
+          set -e          
+          git remote set-head origin -d || true          
           git push -f gitee refs/remotes/origin/*:refs/heads/* --tags --prune

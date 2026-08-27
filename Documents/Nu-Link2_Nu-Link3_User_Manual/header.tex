@@ -1,0 +1,15 @@
+\usepackage{float}
+\usepackage{titlesec}
+\titleformat{\paragraph}[block]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{1.5ex plus 0.5ex minus 0.2ex}{0.5ex plus 0.1ex}
+\titleformat{\subparagraph}[block]{\normalfont\normalsize\itshape}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{1.25ex plus 0.5ex minus 0.2ex}{0.3ex plus 0.05ex}
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][]{%
+  \vspace{1em}%
+  \origfigure[H]%
+}{%
+  \endorigfigure
+  \vspace{0.5em}%
+}

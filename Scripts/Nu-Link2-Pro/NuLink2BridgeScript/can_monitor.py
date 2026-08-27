@@ -4,8 +4,8 @@ import sys
 
 COM_PORT = 'COM7'  # <-- CAN Bridge
 BAUD_RATES = 9600  # dont care
-ser = serial.Serial(COM_PORT, BAUD_RATES)
- 
+ser = serial.Serial(COM_PORT, (((0 + 1) << 28) + (BAUD_RATES & 0x0FFFFFFF)))
+
 print("connected to: " + ser.portstr)
 
 can_mode = [

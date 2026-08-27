@@ -155,7 +155,10 @@ class ISP_Intr(ISP_Timer):
         return self._run_cmd(0xA4, word_to_bytes(self._packet_no), None)
 
     def erase_all(self):
-        return self._run_cmd(0xA3, None, None)
+        if self.__run_cmd_write(0xA3, None):
+            return self.__run_cmd_read(None, 25)
+
+        return False
 
     def update_config(self, configs=[]):
         configs = configs[0:14] if len(configs) > 14 else configs
@@ -172,12 +175,10 @@ class ISP_Intr(ISP_Timer):
         if curr_addr == start_addr:
             data = data[0:48] if len(data) > 48 else data
 
-            if self._run_cmd(
-                isp_cmd,
-                word_to_bytes(start_addr) + word_to_bytes(total_len) + data,
-                None,
+            if self.__run_cmd_write(
+                isp_cmd, word_to_bytes(start_addr) + word_to_bytes(total_len) + data
             ):
-                return len(data)
+                return len(data) if self.__run_cmd_read(None, 25) else 0
             else:
                 return 0
         else:
@@ -341,7 +342,7 @@ class ISP_CAN(ISP_Timer):
     def __run_cmd_read(self, recv_data, timeout_sec=5):
         tick_count = self.get_timer_tick()
         while not self._recv_event:
-            if (self.get_timer_tick() - tick_count) > timeout_sec:
+            if (self.get_timer_tick() - tick_count) >= timeout_sec:
                 break
 
         if self._recv_event:
@@ -419,7 +420,7 @@ class ISP_CAN(ISP_Timer):
             self._df_base_addr + start_addr,
             total_len,
             self._df_base_addr + curr_addr,
-            data,
+            data
         )
 
     def resend(self):
@@ -524,7 +525,7 @@ def main():
         3: ISP_RS485(),
         4: ISP_CAN(
             0x0F000000 if (user_config["ISP CAN"]["ConfigBaseSel"] == 1) else 0x00000000,
-            user_config["ISP CAN"]["DataFlashBaseAddress"],
+            bytes_to_word(user_config["ISP CAN"]["DataFlashBaseAddress"]),
         ),
     }
 
