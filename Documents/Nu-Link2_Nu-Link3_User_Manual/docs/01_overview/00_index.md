@@ -44,6 +44,10 @@ The table below compares the Nu-Link family of devices.
 | USB Flash Drive | ✔ | ✔ | - | - | - |
 | **Bridge** | | | | | |
 | Virtual COM | ✔ | ✔ | ✔ | ✔ | ✔ |
+| I2C/I3C Bridge | ✔ | ✔ [^1] | - | - | - |
+| SPI Bridge | ✔ | ✔ | - | - | - |
+| RS-485 Bridge | ✔ | ✔ | - | - | - |
+| CAN Bridge | ✔ | ✔ [^1] | - | - | - |
 | **Bus Monitor** | | | | | |
 | I2C/I3C, SPI, CAN, RS-485 | ✔ | ✔ [^1] | - | - | - |
 | **Additional features** | | | | | |

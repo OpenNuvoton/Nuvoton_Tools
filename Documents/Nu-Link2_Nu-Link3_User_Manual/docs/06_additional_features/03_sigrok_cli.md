@@ -20,8 +20,7 @@ You can download the Nu-Link3-Pro build of sigrok-cli from [here](https://github
   sigrok-cli --driver nuvoton-nulink3-pro --scan
   ```
 
-- Capture 6 channels at 4 MHz for a fixed number of samples and save the result to a sigrok session file (`.sr`) on disk:
-
+- Capture all six channels by selecting channel indices 0 through 5 (`-C 0-5`) at 4 MHz for a fixed number of samples, and save the result to a sigrok session file (`.sr`) on disk:
   ```
   sigrok-cli --driver nuvoton-nulink3-pro --config samplerate=4m -C 0-5 --samples 100M -o capture.sr
   ```
