@@ -19,51 +19,79 @@ tool, a physical button, or an automated IC programming system.
 Nu-Link devices also function as In-System Programming (ISP) programmers, supporting firmware upgrades after field deployment.
 
 
-### Nu-Link Family Comparison
+## Nu-Link Family Comparison
 
-The table below compares the Nu-Link family of devices.
+The tables below compare the Nu-Link family of devices.
 
-| Type / Function | Nu-Link3-Pro | Nu-Link2-Pro | Nu-Link2 | Nu-Link2-Me | Nu-Link-Me |
-|-----------------|:------------:|:------------:|:--------:|:-----------:|:----------:|
-| **Debug** | | | | | |
+### Debug
+
+| Function | Nu-Link3-Pro | Nu-Link2-Pro | Nu-Link2 | Nu-Link2-Me | Nu-Link-Me |
+| :--- | :---: | :---: | :---: | :---: | :---: |
 | Debug via SWD | ✔ | ✔ | ✔ | ✔ | ✔ |
 | ETM | ✔ | ✔ | - | - | - |
 | pyOCD | ✔ | ✔ | ✔ | ✔ | - |
-| **Program** | | | | | |
+
+### Program
+
+| Function | Nu-Link3-Pro | Nu-Link2-Pro | Nu-Link2 | Nu-Link2-Me | Nu-Link-Me |
+| :--- | :---: | :---: | :---: | :---: | :---: |
 | Online ICP Programming | ✔ | ✔ | ✔ | ✔ | ✔ |
 | Offline ICP Programming | ✔ | ✔ | ✔ | ✔ | - |
 | Offline ICP-Control Bus | ✔ | ✔ | ✔ | ✔ | - |
 | Drag-and-drop flash programming | ✔ | ✔ | ✔ | ✔ | - |
 | SWD I/O Voltage Support | 1.8V, 2.5V, 3.3V, 5.0V | 1.8V, 2.5V, 3.3V, 5.0V | 1.8V, 2.5V, 3.3V, 5.0V | 1.8V, 3.3V, 5.0V [^2] | 3.3V, 5.0V [^3] |
-| **Upgrade** | | | | | |
-| Online ISP | ✔ | ✔ | ✔ [^4] | ✔ [^4] | - |
-| Offline ISP | ✔ | ✔ | ✔ [^4] | ✔ [^4] | - |
-| **Storage** | | | | | |
+
+### Upgrade
+
+| Function | Nu-Link3-Pro | Nu-Link2-Pro | Nu-Link2 | Nu-Link2-Me | Nu-Link-Me |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| Online ISP | ✔ | ✔ | ✔ [^1] | ✔ [^1] | - |
+| Offline ISP | ✔ | ✔ | ✔ [^1] | ✔ [^1] | - |
+
+### Storage
+
+| Function | Nu-Link3-Pro | Nu-Link2-Pro | Nu-Link2 | Nu-Link2-Me | Nu-Link-Me |
+| :--- | :---: | :---: | :---: | :---: | :---: |
 | SPI Flash | ✔ | ✔ | ✔ | ✔ | - |
 | SD Card | ✔ | ✔ | - | - | - |
 | USB Flash Drive | ✔ | ✔ | - | - | - |
-| **Bridge** | | | | | |
+
+### Bridge
+
+| Function | Nu-Link3-Pro | Nu-Link2-Pro | Nu-Link2 | Nu-Link2-Me | Nu-Link-Me |
+| :--- | :---: | :---: | :---: | :---: | :---: |
 | Virtual COM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| I2C/I3C Bridge | ✔ | ✔ [^1] | - | - | - |
+| I2C Bridge | ✔ | ✔ | - | - | - |
+| I3C Bridge | ✔ | - | - | - | - |
 | SPI Bridge | ✔ | ✔ | - | - | - |
 | RS-485 Bridge | ✔ | ✔ | - | - | - |
-| CAN Bridge | ✔ | ✔ [^1] | - | - | - |
-| **Bus Monitor** | | | | | |
-| I2C/I3C, SPI, CAN, RS-485 | ✔ | ✔ [^1] | - | - | - |
-| **Additional features** | | | | | |
+| CAN 2.0 Bridge | ✔ | ✔ | - | - | - |
+| CAN FD Bridge | ✔ | - | - | - | - |
+
+### Bus Monitor
+
+| Function | Nu-Link3-Pro | Nu-Link2-Pro | Nu-Link2 | Nu-Link2-Me | Nu-Link-Me |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| I2C Bus Monitor | ✔ | ✔ | - | - | - |
+| I3C Bus Monitor | ✔ | - | - | - | - |
+| SPI Bus Monitor | ✔ | ✔ | - | - | - |
+| CAN 2.0 Bus Monitor | ✔ | ✔ | - | - | - |
+| CAN FD Bus Monitor | ✔ | - | - | - | - |
+| RS-485 Bus Monitor | ✔ | ✔ | - | - | - |
+
+## Additional Features
+
+| Function | Nu-Link3-Pro | Nu-Link2-Pro | Nu-Link2 | Nu-Link2-Me | Nu-Link-Me |
+| :--- | :---: | :---: | :---: | :---: | :---: |
 | PulseView | ✔ | - | - | - | - |
 | MicroPython | ✔ | - | - | - | - |
 
 Table: Nu-Link Family Comparison
 
-**Notes:**  
-[^1]: Nu-Link2-Pro does not support I3C or CAN FD (it only supports CAN 2.0).  
-[^2]: Voltage is adjusted by resistor ICEJPR1.  
-[^3]: Voltage is adjusted by resistor JPR1.  
-[^4]: Only supports the UART interface for ISP updates.  
 
 
-### Abbreviations
+
+## Abbreviations
 
 For simplicity and clarity, some specific terms in this user manual
 are contracted or abbreviated, as listed in Table: Nu-Link Debugger/Programmer Technical Abbreviations.
@@ -86,3 +114,7 @@ are contracted or abbreviated, as listed in Table: Nu-Link Debugger/Programmer T
 
 Table: Nu-Link Debugger/ Programmer Technical Abbreviations
 
+
+[^1]: Only supports the UART interface for ISP updates.<br>
+[^2]: Voltage is adjusted by resistor ICEJPR1.<br>
+[^3]: Voltage is adjusted by resistor JPR1.
