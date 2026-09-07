@@ -85,26 +85,3 @@ After copying the `.isp` project file to the disk, the Nu-Link automatically pro
 - **Clearing Data**: To completely remove the offline ISP data from the programmer, create a blank file named `CLR_ISP.ACT` in the root directory of the Nu-Link disk. This will trigger the internal cleanup process.
 
 
-
-### Status LED Description
-
-The offline LED indicator for ISP is the same as for ICP.
-
-| Status                                 | ICE | ICP | Red LED | Green LED |
-|-----------------------------------------|-----|-----|---------|-----------|
-| During Offline Programming              | On  | On  | Flash   | -         |
-| Offline Programming Completed           | On  | On  | -       | Flash     |
-| Offline Programming Failed (Auto mode)  | On  | On  | Flash   | -         |
-| Offline Programming Failed              | On  | On  | Flash   | -         |
-
-Table: Offline ISP LED Status
-
-
-
-### Programming Success & Failure Indicators
-
-- **Programming Success (Left Image)**
-- **Programming Failure (Right Image)**
-
-![Offline ISP LED Indicators](../../../media/nu-link3/nulink3-offlineISP-blink.png)
-
