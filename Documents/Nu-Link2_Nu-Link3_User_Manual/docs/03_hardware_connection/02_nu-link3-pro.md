@@ -180,5 +180,5 @@ Table: ETM Interface Pin Definition and Description
 
 ### ICP Offline Programming Function Connection
 
-![ICP Offline Programming Illustration of SWD Interface](../../media/nu-link3/image20.png){ width=80% }
+![ICP Offline Programming Illustration of SWD Interface](../../media/nu-link3/image20.png)
 
