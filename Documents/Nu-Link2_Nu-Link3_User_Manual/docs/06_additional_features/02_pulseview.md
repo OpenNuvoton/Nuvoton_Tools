@@ -87,4 +87,17 @@ The maximum capture length can be bounded by a configurable maximum sample count
 
 Figure: Selecting the maximum sample count (1M to 500M) in PulseView
 
+#### Limitations
+
+The maximum sample rate depends on the number of enabled channels. The selectable sample rates are **1, 2, 4, 8, 10, 22, and 55 MHz**, and the maximum usable rate for each channel count is listed below:
+
+| Channel Count | Maximum Sample Rate |
+|:-------------:|:-------------------:|
+| 1 or 2 | 55 MHz |
+| 4 | 22 MHz |
+| 6 | 10 MHz |
+
+Table: Maximum Sample Rate per Channel Count in Stream Mode
+
+
 
