@@ -5,7 +5,12 @@
          <img src="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/DebugMultiDevice/GetDeviceUID.png" alt="GetDeviceUID.png" width="900">
      </p>
 
-1. Before loading code to the target, modify the CMSIS Load task in tasks.json by adding the desired device UID after cmsisdap:. Then click the Load Application button, and pyOCD will use the device with that UID to perform the code load to the target.
+1. use the `probe-rs list` command in the terminal, as shown below, to obtain the UID of each CMSIS-DAP device.
+     <p>
+         <img src="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/DebugMultiDevice/GetProbersDeviceUID.png" alt="GetProbersDeviceUID.png" width="900">
+     </p>
+
+1. Before loading code to the target, modify the Probe-rs Load task in tasks.json by adding the desired device UID. Then click the Load Application button, and pyOCD will use the device with that UID to perform the code load to the target.
      <p>
          <img src="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/DebugMultiDevice/SetDownloadDeviceUID.png" alt="SetDownloadDeviceUID.png" width="500">
      </p>
@@ -19,8 +24,7 @@ Specify the unique ID (UID) of the target device in your `launch.json` file to e
 #### 1. Using pyOCD
 To target a specific device using **pyOCD**, you need to modify the device connection string.
 
-* **Instruction:** Locate the device field and append the UID immediately after the `cmsis-dap:` prefix.
-* **Format:** `cmsis-dap:<YOUR_DEVICE_UID>`
+* **Instruction:** Locate the device field and append the UID immediately after the `probe_uid:` prefix.
 * **Next Step:** Save the file and click the **Debug Application** button.
 
      <p>
