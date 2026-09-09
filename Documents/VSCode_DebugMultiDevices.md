@@ -15,6 +15,11 @@
          <img src="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/DebugMultiDevice/SetDownloadDeviceUID.png" alt="SetDownloadDeviceUID.png" width="500">
      </p>
 
+1. If you already know the probe device ID index, you can skip modifying the Probe-rs Load task in tasks.json and directly click the **Load Application** button, then enter the probe index as shown below.
+     <p>
+         <img src="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/DebugMultiDevice/SelectProbeDevice.png" alt="SelectProbeDevice.png" width="500">
+     </p>
+
 ### Debug Configuration Guide: Specifying Device UID
 
 Specify the unique ID (UID) of the target device in your `launch.json` file to ensure the debugger connects to the correct hardware.
