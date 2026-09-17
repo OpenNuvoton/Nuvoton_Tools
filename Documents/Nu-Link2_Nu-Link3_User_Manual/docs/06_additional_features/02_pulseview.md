@@ -81,11 +81,11 @@ Figure: The process of exporting these annotations for documentation or further 
 
 ### Performance Specifications
 
-The maximum capture length can be bounded by a configurable maximum sample count, selectable from **1M up to 50G samples**. The table below lists the record length obtained at the maximum sample count of 500M samples:
+The maximum capture length can be bounded by a configurable maximum sample count, selectable from **1M up to 50G samples**. 
 
 <img src="../../media/nu-link3/NL3_PulseView/NL3_PulseView_sample_count.png" width="500">
 
-Figure: Selecting the maximum sample count (1M to 500M) in PulseView
+Figure: Selecting the maximum sample count in PulseView
 
 #### Limitations
 
