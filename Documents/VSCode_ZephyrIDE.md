@@ -1,10 +1,10 @@
 ## Outline
 - [Zephyr Project Setup Guide for Nuvoton NuMicro Cortex-M](#zephyr-project-setup-guide-for-nuvoton-numicro-cortex-m)
-- [Trouble Shooting](#trouble-shooting)
+- [Troubleshooting](#troubleshooting)
 
 ## Zephyr Project Setup Guide for Nuvoton NuMicro Cortex-M
 
-1. Install Required Extension Packs
+1. Install the required extension packs.
 
     Install the following extension packs:
 
@@ -21,10 +21,17 @@
              <img src="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/install_Zephyr_Pack.png" alt="install_Zephyr_Pack.png" width="800">
          </a>
      </p>
-1. Click the Host Tools option to install the environment.
+1. Select **Host Tools** to install the required environment.
+    Install `winget` first. If you encounter any problems, see item 1 in the Troubleshooting section.
      <p>
          <a href="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/setup_configuration2.png" target="_blank">
              <img src="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/setup_configuration2.png" alt="setup_configuration2.png" width="1200">
+         </a>
+     </p>
+    If you encounter any problems while installing the required development tools, see item 2 in the Troubleshooting section.
+     <p>
+         <a href="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/setup_configuration3.png" target="_blank">
+             <img src="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/setup_configuration3.png" alt="setup_configuration3.png" width="1200">
          </a>
      </p>
 1. Download and install the SDK version that matches your Zephyr version.
@@ -34,8 +41,8 @@
          </a>
      </p>
 
-1. Select initialize current directory -> Full Zephyr.
-After that, wait for a while as the Zephyr Project files and configurations are downloaded and the workspace is created.
+1. Select **Initialize Current Directory** > **Full Zephyr**.
+    Wait while the Zephyr Project files and configuration are downloaded and the workspace is created.
      <p>
          <a href="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/workspace_setup2.png" target="_blank">
              <img src="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/workspace_setup2.png" alt="workspace_setup2.png" width="900">
@@ -46,33 +53,32 @@ After that, wait for a while as the Zephyr Project files and configurations are 
              <img src="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/full_zephyr.png" alt="full_zephyr.png" width="300">
          </a>
      </p>
-1. Creating a Zephyr Project from Sample Code
+1. Create a Zephyr project from sample code.
 
-    Create a new project using sample code.
-    Choose a project template provided by the Zephyr IDE.
+    Create a new project from sample code by selecting a project template provided by the Zephyr IDE.
    <p>
        <a href="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/select_template2.png" target="_blank">
            <img src="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/select_template2.png" alt="select_template2.png" width="1200">
        </a>
    </p>
 
-1. Add a build configuration and choose your target board, e.g., `NuMaker-PFM-M467`.
+1. Add a build configuration and select your target board, for example, `NuMaker-PFM-M467`.
    <p>
        <a href="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/select_board.png" target="_blank">
            <img src="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/select_board.png" alt="select_board.png" width="600">
        </a>
    </p>
 
-1. Add Runner Profiles
-  Configure the project runner to use PYOCD.
+1. Add runner profiles.
+    Configure the project runner to use PyOCD.
    <p>
        <a href="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/add_runner_profiles.png" target="_blank">
            <img src="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/add_runner_profiles.png" alt="add_runner_profiles.png" width="1200">
        </a>
    </p>
    
-1. Build Project and Flash to Target and Debug Target
-  Use the build button to build and flash the firmware to your target board and debug your target.
+1. Build, flash, and debug the target.
+    Select the build button to build and flash the firmware to your target board, and then start a debug session.
 
    <p>
        <a href="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/build_flash2.png" target="_blank">
@@ -80,17 +86,17 @@ After that, wait for a while as the Zephyr Project files and configurations are 
        </a>
    </p>
 
-## Trouble Shooting
+## Troubleshooting
 
-1. Problem with winget tool installation.
+1. Problems installing the winget tool.
 
-   From this webpage (https://github.com/microsoft/winget-cli/releases), download the two files shown in the red box. Please download the appropriate winget version according to your operating system version.
+    From the [winget-cli releases page](https://github.com/microsoft/winget-cli/releases), download the two files shown in the red box. Select the winget version that matches your operating system.
      <p>
          <a href="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/download_winget.png" target="_blank">
              <img src="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/download_winget.png" alt="download_winget.png" width="600">
          </a>
      </p>
-   First, unzip the ZIP file, go into the x64 folder, open PowerShell, and enter the commands below in order to install the three dependency files:
+    First, unzip the ZIP file, open PowerShell in the `x64` folder, and run the commands below to install the dependency files:
 
     winget v1.12
     ```
@@ -111,15 +117,15 @@ After that, wait for a while as the Zephyr Project files and configurations are 
     Add-AppPackage -Path .\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
     ```
     
-1. Problem with related packages installation.
+1. Problems installing related packages.
 
-   If the installation fails, as shown in the red text in the image, you can open the OUTPUT panel in the terminal and select the Zephyr IDE option.
+    If the installation fails and an error appears in red, open the OUTPUT panel in the terminal and select **Zephyr IDE**.
      <p>
          <a href="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/install_tool_message.png" target="_blank">
              <img src="https://raw.githubusercontent.com/OpenNuvoton/Nuvoton_Tools/master/img/ZephyrIDE/install_tool_message.png" alt="install_tool_message.png" width="900">
          </a>
      </p>
-   If installing gperf and wget results in error messages, you can manually install them from the terminal by adjusting the parameters:
+    If installing `gperf` or `wget` results in an error, install the package manually from the terminal. The same procedure applies to other development tools: replace the package name in the command with the name of the tool that failed to install.
 
     ```
     winget install --accept-package-agreements --accept-source-agreements gperf --source winget
