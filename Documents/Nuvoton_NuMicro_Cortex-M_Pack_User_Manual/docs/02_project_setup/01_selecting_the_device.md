@@ -12,13 +12,19 @@ The project and the linker script memory sizes are updated for the new device.
 After installing a newer Nuvoton Device Family Pack (DFP), run **Nuvoton: Regenerate chip description**, then
 run **Nuvoton: Select Device Model** again.
 
-### Linker Script Memory Sync
+### Checking ROM and RAM Sizes
 
-The linker script memory sizes are updated automatically when you change the device with
-**Nuvoton: Select Device Model**.
+ROM and RAM sizes in the linker files are updated automatically. You can check them in the
+**linker** folder of the **CMSIS** view.
 
-To update them manually, run **Nuvoton: Sync linker script memory sizes from cbuild-run**.
+**Arm Compiler 6 (AC6):** open `regions_<device>.h` and check `__ROM0_SIZE` and `__RAM0_SIZE`.
 
 <p>
-    <img src="../../media/rom_ram_size.png" alt="rom_ram_size.png" width="999">
+    <img src="../../media/ac6_rom_ram_size.png" alt="ac6_rom_ram_size.png" width="999">
+</p>
+
+**GCC (GNUC):** open `gcc_arm.ld` and check `LENGTH` of `FLASH` and `RAM`.
+
+<p>
+    <img src="../../media/gnuc_rom_ram_size.png" alt="gnuc_rom_ram_size.png" width="999">
 </p>
